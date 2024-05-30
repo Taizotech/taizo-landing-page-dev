@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon.ico">
+    <link href='https://fonts.googleapis.com/css?family=DM Sans' rel='stylesheet'>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>Custom Notification</title>
+
+    <style>
+        body {
+            font-family: 'DM Sans';
+        }
+
+        .content_wrp {
+            height: 100vh;
+            width: 100vw;
+            padding: 20px 40px;
+        }
+
+        .content_left,
+        .content_right {
+            display: grid;
+            align-content: baseline;
+            /* justify-content: center; */
+            margin-top: 3%
+        }
+
+        .content_left {
+            display: grid;
+            align-content: baseline;
+            justify-content: center;
+            margin-top: 3%
+        }
+
+        .Update_form_container label {
+            font-size: 14px;
+            font-weight: 600;
+            margin-top: 15px;
+            margin-bottom: 8px;
+            color: #202124;
+            font-family: 'DM Sans';
+            display: block;
+        }
+
+        input {
+            border-radius: 5px;
+            width: 300px;
+            height: 38px;
+            /* margin: 10px; */
+            margin-bottom: 15px;
+            border-color: #a0a0a0;
+            border-style: solid;
+            padding-left: 10px;
+            margin-right: 20px;
+        }
+
+        input::placeholder {
+            font-size: 12px;
+            font-weight: 500;
+        }
+
+        .validMsg {
+            display: none;
+        }
+
+        .error .validMsg {
+            display: block;
+            color: red;
+        }
+
+        .default_job_details_wrp h6 {
+            font-weight: 500;
+            color: #a0a0a0;
+        }
+
+        .default_job_details_wrp h6>span {
+            font-weight: 600;
+            color: #202124;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <section>
+        <div class="container-fluid">
+            <h1 class="text-center mt-5">Custom Notification </h1>
+            <div class="row content_wrp">
+
+                <div class="col-sm-5 content_left">
+                    <div>
+
+                    </div>
+                    <div class="default_job_details_wrp d-none">
+                        <h3 class="py-4">Default Job details</h3>
+                        <h6>
+                            Employer Id : <span class="default_empId"></span>
+                        </h6>
+                        <h6>
+                            Job Id : <span class="default_jobId"></span>
+                        </h6>
+                        <h6>
+                            Expiry date : <span class="default_Expiry_date"></span>
+                        </h6>
+                        <h6>
+                            Posted time : <span class="default_Posted_time"></span>
+                        </h6>
+                        <button class="btn btn-success prefill_default my-4 px-4">5 Prefill</button>
+                        <div class="mt-5">
+                            <button onclick="location.reload()" class="btn btn-danger">7 Page refresh</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-7 content_right">
+                    <div class="Update_form_container">
+                        <form action="" onsubmit="return false">
+                            <div class="form-group">
+                                <label for="job_id">Job Id</label>
+                                <input id="job_id" class="" type="text" placeholder="Job Id" autofocus autocomplete="off">
+                                <button class="btn btn-success get_job_details" type="submit"> 1 Submit </button>
+                                <p class="validMsg">please fill out this feild</p>
+                            </div>
+
+
+                        </form>
+
+                        <form action="" class=" " onsubmit="return false">
+                            <div class="form-group">
+                                <label for="ExpiryDate">Expiry date</label>
+                                <input id="ExpiryDate" class="" type="text" placeholder="YYYY-MM-DD" autocomplete="off">
+                                <p class="validMsg">please fill out this feild</p>
+                            </div>
+                            <div class="form-group">
+                                <label for="postedTime">Posted time</label>
+                                <input id="postedTime" class="" type="text" placeholder="YYYY-MM-DD 00:00:00" autocomplete="off">
+                                <p class="validMsg">please fill out this feild</p>
+                            </div>
+                            <h5 class="responseMsg mb-3 text-success d-none">Updated successfully</h5>
+                            <button class="btn btn-success mt-3 update_form d-none" type="submit">2 Update </button><br>
+                            <div class="mt-4">
+                                <button class="btn btn-warning mt-3  text-white test_notification d-none">3 Test Notification</button>
+                                <button class="btn btn-primary mt-3 mx-5 production_notification d-none">4 Production Notification </button>
+                            </div>
+
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script defer src="./assest/js/all1.js"></script>
+    <script>
+        let noError;
+
+        function formValiidation() {
+            noError = 0;
+
+            if ($("#postedTime").val().length != 0) {
+                removeError("postedTime")
+            } else {
+                addError("postedTime")
+                noError++;
+            }
+
+            if ($("#ExpiryDate").val().length != 0) {
+                removeError("ExpiryDate")
+            } else {
+                addError("ExpiryDate")
+                noError++;
+            }
+
+            if ($("#job_id").val().length != 0) {
+                removeError("job_id")
+            } else {
+                addError("job_id")
+                noError++;
+            }
+
+
+        }
+        $(document).on("click", ".get_job_details", function() {
+            let job_id = $("#job_id").val();
+            let settings = {
+                url: "https://prod.taizo.in/webEmployer/job/" + job_id,
+                method: "GET",
+                contentType: "application/json; charset=utf-8",
+            }
+            $.ajax(settings).done(function(res) {
+                console.log(res)
+                $(".default_jobId").text(res.jobDetails.id)
+                $(".default_Posted_time").text(res.jobDetails.jobPostedTime.split("T").join(" ").split(".").shift())
+                $(".default_Expiry_date").text(res.jobDetails.expiryDate)
+                $(".default_empId").text(res.jobDetails.employerId)
+                $(".update_form").removeClass("d-none")
+                $(".default_job_details_wrp").removeClass("d-none")
+                $(".get_job_details").addClass("d-none")
+                $("#ExpiryDate").val(res.jobDetails.expiryDate)
+                $("#postedTime").val(res.jobDetails.jobPostedTime.split("T").join(" ").split(".").shift())
+
+
+
+                // $(".default_jobId").text(res.id)
+
+            })
+        })
+        $(document).on("click", ".update_form", function() {
+            formValiidation();
+            if (noError == 0) {
+                let job_id = $("#job_id").val();
+                let postedTime = $("#postedTime").val();
+                let ExpiryDate = $("#ExpiryDate").val();
+                let settings = {
+                    method: "PUT",
+                    async: false,
+                    url: "https://prod.taizo.in" + `/admin/jobE
+                    dit?jid=${job_id}&expiry_date=${ExpiryDate}&posted_time=${postedTime}`
+                }
+                $.ajax(settings).done(function(res) {
+                    console.log(res);
+                    successPopup("Updated")
+                    $(".responseMsg").removeClass("d-none")
+                    $(".production_notification").removeClass("d-none")
+                    $(".test_notification").removeClass("d-none")
+                })
+            }
+
+        })
+
+        $(document).on("click", ".prefill_default", function() {
+
+            $("#postedTime").val($(".default_Posted_time").text());
+            // $("#ExpiryDate").val($(".default_Expiry_date").text());
+            $(".responseMsg").addClass("d-none")
+            $(".production_notification").addClass("d-none")
+            $(".test_notification").addClass("d-none")
+            $(".update_form").text("6 Update")
+
+        })
+
+        $(document).on("input", "#ExpiryDate , #postedTime , #job_id", function() {
+            $(".responseMsg").addClass("d-none")
+            $(".production_notification").addClass("d-none")
+            $(".test_notification").addClass("d-none");
+        })
+
+        $(document).on("click", ".test_notification", function() {
+            triggerNotification("testJobNotification", "Test Noti")
+        })
+
+        $(document).on("click", ".production_notification", function() {
+            triggerNotification("jobNotification", "Prod Noti");
+
+        })
+
+        function triggerNotification(endUrl, status) {
+            let emp_Id = $(".default_empId").text();
+            let job_Id = $(".default_jobId").text();
+            let settings = {
+                method: "GET",
+                url: `https://prod.taizo.in/admin/${endUrl}?emp_id=${emp_Id}&job_id=${job_Id}`
+            }
+            $.ajax(settings).done(function() {
+                successPopup(status + "Sent")
+                console.log("done test")
+            })
+        }
+        // $("body").css("background-color", "red")
+    </script>
+</body>
+
+
+</html>

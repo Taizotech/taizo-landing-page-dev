@@ -1,0 +1,88 @@
+@media only screen and (max-width: 600px) {
+    .textCenter {
+        text-align: center;
+    }
+    .topNav_profileImg {
+        height: 30px !important;
+        width: 30px !important;
+    }
+    .statsdaterangeWrp {
+        margin-left: 60vw;
+    }
+    /* feedBack  */
+    .feedback_rowContainer {
+        min-height: 300px;
+        background: white;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        padding-bottom: 8% !important;
+        padding: 2%;
+        border-radius: 15px;
+        margin-top: -20px;
+        box-shadow: 0px 0px 6px #00000029;
+    }
+    /* end of feed Back */
+    /* index page  */
+    .otpmodalwrp {
+        width: 100% !important;
+        max-width: 500px;
+        background: #fff;
+        padding: 36px 5px !important;
+        border-radius: 32px;
+        margin: 0 auto;
+        text-align: center;
+        position: relative;
+    }
+    /* end of index page */
+    /* managejobs  */
+    .jdPopContSec li.nav-item {
+        margin-left: 5px;
+        width: auto;
+        text-align: center;
+        background: #f6f6f6;
+        border-radius: 11px 11px 0px 0px;
+    }
+    .jdHead {
+        padding: 0px 0px;
+    }
+    /* end of managejobs  */
+    /* candidate page */
+    .candidateJobDetails .jdheadWrp {
+        position: relative;
+        padding-left: 30px;
+    }
+    .candidate_profile_img {
+        border-radius: 18px;
+        height: 80px;
+        width: 80px;
+        object-fit: cover;
+        object-position: 15% 30%;
+        margin-left: -20px;
+        margin-top: -20px;
+    }
+    .can_icons_align {
+        margin-top: 0px;
+    }
+    /* end of  candidate page  */
+    /* manage jobs */
+    .jdPopContSec .manageJobContWrp {
+        padding: 0px 0px;
+        padding-bottom: 40px;
+    }
+    /* end of manage jobs  */
+}
+
+@media only screen and (max-width: 375px) {
+    .jsPscatType {
+        padding-top: 20px;
+    }
+    .candidate_profile_img {
+        border-radius: 18px;
+        height: 70px;
+        width: 70px;
+        object-fit: cover;
+        object-position: 15% 30%;
+        margin-left: -20px;
+        margin-top: -20px;
+    }
+}

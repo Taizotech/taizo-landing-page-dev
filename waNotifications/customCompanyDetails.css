@@ -1,0 +1,259 @@
+body {
+    /* background-color: #FCFCFC; */
+    /* background: linear-gradient(90deg, white 33.333%, #e6e3e3 66.666%); */
+    /* background: linear-gradient(to right, white 0%, white 33.333%, #e2e0e0 33.70%, #FCFCFC 33.80%, #FCFCFC 100%); */
+
+    background-color: #1cb260;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+label {
+    font-size: 12px;
+    font-weight: 600;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    color: #202124;
+    font-family: 'DM Sans';
+}
+
+input:hover,
+select:hover {
+    cursor: pointer;
+}
+
+.frmtitle {
+    font-weight: 600;
+}
+
+.cmpdtlsfrm {
+    width: 50vw;
+    margin: 0px auto;
+    padding: 10px 30px;
+}
+
+.leftContent {
+    /* display: grid;
+        align-items: center; */
+    padding: 15vh 50px;
+    background-color: white;
+}
+
+.stepper,
+.detailsList {
+    list-style-type: none;
+}
+
+.vertical_line {
+    border-left-style: solid;
+    border-color: #999;
+    margin-left: -3px;
+}
+
+.activeStep {
+    color: #1cb260 !important;
+    border-color: #1cb260 !important;
+}
+
+.stepperTop li,
+.detailsList li {
+    display: inline;
+}
+
+.detailsList {
+    margin-left: -10px;
+}
+
+.stepperTop li {
+    margin-left: -10px;
+}
+
+.webView {
+    display: block;
+}
+
+.mobileView {
+    display: none;
+}
+
+.lsttitle {
+    font-size: 23px;
+    font-weight: 600;
+    color: #393939;
+    font-family: 'DM Sans';
+}
+
+.dot {
+    height: 35px;
+    width: 35px;
+    background-color: white;
+    border-style: solid;
+    border-color: #999;
+    border-radius: 50%;
+    display: inline-block;
+    overflow: hidden;
+    border: 2px solid #999;
+    /* border-radius: 50% !important; */
+    margin-left: -22px;
+}
+
+/* #nextStep1{
+        margin-top: 125%;
+        margin-right: 90%;
+    } */
+
+.stepperweb .dot {
+    position: absolute;
+    height: 35px;
+    width: 35px;
+    background-color: white;
+    border-style: solid;
+    border-color: #999;
+    border-radius: 50%;
+    display: inline-block;
+    overflow: hidden;
+    border: 2px solid #999;
+    /* border-radius: 50% !important; */
+    /* margin-left: -22px; */
+    left: 62px;
+    margin-top: -7px !important;
+}
+
+.horizondalLine {
+    border-bottom: solid;
+    width: 60vw;
+    margin-left: 25px;
+    margin-bottom: -35px;
+    /* margin-top: 10px; */
+    border-color: #999;
+}
+
+img.brandLogo {
+    width: 165px;
+}
+
+#contactNum {
+    width: 22vw;
+}
+
+.logoSec {
+    width: 75px;
+    height: 75px;
+}
+
+.uploadContainer {
+    border-style: dashed;
+    border-color: #e2e0e0;
+    height: 73px;
+    justify-content: end;
+    border-left: none;
+    border-radius: 10px;
+    margin-left: -50px;
+    /* background-color: white; */
+}
+
+.dropDown {
+    width: 100px;
+    height: 200px;
+    overflow-x: auto;
+}
+
+.stepperweb li span {
+    font-weight: 600;
+}
+
+.current_cities_popup .popup_city_list {
+    list-style-position: outside;
+    padding: 0px;
+}
+
+.current_cities_popup .text_content p {
+    margin-bottom: 0px;
+    margin-top: 10px;
+    font-size: 15px;
+}
+
+.current_cities_popup .popup_city_list>li {
+    display: inline-block;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.current_cities_popup .common_popupContent {
+    max-width: 620px;
+    width: auto;
+    padding: 5px 25px;
+}
+
+.social_icons_wrp {
+    padding-left: 0px;
+    margin-top: 15px;
+}
+
+.social_icons_wrp .SocNavItem {
+    list-style: none;
+    display: inline-block;
+    margin: 0px 15px;
+}
+
+#whatapp_number {
+    background-image: url("images/whatsapp.png");
+    background-repeat: no-repeat;
+    background-size: 20px;
+    background-position: 97% center;
+}
+
+@media screen and (min-width:240px) and (max-width:480px) {
+    .webView {
+        display: none;
+    }
+
+    .mobileView {
+        display: block;
+        /* padding: 0px 5px; */
+    }
+
+    .cmpdtlsfrm {
+        width: 90vw;
+        padding: 0px 20px;
+        margin: 10px auto;
+        /* padding: 0px 0px; */
+    }
+
+    body {
+        background: #FCFCFC !important;
+    }
+
+    #contactNum {
+        width: 78vw;
+    }
+}
+
+@media screen and (max-width:600px) {
+    label {
+        margin-top: 5px;
+    }
+
+
+    .social_icons_wrp {
+        padding-left: 0px;
+        margin-top: 10px;
+    }
+
+    .current_cities_popup .common_popupContent {
+        max-width: 620px;
+        width: auto;
+        padding: 0px 5px;
+    }
+}
+
+form select {
+    background-image: url("images/downArrow.png");
+    background-repeat: no-repeat;
+    background-size: 10px;
+    background-position: 95%;
+}

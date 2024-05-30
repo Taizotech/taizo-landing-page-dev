@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Taizo - Company Details</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon.ico" />
+    <link rel="stylesheet" href="customCompanyDetails.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="google-signin-client_id"
+        content="1051314195440-n6cqggaf3t0226jedti402qnh5rpiq27.apps.googleusercontent.com" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/css/intlTelInput.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+        integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css?family=DM Sans" rel="stylesheet" />
+    <link rel="stylesheet" href="./assest/css/popupModal1.css">
+    <link rel="stylesheet" href="./assest/css/common1.css">
+    <link rel="stylesheet" href="./assest/css/style1.css">
+
+</head>
+<style>
+    /* html {
+        overflow-x: hidden;
+    } */
+</style>
+
+<body>
+    <div class="container ">
+        <div class="CompDetlsfrm">
+            <div class="cmpdtlsfrmwrp">
+                <div class="cmpdtlsfrm" action="">
+                    <div class="cmpnyDetails ">
+                        <form action="" onsubmit=" return false">
+                            <h4 class="frmtitle">Admin-Company Details</h4>
+                            <div class="col-sm-6 form-group">
+                                <label for="myfile">Company Logo (Recommended)</label>
+                                <div class="row form-group">
+                                    <div class="col-3" style="z-index: 1;">
+                                        <div class="logoSec text-left">
+                                            <button id="companyImg_btn" onclick="return false" type="button"
+                                                tabindex="1" style="background-color: inherit; border-style:none; ">
+                                                <img src="./images1/Company-Logo.png" width="75px" height="75px"
+                                                    style="border-radius: 10px; border-color:#e2e0e0; border-style: solid;background-color: inherit;"
+                                                    class=" companyImg " id="companyImg"></button>
+                                            <input type="file" id="myfile" onchange="loadImg(event)" readonly
+                                                placeholder="upload" class="d-none" name="myfile"
+                                                accept=".jpg, .jpeg, .png">
+                                        </div>
+                                    </div>
+                                    <div class="col-9">
+                                        <div class="d-grid uploadContainer">
+                                            <button
+                                                style="margin: auto 10px; color: #316DC5; border-style: none; background-color: inherit; cursor: pointer; "
+                                                onclick="return false" type="button" id="uploadLogo"
+                                                tabindex="2">Upload</button>
+                                        </div>
+                                    </div>
+                                    <div class="validMsg fileValidate" style="color: red">
+                                        Please upload company log
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label for="industry">Industry</label>
+                                        <select required name="industry" class="form-control" id="industry" autofocus
+                                            tabindex="3">
+
+                                        </select>
+                                        <div class="validMsg" style="color: red">
+                                            Please select the industry
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="col-sm-6 form-group">
+                                    <label for="">Business Type</label>
+                                    <select required name="" class="form-control" id="business_type" autofocus
+                                        tabindex="4">
+                                        <option value="" selected>Select</option>
+                                        <option value="Manufacturing ">Manufacturing </option>
+                                        <option value="Staffing Services">Staffing Services</option>
+                                        <option value="Others">Others</option>
+                                    </select>
+                                    <p class="validMsg">Please fill out this field</p>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label for="companyname">Company Name</label>
+                                        <input type="text" name="companyname" id="companyName" class="form-control"
+                                            placeholder="Company Name" tabindex="5" />
+                                        <div class="validMsg" style="color: red">
+                                            Please enter your company name
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label for="email">Email</label>
+                                        <input type="email" name="ciemailty" id="emailValue" class="form-control"
+                                            placeholder="Email" tabindex="6" />
+                                        <div class="validMsg emailError" style="color: red">
+                                            Please enter your email
+                                        </div>
+                                        <div class="emailError d-none" style="color: red">
+                                            Please enter valid Email Id
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <!-- <label for="city">City/Town</label> -->
+                                        <!-- <input type="text" name="city" class="form-control" id="cityName" placeholder="City/Town" /> -->
+                                        <div data-bs-toggle="dropdown" data-bs-target="cityDt"> <label
+                                                for="cityName">City</label><input type="text" list="city_list"
+                                                class="form-control text-capitalize" placeholder="Ex: Chennai"
+                                                id="cityName" autocomplete="off" style="background-color:white ; "
+                                                tabindex="7" name="cityName"></input>
+                                            <datalist id="city_list">
+                                                <option value="Edge">
+                                            </datalist>
+                                            <div class="d-grid justify-content-end pe-3" style="margin-top: -20px;">
+                                                <iconify-icon icon="il:arrow-down"
+                                                    style="font-size:10px ;"></iconify-icon>
+                                            </div>
+                                        </div>
+                                        <!-- <div class=" d-none validcity">Please select a city </div> -->
+                                        <!-- <ul class="dropdown-menu mt-4" id="cityDt" style="width: 19vw;">
+
+                                    </ul> -->
+                                        <div class="validMsg mt-4 city_err_text" style="color: red">
+                                            Please enter your city/town
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="col-sm-6 mt-4 mt-sm-0">
+                                    <div class="form-group">
+                                        <label for="areaName">Area</label>
+                                        <input type="text" list="areaDt" class="form-control  " autocomplete="off"
+                                            placeholder="Ex: Korattur" id="areaName" name="areaName" maxlength="45"
+                                            tabindex="8">
+
+                                        <datalist id="areaDt" style="width: 100px !important;">
+                                        </datalist>
+
+                                        <div class="validMsg" style="color: red">
+                                            Please enter your area
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="address">Address</label>
+                                <textarea class="form-control" id="addressText" name="address" id="address"
+                                    placeholder="Ex: No-943, 39th Street, Korattur, Chennai. " cols="30" rows="3"
+                                    tabindex="9"></textarea>
+
+                                <div class="validMsg" style="color: red">
+                                    Please enter your address
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                <label for="address">Latitude</label>
+                                <input type="text" name="latitude" id="latitudeName" class="form-control"
+                                    placeholder="Latitude" tabindex="10" />
+                                <div class="validMsg" style="color: red">
+                                    Please Enter the latitude
+                                </div>
+                            </div></div><div class="col-sm-6"> <div class="form-group">
+                                <label for="address">Longitude</label>
+                                <input type="text" name="longitude" id="longitueName" class="form-control"
+                                    placeholder="longitue" tabindex="11" />
+                                <div class="validMsg" style="color: red">
+                                    Please Enter the longitue
+                                </div>
+                            </div></div>
+                        </div>
+
+
+                            <!-- <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" name="ciemailty" id="emailValue" class="form-control" placeholder="Email" tabindex="5" />
+                            <div class="validMsg emailError" style="color: red">
+                                Please enter your email
+                            </div>
+                            <div class="emailError d-none" style="color: red">
+                                Please enter valid Email Id
+                            </div>
+                        </div> -->
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label for="contactName">Contact Person Name</label>
+                                        <input type="text" name="contactName" id="contactName" autofocus
+                                            class="form-control text-capitalize contactName"
+                                            placeholder="contact Person Name" tabindex="12" />
+                                        <div class="validMsg" style="color: red">
+                                            Please enter the contact person name
+                                        </div>
+                                    </div>
+
+
+
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label for="whatapp_number">WhatsApp number</label>
+                                        <input type="number" onKeyPress="if(this.value.length==10) return false;"
+                                            name="whatapp_number" id="whatapp_number" autofocus
+                                            class="form-control text-capitalize " placeholder="WhatsApp Number"
+                                            tabindex="13" />
+                                        <div class="validMsg" style="color: red">
+                                            Please enter the valid WhatApp number
+                                        </div>
+                                    </div></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-6"><div class="form-group">
+                                        <label for="websiteURL">Website URL (Optional) </label>
+                                        <input type="text" name="websiteURL" maxlength="75" id="websiteURL"
+                                            class="form-control" placeholder="Website URL" tabindex="14" />
+                                        <div class="validMsg" style="color: red">
+                                            Please fill out this field
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-6">
+                                    <!-- right side -->
+
+                                    <div class="form-group">
+                                        <label for="mobileNum">Mobile number</label>
+                                        <input type="number" onKeyPress="if(this.value.length==10) return false;"
+                                            name="mobileNum" id="mobileNum" autofocus
+                                            class="form-control text-capitalize " placeholder="mobile Number"
+                                            tabindex="15" />
+                                        <div class="validMsg" style="color: red">
+                                            Please enter the valid Mobile number
+                                        </div>
+                                    </div>
+                                </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="form-group">
+                                        <label for="numOfEmployes">No of Employees</label>
+                                        <select required class="form-control" name="" id="numOfEmployes" tabindex="16"
+                                            size="">
+                                            <option selected value="">Select No of employees</option>
+                                            <option value="0-1">0-1</option>
+                                            <option value="2-10">2-10</option>
+                                            <option value="11-50">11-50</option>
+                                            <option value="51-200">51-200</option>
+                                            <option value="200+">200+</option>
+                                        </select>
+                                        <!-- <div data-bs-toggle="dropdown"><input type="text" readonly style="background-color: white;" name="numOfEmployes" id="numOfEmployes" class="form-control" placeholder="No of Employees" tabindex="8" /></div>
+                                    <ul class="dropdown-menu dropDown" id="numOfEmpList" aria-labelledby="numOfEmployes">
+                                        <li class="dropdown-item">0-1</li>
+                                        <li class="dropdown-item">2-10</li>
+                                        <li class="dropdown-item">11-50</li>
+                                        <li class="dropdown-item">51-200</li>
+                                        <li class="dropdown-item">200+</li>
+                                    </ul> -->
+
+                                        <div class="validMsg" style="color: red">
+                                            Please select no of employees
+                                        </div>
+                                    </div>
+                                  </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label for="contactNum">Landline Number (Optional) </label>
+                                        <input type="number" onKeyPress="if(this.value.length==10) return false;"
+                                                name="contactNum" id="contactNum" class="form-control"
+                                                placeholder="Landline number" tabindex="17" />
+                                        <div class="validMsg" style="color: red">
+                                            Please fill out this field
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                                  <div class="row">
+                                    <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label for="yearFound">Year Founded</label>
+                                        <div data-bs-toggle="dropdown"><input list="yearFounded_list" type="text"
+                                                name="yearFound" style="background-color: white;" class="form-control"
+                                                id="yearFound" placeholder="Year Founded" tabindex="18" />
+                                            <datalist id="yearFounded_list">
+
+                                            </datalist>
+                                        </div>
+
+                                        <!-- <ul class="dropdown-menu dropDown" id="yearFoundList" aria-labelledby="yearFound">
+
+                                    </ul> -->
+                                        <div class="validMsg" style="color: red">
+                                            Please select the year founded
+                                        </div>
+                                    </div></div>
+                                     <div class="col-sm-6">
+                                            <div class="form-group">
+                                                <label for="gstNum">GST Number <span
+                                                        class="text-danger">*</span></label>
+                                                <input type="text" name="gstNum" class="form-control text-uppercase"
+                                                    maxlength="15" id="gstNum" placeholder="GST Number "
+                                                    tabindex="19" />
+                                                <div class="validMsg" style="color: red">
+                                                    Please enter valid GST number
+                                                </div>
+                                            </div></div>
+                                            <!-- <div style="padding: 10px; margin-top: 20px; background-color:#fcf7eb ; height: auto; border-radius: 10px;text-align: left; font-size: 12px; font-weight: 500;">
+                                        <span class="iconify" data-icon="eva:info-fill" style="color: #deb33c; font-size: 20px;"></span><strong> Why do we need GST information?</strong><br><br>
+                                        <p class="ps-2" style="color: #202124E6;">
+                                            Taizo screens every job posting and company before they are published our platform to protect job seekers and prevent job hunt fraud.<br> <br> contact us at <strong><a href="tel:+917806805808">+91 7806805808</a></strong>                                                            for assistance.
+                                        </p>
+                                    </div> -->
+                                        </div>
+                                <div class="row">
+                                    <div class="col-12 ">
+
+                                        <div class="form-group">
+                                            <label for="referalOption">How did you hear about us?</label>
+                                            <select required type="text" name="referalOption" class="form-control"
+                                                id="referalOption" placeholder="-Select-" tabindex="20">
+                                                <option selected value=""> -Select- </option>
+                                                <option value="Email">Email</option>
+                                                <option value="YouTube">YouTube</option>
+                                                <option value="Facebook">Facebook</option>
+                                                <option value="Instagram">Instagram</option>
+                                                <option value="WhatsApp">WhatsApp</option>
+                                                <option value="LinkedIn">LinkedIn</option>
+                                                <option value="Google Search">Google Search</option>
+                                                <option value="Recommended by a friend or colleague">Recommended by a
+                                                    friend or colleague</option>
+                                                <option value="Recommended by Industrial Association">Recommended by
+                                                    Industrial Association</option>
+                                                <option value="Taizo staff member">Taizo staff member</option>
+                                                <option value="Other">Others</option>
+                                            </select>
+                                            <div class="validMsg" style="color: red">
+                                                Please fill out this field
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                <div class="" style="display: flex; justify-content: end;">
+                    <button class="btn bg-green text-white px-4 mt-4" type="submit" id="nextStep1">SUBMIT</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+     </div>
+    </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js "></script>
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDClUaUiKoy6KFC0ZrEPM-a5RF80OWysOc&libraries=places&callback=initialize"
+        defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/js/intlTelInput-jquery.min.js "></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js "></script>
+    <script defer src="./assest/js/all1.js "></script>
+    <script defer src="./assest/js/companyDetails1.js "></script>
+    <script>
+
+// document.getElementById('cityName').addEventListener('keydown', function(e) {
+//         if (e.key !== "Backspace") {
+//             e.preventDefault(); // Prevent any input except backspace
+//         }
+//     });
+
+//     document.getElementById('areaName').addEventListener('keydown', function(e) {
+//         if (e.key !== "Backspace") {
+//             e.preventDefault(); // Prevent any input except backspace
+//         }
+//     });
+        let user_location_details = {};
+        function initialize() {
+            let latitude, longitude, state, pin_code, country;
+            let input = document.getElementById("companyName");
+            const autocomplete = new google.maps.places.Autocomplete(input);
+            // console.log(autocomplete.getPlace());
+            autocomplete.addListener("place_changed", onPlaceChange);
+
+            function onPlaceChange() {
+                var place = autocomplete.getPlace();
+                latitude = place.geometry.location.lat();
+                longitude = place.geometry.location.lng();
+
+                $("#addressText").val(place.formatted_address);
+                $("#companyName").val(place.name);
+                $("#latitudeName").val(latitude);
+                $("#longitueName").val(longitude);
+                removeError("addressText");
+                let address_components = place.address_components;
+
+                for (var i = 0; i < address_components.length; i++) {
+                    if (address_components[i].types.indexOf("locality") != -1) {
+                        city = address_components[i].long_name;
+                    } else if (
+                        address_components[i].types.indexOf("administrative_area_level_1") != -1
+                    ) {
+                        state = address_components[i].long_name;
+                    } else if (address_components[i].types.indexOf("postal_code") != -1) {
+                        pin_code = address_components[i].long_name;
+                    } else if (address_components[i].types.indexOf("country") != -1) {
+                        country = address_components[i].long_name;
+                    } else if (
+                        address_components[i].types.indexOf("sublocality_level_1") != -1
+                    ) {
+                        area = address_components[i].long_name;
+                    }
+                }
+
+                user_location_details = {
+                    latitude: typeof latitude != "undefined" ? latitude : null,
+                    longitude: typeof longitude != "undefined" ? longitude : null,
+                    state: typeof state != "undefined" ? state : null,
+                    pin_code: typeof pin_code != "undefined" ? pin_code : null,
+                    country: typeof country != "undefined" ? country : null,
+                    area: typeof area != "undefined" ? area : null,
+                    //   address: typeof address != "undefined" ? address : null,
+                };
+                console.log(user_location_details)
+            }
+
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,1063 @@
+@media screen and (min-device-width: 200px) and (max-device-width: 576px) {
+    .languageBtn {
+        position: relative;
+        right: 3%;
+    }
+    .mentorSec {
+        margin: 3% !important;
+    }
+    .playStoreImg {
+        position: relative;
+        top: 25%;
+        right: 7% !important;
+    }
+    .jobSeekerBannerContent {
+        position: relative;
+        /* top: 0px !important; */
+        top: 0px !important;
+        /* margin-top: -60% !important;*/
+    }
+    .jobSeekerAppImg {
+        /* position: relative; */
+        /* bottom: 4%; */
+        width: 100% !important;
+        top: 15% !important;
+    }
+    .jobSeekerImg {
+        width: 60% !important;
+    }
+    .jobSeekerTitleSec {
+        text-align: center;
+        font-weight: bold;
+        font-size: 20px !important;
+        color: #283A2B;
+    }
+    /*.jobSeekerBannerContent {
+    position: relative;
+    top: 40px !important;
+}*/
+    #homeBoldTitle {
+        position: relative;
+        left: 0% !important;
+        text-align: center !important;
+    }
+    .slideEmployeeBtn {
+        background: #1CB260 !important;
+        color: white !important;
+        border: 1px solid #1CB260 !important;
+        width: 40%;
+        line-height: 30px;
+        font-size: 14px !important;
+    }
+    .employerBtnRight {
+        position: relative;
+        right: 30%;
+    }
+    .employerBtnLeft {
+        position: relative;
+        left: 26.55%;
+        top: 20px;
+    }
+    .slideTxt {
+        position: relative;
+        bottom: 4%;
+    }
+    .sliderSecondSec {
+        position: relative;
+        width: 55%;
+        left: 22%;
+    }
+    .cardSec {
+        margin: 0 auto !important;
+        text-align: center !important;
+        margin-bottom: 5% !important;
+    }
+    .cardSecContent {
+        margin: 0 auto !important;
+        text-align: center !important;
+    }
+    .mentorSec {
+        margin-top: 10%;
+    }
+    .mentorTitle {
+        padding-top: 10%;
+    }
+    .teamMemberContent {
+        position: relative;
+        top: 25px;
+    }
+    .jobSeekerTitle {
+        text-align: center;
+        font-weight: bold;
+        font-size: 18px !important;
+        color: #283A2B;
+    }
+    /* .aboutusContent {
+        position: relative;
+        top: 28%;
+    } */
+    .aboutusTitle {
+        position: relative;
+        top: 25%;
+        color: #FFFFFF;
+        font-size: 26px;
+    }
+    .mentorPadding {
+        margin: 0px !important;
+        padding: 10px !important;
+    }
+    .teamMemberBg {
+        background: #F8F8F8 !important;
+    }
+    .homeSubTitle {
+        text-align: center !important;
+    }
+    .postJobImg {
+        width: 60% !important;
+    }
+    .homeLight {
+        text-align: center !important;
+        font-size: 10px !important;
+    }
+    .homeBold {
+        text-align: center !important;
+        font-size: 10px !important;
+    }
+    .homeSecondSubTitle {
+        text-align: center !important;
+    }
+    .hireEmployeeBtn {
+        margin: 0 auto;
+        text-align: center;
+        display: block;
+        width: 50% !important;
+    }
+
+    .employeeBtn {
+        margin: 0 auto;
+        text-align: center;
+        display: block;
+        width: 50% !important;
+    }
+    .homeItem {
+        text-align: center !important;
+    }
+    .mentorSubTitleSec {
+        color: #393939;
+        font-size: 12px;
+    }
+    .postJobCont {
+        text-align: center !important;
+        font-size: 10px !important;
+    }
+    .postJobContSec {
+        text-align: center !important;
+        font-size: 10px !important;
+    }
+    .homeLightFont {
+        color: #A3A3A3 !important;
+        font-size: 10px !important;
+    }
+}
+
+@media screen and (min-device-width:375px) and (max-device-width: 375px) {
+    .languageBtn {
+        position: relative;
+        right: 3%;
+    }
+    .mentorSec {
+        margin: 3% !important;
+    }
+    .playStoreImg {
+        position: relative;
+        top: 25%;
+        right: 7% !important;
+    }
+    .jobSeekerBannerContent {
+        position: relative;
+        /* top: 0px !important; */
+        top: 0px !important;
+        /* margin-top: -60% !important;*/
+    }
+    .jobSeekerAppImg {
+        /* position: relative; */
+        /* bottom: 4%; */
+        width: 100% !important;
+        top: 15% !important;
+    }
+    .jobSeekerImg {
+        width: 60% !important;
+    }
+    .jobSeekerTitleSec {
+        text-align: center;
+        font-weight: bold;
+        font-size: 20px !important;
+        color: #283A2B;
+    }
+    /*.jobSeekerBannerContent {
+    position: relative;
+    top: 40px !important;
+}*/
+    #homeBoldTitle {
+        position: relative;
+        left: 0% !important;
+        text-align: center !important;
+    }
+    .slideEmployeeBtn {
+        background: #1CB260 !important;
+        color: white !important;
+        border: 1px solid #1CB260 !important;
+        width: 40%;
+        line-height: 30px;
+        font-size: 14px !important;
+    }
+    .employerBtnRight {
+        position: relative;
+        right: 30%;
+    }
+    .employerBtnLeft {
+        position: relative;
+        left: 26.55%;
+        top: 20px;
+    }
+    .slideTxt {
+        position: relative;
+        bottom: 4%;
+    }
+    .sliderSecondSec {
+        position: relative;
+        width: 55%;
+        left: 22%;
+    }
+    .cardSec {
+        margin: 0 auto !important;
+        text-align: center !important;
+        margin-bottom: 5% !important;
+    }
+    .cardSecContent {
+        margin: 0 auto !important;
+        text-align: center !important;
+    }
+    .mentorSec {
+        margin-top: 10%;
+    }
+    .mentorTitle {
+        padding-top: 10%;
+    }
+    .teamMemberContent {
+        position: relative;
+        top: 25px;
+    }
+    .jobSeekerTitle {
+        text-align: center;
+        font-weight: bold;
+        font-size: 18px !important;
+        color: #283A2B;
+    }
+    /* .aboutusContent {
+        position: relative;
+        top: 28%;
+    } */
+    .aboutusTitle {
+        position: relative;
+        top: 25%;
+        color: #FFFFFF;
+        font-size: 26px;
+    }
+    .mentorPadding {
+        margin: 0px !important;
+        padding: 10px !important;
+    }
+    .teamMemberBg {
+        background: #F8F8F8 !important;
+    }
+    .homeSubTitle {
+        text-align: center !important;
+    }
+    .postJobImg {
+        width: 60% !important;
+    }
+    .homeLight {
+        text-align: center !important;
+        font-size: 10px !important;
+    }
+    .homeBold {
+        text-align: center !important;
+        font-size: 10px !important;
+    }
+    .homeSecondSubTitle {
+        text-align: center !important;
+    }
+    .hireEmployeeBtn {
+        margin: 0 auto;
+        text-align: center;
+        display: block;
+        width: 50% !important;
+    }
+    .employeeBtn {
+        margin: 0 auto;
+        text-align: center;
+        display: block;
+        width: 50% !important;
+    }
+    .homeItem {
+        text-align: center !important;
+    }
+    .mentorSubTitleSec {
+        color: #393939;
+        font-size: 12px;
+    }
+    .postJobCont {
+        text-align: center !important;
+        font-size: 10px !important;
+    }
+    .postJobContSec {
+        text-align: center !important;
+        font-size: 10px !important;
+    }
+    .homeLightFont {
+        color: #A3A3A3 !important;
+        font-size: 10px !important;
+    }
+}
+
+@media screen and (min-device-width:360px) and (max-device-width: 360px) {
+    .languageBtn {
+        position: relative;
+        right: 3%;
+    }
+    .sliderSecondImg {
+        padding-top: 35%;
+        width: 80% !important;
+        margin: 0 auto !important;
+        display: block !important;
+        text-align: center;
+    }
+    .mentorSec {
+        margin: 3% !important;
+    }
+    .playStoreImg {
+        position: relative;
+        top: 25%;
+        right: 7% !important;
+    }
+    .jobSeekerBannerContent {
+        position: relative;
+        /* top: 0px !important; */
+        top: 0px !important;
+        /* margin-top: -60% !important;*/
+    }
+    .jobSeekerAppImg {
+        /* position: relative; */
+        /* bottom: 4%; */
+        width: 100% !important;
+        top: 15% !important;
+    }
+    .jobSeekerImg {
+        width: 60% !important;
+    }
+    .jobSeekerTitleSec {
+        text-align: center;
+        font-weight: bold;
+        font-size: 20px !important;
+        color: #283A2B;
+    }
+    /*.jobSeekerBannerContent {
+    position: relative;
+    top: 40px !important;
+}*/
+    #homeBoldTitle {
+        position: relative;
+        left: 0% !important;
+        text-align: center !important;
+    }
+    .slideEmployeeBtn {
+        background: #1CB260 !important;
+        color: white !important;
+        border: 1px solid #1CB260 !important;
+        width: 40%;
+        line-height: 30px;
+        font-size: 14px !important;
+    }
+    .employerBtnRight {
+        position: relative;
+        right: 30%;
+    }
+    .employerBtnLeft {
+        position: relative;
+        left: 26.55%;
+        top: 20px;
+    }
+    .slideTxt {
+        position: relative;
+        bottom: 4%;
+    }
+    .sliderSecondSec {
+        position: relative;
+        width: 55%;
+        left: 22%;
+    }
+    .cardSec {
+        margin: 0 auto !important;
+        text-align: center !important;
+        margin-bottom: 5% !important;
+    }
+    .cardSecContent {
+        margin: 0 auto !important;
+        text-align: center !important;
+    }
+    .mentorSec {
+        margin-top: 10%;
+    }
+    .mentorTitle {
+        padding-top: 10%;
+    }
+    .teamMemberContent {
+        position: relative;
+        top: 25px;
+    }
+    .jobSeekerTitle {
+        text-align: center;
+        font-weight: bold;
+        font-size: 18px !important;
+        color: #283A2B;
+    }
+    /* .aboutusContent {
+        position: relative;
+        top: 28%;
+    } */
+    .aboutusTitle {
+        position: relative;
+        top: 25%;
+        color: #FFFFFF;
+        font-size: 26px;
+    }
+    .mentorPadding {
+        margin: 0px !important;
+        padding: 10px !important;
+    }
+    .teamMemberBg {
+        background: #F8F8F8 !important;
+    }
+    .homeSubTitle {
+        text-align: center !important;
+    }
+    .postJobImg {
+        width: 60% !important;
+    }
+    .homeLight {
+        text-align: center !important;
+        font-size: 10px !important;
+    }
+    .homeBold {
+        text-align: center !important;
+        font-size: 10px !important;
+    }
+    .homeSecondSubTitle {
+        text-align: center !important;
+    }
+    .hireEmployeeBtn {
+        margin: 0 auto;
+        text-align: center;
+        display: block;
+        width: 50% !important;
+    }
+    .employeeBtn {
+        margin: 0 auto;
+        text-align: center;
+        display: block;
+        width: 50% !important;
+    }
+    .homeItem {
+        text-align: center !important;
+    }
+    .mentorSubTitleSec {
+        color: #393939;
+        font-size: 12px;
+    }
+    .postJobCont {
+        text-align: center !important;
+        font-size: 10px !important;
+    }
+    .postJobContSec {
+        text-align: center !important;
+        font-size: 10px !important;
+    }
+    .homeLightFont {
+        color: #A3A3A3 !important;
+        font-size: 10px !important;
+    }
+}
+
+@media screen and (min-device-width: 577px) and (max-device-width:960px) {
+    .languageBtn {
+        position: relative;
+        right: 3%;
+    }
+    .mentorSec {
+        margin: 3% !important;
+    }
+    .playStoreImg {
+        position: relative;
+        top: 25%;
+        right: 7% !important;
+    }
+    .jobSeekerBannerContent {
+        position: relative;
+        /* top: 0px !important; */
+        top: 0px !important;
+        /* margin-top: -60% !important;*/
+    }
+    .jobSeekerAppImg {
+        /* position: relative; */
+        /* bottom: 4%; */
+        width: 100% !important;
+        top: 15% !important;
+    }
+    .jobSeekerImg {
+        width: 60% !important;
+    }
+    .jobSeekerTitleSec {
+        text-align: center;
+        font-weight: bold;
+        font-size: 20px !important;
+        color: #283A2B;
+    }
+    /*.jobSeekerBannerContent {
+    position: relative;
+    top: 40px !important;
+}*/
+    #homeBoldTitle {
+        position: relative;
+        left: 0% !important;
+        text-align: center !important;
+    }
+    .slideEmployeeBtn {
+        background: #1CB260 !important;
+        color: white !important;
+        border: 1px solid #1CB260 !important;
+        width: 40%;
+        line-height: 30px;
+        font-size: 14px !important;
+    }
+    .employerBtnRight {
+        position: relative;
+        right: 30%;
+    }
+    .employerBtnLeft {
+        position: relative;
+        left: 26.55%;
+        top: 20px;
+    }
+    .slideTxt {
+        position: relative;
+        bottom: 4%;
+    }
+    .sliderSecondSec {
+        position: relative;
+        width: 55%;
+        left: 22%;
+    }
+    .cardSec {
+        margin: 0 auto !important;
+        text-align: center !important;
+        margin-bottom: 5% !important;
+    }
+    .cardSecContent {
+        margin: 0 auto !important;
+        text-align: center !important;
+    }
+    .mentorSec {
+        margin-top: 10%;
+    }
+    .mentorTitle {
+        padding-top: 10%;
+    }
+    .teamMemberContent {
+        position: relative;
+        top: 25px;
+    }
+    .jobSeekerTitle {
+        text-align: center;
+        font-weight: bold;
+        font-size: 18px !important;
+        color: #283A2B;
+    }
+    /* .aboutusContent {
+        position: relative;
+        top: 28%;
+    } */
+    .aboutusTitle {
+        position: relative;
+        top: 25%;
+        color: #FFFFFF;
+        font-size: 26px;
+    }
+    .mentorPadding {
+        margin: 0px !important;
+        padding: 10px !important;
+    }
+    .teamMemberBg {
+        background: #F8F8F8 !important;
+    }
+    .homeSubTitle {
+        text-align: center !important;
+    }
+    .postJobImg {
+        width: 60% !important;
+    }
+    .homeLight {
+        text-align: center !important;
+        font-size: 10px !important;
+    }
+    .homeBold {
+        text-align: center !important;
+        font-size: 10px !important;
+    }
+    .homeSecondSubTitle {
+        text-align: center !important;
+    }
+    .hireEmployeeBtn {
+        margin: 0 auto;
+        text-align: center;
+        display: block;
+        width: 50% !important;
+    }
+
+    .employeeBtn {
+        margin: 0 auto;
+        text-align: center;
+        display: block;
+        width: 50% !important;
+    }
+    .homeItem {
+        text-align: center !important;
+    }
+    .mentorSubTitleSec {
+        color: #393939;
+        font-size: 12px;
+    }
+    .postJobCont {
+        text-align: center !important;
+        font-size: 10px !important;
+    }
+    .postJobContSec {
+        text-align: center !important;
+        font-size: 10px !important;
+    }
+    .homeLightFont {
+        color: #A3A3A3 !important;
+        font-size: 10px !important;
+    }
+}
+
+@media screen and (min-device-width: 280px) and (max-device-width:280px) {
+    .languageBtn {
+        position: relative;
+        right: 3%;
+    }
+    .mentorSec {
+        margin: 3% !important;
+    }
+    .playStoreImg {
+        position: relative;
+        top: 25%;
+        right: 7% !important;
+    }
+    .jobSeekerBannerContent {
+        position: relative;
+        /* top: 0px !important; */
+        top: 0px !important;
+        /* margin-top: -60% !important;*/
+    }
+    .jobSeekerAppImg {
+        /* position: relative; */
+        /* bottom: 4%; */
+        width: 100% !important;
+        top: 15% !important;
+    }
+    .jobSeekerImg {
+        width: 60% !important;
+    }
+    .jobSeekerTitleSec {
+        text-align: center;
+        font-weight: bold;
+        font-size: 20px !important;
+        color: #283A2B;
+    }
+    /*.jobSeekerBannerContent {
+    position: relative;
+    top: 40px !important;
+}*/
+    #homeBoldTitle {
+        position: relative;
+        left: 0% !important;
+        text-align: center !important;
+    }
+    .slideEmployeeBtn {
+        background: #1CB260 !important;
+        color: white !important;
+        border: 1px solid #1CB260 !important;
+        width: 40%;
+        line-height: 30px;
+        font-size: 14px !important;
+    }
+    .employerBtnRight {
+        position: relative;
+        right: 30%;
+    }
+    .employerBtnLeft {
+        position: relative;
+        left: 26.55%;
+        top: 20px;
+    }
+    .slideTxt {
+        position: relative;
+        bottom: 4%;
+    }
+    .sliderSecondSec {
+        position: relative;
+        width: 55%;
+        left: 22%;
+    }
+    .cardSec {
+        margin: 0 auto !important;
+        text-align: center !important;
+        margin-bottom: 5% !important;
+    }
+    .cardSecContent {
+        margin: 0 auto !important;
+        text-align: center !important;
+    }
+    .mentorSec {
+        margin-top: 10%;
+    }
+    .mentorTitle {
+        padding-top: 10%;
+    }
+    .teamMemberContent {
+        position: relative;
+        top: 25px;
+    }
+    .jobSeekerTitle {
+        text-align: center;
+        font-weight: bold;
+        font-size: 18px !important;
+        color: #283A2B;
+    }
+    /* .aboutusContent {
+        position: relative;
+        top: 28%;
+    } */
+    .aboutusTitle {
+        position: relative;
+        top: 25%;
+        color: #FFFFFF;
+        font-size: 26px;
+    }
+    .mentorPadding {
+        margin: 0px !important;
+        padding: 10px !important;
+    }
+    .teamMemberBg {
+        background: #F8F8F8 !important;
+    }
+    .homeSubTitle {
+        text-align: center !important;
+    }
+    .postJobImg {
+        width: 60% !important;
+    }
+    .homeLight {
+        text-align: center !important;
+        font-size: 10px !important;
+    }
+    .homeBold {
+        text-align: center !important;
+        font-size: 10px !important;
+    }
+    .homeSecondSubTitle {
+        text-align: center !important;
+    }
+    .hireEmployeeBtn {
+        margin: 0 auto;
+        text-align: center;
+        display: block;
+        width: 50% !important;
+    }
+    .hireEmployeeBtn1 {
+        margin: 0 auto;
+        text-align: center;
+        display: block;
+        width: 50% !important;
+    }
+
+    .employeeBtn {
+        margin: 0 auto;
+        text-align: center;
+        display: block;
+        width: 50% !important;
+    }
+    .homeItem {
+        text-align: center !important;
+    }
+    .mentorSubTitleSec {
+        color: #393939;
+        font-size: 12px;
+    }
+    .postJobCont {
+        text-align: center !important;
+        font-size: 10px !important;
+    }
+    .postJobContSec {
+        text-align: center !important;
+        font-size: 10px !important;
+    }
+    .homeLightFont {
+        color: #A3A3A3 !important;
+        font-size: 10px !important;
+    }
+}
+
+@media screen and (min-device-width:280px) and (max-device-width: 600px) {
+    .txtR {
+        display: flex;
+        justify-content: center;
+        margin-top: 2px;
+        margin-left: 5px;
+    }
+    .txtL {
+        display: flex;
+        justify-content: center;
+    }
+    a.NxtStpBtn {
+        padding: 10px 20px;
+    }
+    #curType {
+        padding-left: 5px;
+        padding-right: 5px;
+        font-size: 12px;
+    }
+    .logIn {
+        margin-top: 15px;
+        width: 110px;
+    }
+    /* user testimonial responsiveness */
+    .testimonials .testimonial-wrap {
+        padding: 0 5px;
+        width: 90vw;
+    }
+    .testimonials .testimonial-item {
+        box-sizing: content-box;
+        padding: 10px 10px 10px 10px;
+        margin: 5px 5px;
+        min-height: 250px;
+        box-shadow: 0px 0px 20px 0px rgba(11, 35, 65, 0.1);
+        position: relative;
+        background: #fff;
+    }
+    .homePara {
+        width: 300px !important;
+        text-align: center;
+        margin: 0 auto;
+        padding-left: 0px;
+        padding-right: 10px;
+    }
+    .quote {
+        position: absolute;
+        z-index: 1;
+        top: 70px;
+        left: 52%;
+        height: 25px;
+        width: 25px;
+    }
+    .locateModal .form-group {
+        width: 80vw;
+    }
+    #chngbtn {
+        width: 65vw;
+    }
+    .locateModal .modal-dialog {
+        width: 90vw;
+    }
+    a.chgSltdCmpBtn {
+        font-size: 14px;
+        position: absolute;
+        /* text-align: end; */
+        margin-top: -50px;
+        /* border: 2px solid #1cb260;
+        padding: 6px 14px;
+        border-radius: 6px; */
+        /* color: black; */
+    }
+    .aboutusImg {
+        /* background-image: url("../../images/banner.png");*/
+        height: auto;
+        background: #00110C;
+        margin-left: 0px !important;
+        margin-right: 0px !important;
+    }
+    .aboutusTitle {
+        /* position: relative; */
+        /* margin-left: 25vw; */
+        color: #FFFFFF;
+        font-size: 26px;
+    }
+    .aboutusContent {
+        /* position: relative; */
+        padding-top: 10vh;
+        padding-bottom: 5vh;
+        color: #F5F5F5;
+        font-size: 16px;
+        opacity: 1;
+        width: 90vw;
+        margin: 0 auto;
+    }
+    .jobSeekerAppImg {
+        padding-top: 150px;
+        /* position: relative; */
+        /* bottom: 4%; */
+        width: 100% !important;
+        /* top: 15% !important; */
+    }
+    .jobSeekerBannerContent1 {
+        position: relative;
+        top: 50px;
+        padding-left: 10%;
+    }
+    .jobSeekerBannerContent2 {
+        position: relative;
+        top: 20px;
+        padding-left: 10%;
+    }
+    .jobSeekerAppImg {
+        margin-top: -70px;
+    }
+    .slide1 .jobSeekerAppImg {
+        margin-top: -100px;
+    }
+    /* logIn content */
+    .postjbfrmwrp {
+        background: #fff;
+        padding: 30px 0px;
+        border-radius: 32px;
+        width: 90vw;
+        max-width: 400px;
+        /* text-align: center; */
+    }
+    .bannerContainer {
+        display: none;
+    }
+    section.postajobbnrwrp {
+        background: white;
+        height: 90vh;
+        margin-top: 66px;
+    }
+    a.psjbbtn,
+    button.psjbbtn,
+    .otpverbtn {
+        background: #1cb260;
+        color: #fff;
+        display: block;
+        text-align: center;
+        border-radius: 6px;
+        padding: 13px 35px;
+        font-size: 16px;
+        line-height: 20px;
+        font-weight: 600;
+        margin-top: 30px;
+        border-style: none;
+        width: 85vw;
+    }
+    .otpmodalwrp {
+        width: 100%;
+        max-width: 500px;
+        background: #fff;
+        padding: 36px 0px;
+        border-radius: 32px;
+        margin: 0 auto;
+        text-align: center;
+        position: relative;
+    }
+    .verification-code--inputs input[type="text"] {
+        border: 2px solid #e1e1e1;
+        width: 40px;
+        height: 40px;
+        padding: 10px;
+        text-align: center;
+        display: inline-block;
+        box-sizing: border-box;
+        border-radius: 6px;
+    }
+}
+
+@media screen and (min-device-width:200px) and (max-device-width:368px) {
+    #expYearChoose {
+        margin-left: -12px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .contact-us-inner {
+      padding-left: var(--padding-41xl);
+      padding-right: var(--padding-41xl);
+      box-sizing: border-box;
+    }
+  }
+
+  @media screen and (max-width: 960px) {
+    .contact-us-inner {
+      align-items: center;
+      justify-content: center;
+      padding-top: var(--padding-21xl);
+      padding-bottom: var(--padding-21xl);
+      box-sizing: border-box;
+    }
+
+    .how-it-works-title-line-parent {
+        gap: var(--gap-35xl);
+        align-items: center;
+        justify-content: center;
+      }
+
+      .frame-parent {
+        flex-direction: column;
+      }
+
+      .frame-wrapper {
+        align-items: center;
+        justify-content: flex-start;
+        flex: unset;
+        align-self: stretch;
+      }
+
+      .infotaizoin1,
+      .we-would-love {
+        text-align: left;
+      }
+  }
+
+  @media screen and (max-width: 420px) {
+    .contact-us-inner {
+      gap: var(--gap-xl);
+      padding-left: var(--padding-xl);
+      padding-right: var(--padding-xl);
+      box-sizing: border-box;
+    }
+
+    .contact-us2 {
+        font-size: var(--font-size-xl);
+      }
+  }
+
+  @media screen and (max-width: 1200px) {
+    .infotaizoin1,
+  .we-would-love {
+    text-align: left;
+  }
+  .need-help-chat-with-us-img img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 40px;
+  }
+  }

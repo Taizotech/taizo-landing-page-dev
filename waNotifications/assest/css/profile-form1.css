@@ -1,0 +1,100 @@
+.row {
+    margin: 0px;
+  }
+  
+  /* .course_completion_wrp .ui-datepicker-calendar {
+    display: none;
+  } */
+  
+  .header_top {
+    /* position: fixed; */
+    width: 100vw;
+    top: 0px;
+    left: 0px;
+    background-color: white;
+    box-shadow: 0 2px 4px 0 rgba(182, 182, 182, 0.462);
+  }
+  
+  body {
+    padding-bottom: 100px;
+    background-color: rgb(216, 216, 216);
+  }
+  
+  textarea {
+    height: 35px;
+  }
+  
+  #can_photo_img {
+    width: 80px;
+    height: 80px;
+    border: solid 3px rgba(117, 117, 117, 0.427);
+    border-radius: 10px;
+  }
+  
+  .form_container {
+    display: grid;
+    justify-content: center;
+    margin-top: 100px;
+  }
+  
+  .form_container > form {
+    min-width: 60vw;
+    padding: 10px;
+    border: 1px solid rgba(210, 210, 210, 0.607);
+    border-radius: 10px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.462);
+    background-color: rgb(255, 255, 255);
+    /* overflow-y: scroll; */
+  }
+  
+  .radio_btn_wrp input {
+    display: none;
+  }
+  .radio_btn_wrp input + label {
+    padding: 5px 8px;
+    border-radius: 3px;
+    border: solid 1px;
+    font-weight: 500;
+    margin-top: 0px;
+    background-color: #e6e6e6b4;
+    min-width: 60px;
+    text-align: center;
+  }
+  .radio_btn_wrp input:checked + label {
+    color: #1cb260;
+    background-color: #77ca9c35;
+  }
+  
+  .ui-autocomplete {
+    max-height: 200px;
+    overflow-y: auto;
+    width: 100px;
+    /* prevent horizontal scrollbar */
+    overflow-x: hidden;
+  }
+  
+  /* IE 6 doesn't support max-height
+     * we use height instead, but this forces the menu to always be this tall
+     */
+  * html .ui-autocomplete {
+    height: 200px;
+  }
+  
+  /* media queries  */
+  
+  @media only screen and (max-width: 576px) {
+    .form_container > form {
+      min-width: 90vw;
+      margin: 0px 3vw;
+    }
+  }
+  @media only screen and (min-width: 576px) and (max-width: 768px) {
+  }
+  @media only screen and (min-width: 768px) and (max-width: 992px) {
+  }
+  @media only screen and (min-width: 992px) and (max-width: 1200px) {
+  }
+  @media only screen and (min-width: 1200px) and (max-width: 1400px) {
+  }
+  /* end of media queries */
+  

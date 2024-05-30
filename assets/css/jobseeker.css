@@ -1,0 +1,658 @@
+@keyframes scale-up {
+    0% {
+      transform: scale(0.5);
+    }
+    to {
+      transform: scale(1);
+    }
+  }
+  @keyframes slide-in-left {
+    0% {
+      transform: translateX(-200px);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  @keyframes slide-in-right {
+    0% {
+      transform: translateX(200px);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  .jobseeker-hero-background-1-icon {
+    position: absolute;
+    margin: 0 !important;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 100%;
+    object-fit: cover;
+    z-index: 0;
+  }
+  .cncvmc {
+    align-self: stretch;
+    position: relative;
+    font-weight: 600;
+  }
+  .get-a-job {
+    color: var(--color-khaki);
+  }
+  .machine-operators-get-container {
+    align-self: stretch;
+    position: relative;
+    font-size: var(--font-size-13xl);
+    font-weight: 500;
+    color: var(--studio-darkmode-allwhite-ffffff);
+  }
+  .title,
+  .title-subtitle,
+  .title1 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .title-subtitle,
+  .title1 {
+    align-self: stretch;
+  }
+  .title {
+    flex: 1;
+    opacity: 1;
+  }
+  .title.animate {
+    animation: 1s ease 0s 1 normal forwards scale-up;
+  }
+  .employer-page-title-content {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  .send-hi-on-container {
+    align-self: stretch;
+    position: relative;
+    font-size: var(--font-size-xl);
+    font-weight: 300;
+    color: var(--studio-darkmode-allwhite-ffffff);
+  }
+  .whatsapp-communication-message-icon {
+    position: relative;
+    width: 27px;
+    height: 27px;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+  .whatsapp-us {
+    position: relative;
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+    /* font-family: var(--font-inter); */
+    color: var(--studio-darkmode-allwhite-ffffff);
+    text-align: left;
+  }
+  .btn-title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: var(--gap-8xs);
+  }
+  .whatsapp-us-btn,
+  .whatsapp-us-btn:hover {
+    border: 1px solid var(--studio-darkmode-allwhite-ffffff);
+    box-sizing: border-box;
+  }
+  .whatsapp-us-btn {
+    cursor: pointer;
+    padding: var(--padding-xs) var(--padding-3xs);
+    background-color: transparent;
+    border-radius: var(--br-9xs);
+    width: 169px;
+    height: 51px;
+    overflow: hidden;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .whatsapp-us-btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  .call-192-svgrepo-com-3-icon {
+    position: relative;
+    width: 16px;
+    height: 16px;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+  .div {
+    flex: 1;
+    position: relative;
+    font-size: var(--font-size-sm);
+    font-weight: 500;
+    /* font-family: var(--font-inter); */
+    color: var(--studio-darkmode-allwhite-ffffff);
+    text-align: left;
+  }
+  .btn-title2 {
+    width: 145px;
+    gap: var(--gap-8xs);
+  }
+  .book-a-free-call-btn,
+  .btn-title1,
+  .btn-title2 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .book-a-free-call-btn {
+    cursor: pointer;
+    border: 0;
+    padding: var(--padding-sm) var(--padding-xl);
+    background-color: var(--color-mediumseagreen-100);
+    border-radius: var(--br-9xs);
+    width: 181px;
+    height: 51px;
+    overflow: hidden;
+    flex-shrink: 0;
+    flex-direction: column;
+    justify-content: center;
+    box-sizing: border-box;
+  }
+  .book-a-free-call-btn:hover {
+    background-color: #139149;
+  }
+  .buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 15px;
+  }
+  .employer-page-title-content-wh {
+    align-self: stretch;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: var(--gap-21xl);
+    opacity: 0;
+  }
+  .employer-page-title-content-wh.animate {
+    animation: 1s ease 0s 1 normal forwards slide-in-left;
+  }
+  .jobseeker-hero-image2-1,
+  .new-1-icon {
+    position: relative;
+    object-fit: cover;
+    opacity: 0;
+  }
+  .jobseeker-hero-image2-1 {
+    width: 482px;
+    height: 544px;
+    display: none;
+  }
+  .jobseeker-hero-image2-1.animate,
+  .new-1-icon.animate {
+    animation: 1s ease 0s 1 normal forwards slide-in-right;
+  }
+  .new-1-icon {
+    width: 502px;
+    height: 577px;
+  }
+  .employer-page-title-employer-l {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 65px;
+    max-width: 1158.56005859375px;
+    z-index: 1;
+  }
+  .employer-page-hero-section {
+    align-self: stretch;
+    background-color: var(--color-black);
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 95px var(--padding-81xl);
+    position: relative;
+    gap: var(--gap-3xs);
+    font-size: var(--font-size-23xl);
+    color: var(--color-khaki);
+  }
+  .icon {
+    position: absolute;
+    margin: 0 !important;
+    top: 0;
+    left: 0;
+    width: 1161px;
+    height: 717px;
+    object-fit: cover;
+    opacity: 0.6;
+    mix-blend-mode: multiply;
+    z-index: 0;
+  }
+  .bio-data-img-1 {
+    position: relative;
+    border-radius: 0 0 11px 0;
+    width: 322px;
+    height: 343px;
+    object-fit: cover;
+  }
+  .creating-bio-data-container,
+  .find-your-next {
+    align-self: stretch;
+    position: relative;
+    font-weight: 600;
+  }
+  .create-bio-data {
+    position: relative;
+    font-size: var(--font-size-base);
+    font-weight: 600;
+    font-family: var(--font-poppins);
+    color: var(--studio-darkmode-allwhite-ffffff);
+    text-align: center;
+  }
+  .create-bio-data-wrapper {
+    cursor: pointer;
+    border: 0;
+    padding: var(--padding-mini) var(--padding-11xl);
+    background-color: rgba(0, 0, 0, 0.25);
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  .create-bio-data-wrapper:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  .text-content-download-the-app- {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: var(--gap-31xl);
+    opacity: 0;
+  }
+  .text-content-download-the-app-.animate {
+    animation: 1s ease 0.2s 1 normal forwards slide-in-left;
+  }
+  .download-the-app-card-playstor1 {
+    align-self: stretch;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: var(--gap-21xl);
+    z-index: 1;
+  }
+  .download-the-app-card,
+  .download-the-app-card-playstor {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .download-the-app-card-playstor {
+    align-self: stretch;
+    border-radius: 15px;
+    background: linear-gradient(94.88deg, #0c7b3c, #0f8d45);
+    overflow: hidden;
+    padding: var(--padding-xl) 0;
+    position: relative;
+    gap: var(--gap-3xs);
+  }
+  .download-the-app-card {
+    flex: 1;
+    max-width: 1158.56005859375px;
+  }
+  .download-the-app {
+    align-self: stretch;
+    background-color: #f4f4f4;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: var(--padding-41xl) var(--padding-121xl);
+    font-size: var(--font-size-11xl);
+    color: var(--studio-darkmode-allwhite-ffffff);
+  }
+  .jobseeker-page {
+    position: relative;
+    width: 100%;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: left;
+    font-size: var(--font-size-sm);
+    color: var(--color-darkslategray-100);
+    font-family: var(--font-poppins);
+  }
+  @media screen and (max-width: 1200px) {
+    .cncvmc {
+      font-size: var(--font-size-19xl);
+    }
+    .machine-operators-get-container {
+      font-size: var(--font-size-7xl);
+    }
+    .jobseeker-hero-image2-1 {
+      max-width: 50%;
+      height: auto;
+    }
+    .new-1-icon {
+      max-width: 40%;
+      height: auto;
+    }
+    .employer-page-title-employer-l {
+      gap: var(--gap-xl);
+    }
+    .employer-page-hero-section {
+      padding-left: var(--padding-41xl);
+      padding-right: var(--padding-41xl);
+      box-sizing: border-box;
+    }
+    .creating-bio-data-container,
+    .find-your-next {
+      font-size: var(--font-size-11xl);
+    }
+    .download-the-app {
+      padding-left: var(--padding-41xl);
+      padding-right: var(--padding-41xl);
+      box-sizing: border-box;
+    }
+  }
+  @media screen and (max-width: 992px) {
+    .cncvmc,
+    .machine-operators-get-container,
+    .send-hi-on-container {
+      text-align: center;
+    }
+    .employer-page-title-content-wh {
+      align-items: center;
+      justify-content: center;
+      flex: unset;
+      align-self: stretch;
+    }
+    .new-1-icon {
+      max-width: 50%;
+      height: auto;
+    }
+    .employer-page-title-employer-l {
+      flex-direction: column;
+    }
+    .creating-bio-data-container,
+    .find-your-next {
+      text-align: center;
+    }
+    .text-content-download-the-app- {
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      flex: unset;
+      align-self: stretch;
+    }
+    .text-content-download-the-app-.animate {
+      animation: 1s ease 0s 1 normal forwards slide-in-top;
+    }
+    @keyframes slide-in-top {
+      0% {
+        transform: translateY(-200px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+    .download-the-app-card-playstor1 {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding-left: 0;
+      padding-top: var(--padding-xl);
+      box-sizing: border-box;
+    }
+    .download-the-app-card-playstor {
+      align-items: flex-start;
+      justify-content: flex-start;
+      padding-left: 0;
+      padding-right: 0;
+    }
+    .download-the-app-card,
+    .download-the-app-card-playstor {
+      padding-top: 0;
+      box-sizing: border-box;
+    }
+    .download-the-app {
+      padding-left: var(--padding-11xl);
+      padding-right: var(--padding-11xl);
+      box-sizing: border-box;
+    }
+    .jobseeker-page {
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--gap-0);
+    }
+  }
+  @media screen and (max-width: 420px) {
+    .cncvmc {
+      font-size: var(--font-size-19xl);
+    }
+    .title1 {
+      gap: var(--gap-3xs);
+    }
+    .title {
+      gap: var(--gap-21xl);
+    }
+    .send-hi-on-container {
+      font-size: var(--font-size-base);
+    }
+    .whatsapp-us-btn {
+      width: 181px;
+      align-items: center;
+      justify-content: flex-start;
+      padding: var(--padding-3xs);
+      box-sizing: border-box;
+    }
+    .buttons {
+      flex-direction: column;
+    }
+    .employer-page-title-content-wh {
+      padding-left: 0;
+      padding-right: 0;
+      box-sizing: border-box;
+    }
+    .jobseeker-hero-image2-1 {
+      max-width: 100%;
+    }
+    .employer-page-hero-section {
+      padding-left: var(--padding-6xl);
+      padding-right: var(--padding-6xl);
+      box-sizing: border-box;
+    }
+    .find-your-next {
+      font-size: var(--font-size-11xl);
+    }
+    .download-the-app-card-playstor {
+      padding-left: 0;
+      padding-right: 0;
+      box-sizing: border-box;
+    }
+    .download-the-app {
+      padding-left: var(--padding-121xl);
+      box-sizing: border-box;
+    }
+    .taizo-enables-manufacturing {
+      font-size: 13px;
+    }
+  }
+  @media screen and (max-width: 350px) {
+    .cncvmc {
+      font-size: var(--font-size-xl);
+    }
+    .machine-operators-get-container {
+      font-size: var(--font-size-23xl);
+    }
+    .employer-page-hero-section {
+      padding-left: var(--padding-xl);
+      box-sizing: border-box;
+    }
+    .download-the-app-card-playstor {
+      padding-left: 0;
+      padding-right: 0;
+      box-sizing: border-box;
+    }
+    .taizo-enables-manufacturing {
+      font-size: 12px;
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .bio-data-img-1 {
+      max-width: 35%;
+      height: auto;
+    }
+    .creating-bio-data-container,
+    .find-your-next {
+      font-size: var(--font-size-5xl);
+    }
+    .text-content-download-the-app- {
+      gap: var(--gap-11xl);
+    }
+    .download-the-app {
+      padding: var(--padding-11xl) var(--padding-xl);
+      box-sizing: border-box;
+    }
+    .taizo-enables-manufacturing {
+      width: 442px;
+    }
+  }
+  @media screen and (max-width: 428px) {
+    .cncvmc {
+      font-size: var(--font-size-13xl);
+      text-align: center;
+    }
+    .machine-operators-get-container {
+      font-size: var(--font-size-3xl);
+      text-align: center;
+      align-self: stretch;
+      width: auto;
+    }
+    .title {
+      align-items: center;
+      justify-content: flex-start;
+    }
+    .send-hi-on-container {
+      text-align: center;
+    }
+    .buttons {
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
+    .employer-page-title-content-wh {
+      align-items: center;
+      justify-content: center;
+      opacity: 1;
+      flex: unset;
+      align-self: stretch;
+    }
+    .employer-page-title-content-wh.animate,
+    .jobseeker-hero-image2-1.animate,
+    .new-1-icon.animate {
+      animation: 1s ease 0s 1 normal forwards scale-up;
+    }
+    @keyframes scale-up {
+      0% {
+        transform: scale(0.5);
+      }
+      to {
+        transform: scale(1);
+      }
+    }
+    .jobseeker-hero-image2-1 {
+      opacity: 1;
+    }
+    @keyframes scale-up {
+      0% {
+        transform: scale(0.5);
+      }
+      to {
+        transform: scale(1);
+      }
+    }
+    .new-1-icon {
+      opacity: 1;
+      max-width: 90%;
+      height: auto;
+    }
+    @keyframes scale-up {
+      0% {
+        transform: scale(0.5);
+      }
+      to {
+        transform: scale(1);
+      }
+    }
+    .employer-page-title-employer-l {
+      flex-direction: column;
+      gap: var(--gap-21xl);
+    }
+    .employer-page-hero-section {
+      flex-direction: row;
+      padding: var(--padding-21xl) var(--padding-11xl) var(--padding-41xl);
+      box-sizing: border-box;
+    }
+    .bio-data-img-1 {
+      max-width: 80%;
+      height: auto;
+    }
+    .creating-bio-data-container,
+    .find-your-next {
+      font-size: var(--font-size-xl);
+    }
+    .text-content-download-the-app- {
+      gap: var(--gap-21xl);
+      align-items: center;
+      justify-content: center;
+    }
+    .download-the-app-card-playstor1 {
+      align-items: center;
+      justify-content: center;
+      padding-left: var(--padding-16xl);
+      box-sizing: border-box;
+    }
+    .download-the-app-card-playstor {
+      padding-top: var(--padding-mini);
+      padding-right: var(--padding-21xl);
+      box-sizing: border-box;
+    }
+    .download-the-app {
+      padding: var(--padding-11xl) var(--padding-xl);
+      box-sizing: border-box;
+    }
+  }
+  

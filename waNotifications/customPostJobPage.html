@@ -1,0 +1,2660 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taizo - Post a Job</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="./images1/favicon.ico">
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/css/intlTelInput.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css" />
+    <link href='https://fonts.googleapis.com/css?family=DM Sans' rel='stylesheet'>
+    <link rel="stylesheet" href="./assest/css/common1.css">
+    <link rel="stylesheet" href="./assest/css/style1.css">
+    <link rel="stylesheet" href="./assest/css/otpmodal1.css">
+    <link rel="stylesheet" href="./assest/css/pricingPopup1.css">
+    <link rel="stylesheet" href="./assest/css/responsiveMediaQuery1.css">
+    <link rel="stylesheet" href="./assest/css/popupModal1.css">
+    <link rel="stylesheet" href="../css/no-of-job-post-selection-page.css" />
+    <link rel="stylesheet" href="./assest/css/pricing1.css" />
+   <!-- google maps link -->
+   <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+
+    <style>
+        .navBar {
+            background-color: #FEFEFE !important;
+            border-bottom-style: solid;
+            border-color: #00000014;
+        }
+
+        body {
+            background-color: #E6E6E6;
+            overflow-x: hidden !important;
+            max-width: 100vw !important;
+        }
+
+        label {
+            font-size: 12px;
+            font-weight: 600;
+            margin-top: 15px;
+            margin-bottom: 8px;
+            color: #202124;
+            font-family: 'DM Sans';
+        }
+
+        .postJobContainer {
+            background-color: #FEFEFE !important;
+            margin: 0px auto;
+            width: 65vw;
+            max-width: 750px;
+            height: auto;
+            padding-bottom: 20px;
+        }
+        .pstJobHead {
+            /* text-align: center; */
+            font-size: 20px;
+            font-weight: 600;
+            height: auto;
+            /* padding: 20px 0px; */
+            border-bottom-style: solid;
+            border-color: #00000014;
+            /* font: normal normal bold 22px/29px DM Sans; */
+        }
+
+        .no-of-openings {
+	        position: relative;
+	        font-weight: 500;
+        }
+
+        .reduce-icon {
+	        position: relative;
+	        width: 10px;
+	        height: 2px;
+        }
+
+        .no-of-openings-reduce-btn,
+        .no-of-openings-value-filed {
+	        background-color: var(--color-white);
+	        border: 1px solid var(--color-gainsboro-200);
+	        overflow: hidden;
+	        display: flex;
+	        flex-direction: column;
+	        align-items: center;
+	        justify-content: flex-start;
+        }
+
+        .no-of-openings-reduce-btn {
+	        border-radius: var(--br-9xs) 0 0 var(--br-9xs);
+	        padding: var(--padding-lg) var(--padding-6xs);
+        }
+
+        .no-of-openings-reduce-btn:hover {
+	        cursor: pointer;
+        }
+
+        .no-of-openings-reduce-btn:hover .reduce-icon {
+	        border: 1px solid var(--color-mediumseagreen-100);
+	        box-sizing: border-box;
+	        cursor: pointer;
+        }
+
+        .no-of-openings-value-filed {
+	        padding: var(--padding-4xs) var(--padding-8xs) var(--padding-5xs);
+	        margin-left: -1px;
+        }
+
+        .add-icon {
+	        position: relative;
+	        width: 10px;
+	        height: 10px;
+        }
+
+        .add-icon:hover {
+	        caret-color: #169c50;
+        }
+
+        .no-of-openings-add-and-redu,
+        .no-of-openings-add-btn {
+	        display: flex;
+	        flex-direction: row;
+	        align-items: center;
+	        justify-content: flex-start;
+        }
+
+        .no-of-openings-add-btn {
+	        border-radius: 0 var(--br-9xs) var(--br-9xs) 0;
+	        background-color: var(--color-white);
+	        border: 1px solid var(--color-gainsboro-200);
+	        overflow: hidden;
+	        padding: var(--padding-sm) var(--padding-6xs);
+	        margin-left: -1px;
+        }
+
+        .no-of-openings-add-btn:hover,
+        .remove:hover {
+	        cursor: pointer;
+        }
+
+        .no-of-openings-add-btn:hover .add-icon {
+	        fill: #169c50;
+        }
+
+        .no-of-openings-add-and-redu {
+	        font-size: var(--font-size-sm);
+        }
+
+        .no-of-openings-div{
+            width: 150px;
+        }
+
+        .no-of-openings-div,
+        .no-of-openings-div1 {
+	        display: flex;
+	        flex-direction: column;
+	        align-items: flex-start;
+
+        }
+
+        .no-of-openings-div1 {
+	        justify-content: flex-start;
+	        gap: var(--gap-8xs);
+        }
+
+        .no-of-openings-div {
+	        justify-content: center;
+        }
+
+        .job-category-noof-opening-amo2,
+        .no-of-openings-amount-div {
+	        display: flex;
+	        flex-direction: row;
+	        align-items: center;
+	        justify-content: flex-start;
+	        gap: var(--gap-133xl);
+        }
+
+        .job-category-noof-opening-amo2 {
+	        gap: var(--gap-base);
+        }
+
+        .custom-radio {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .custom-radio input[type="radio"] {
+            opacity: 0;
+            position: absolute;
+            z-index: -1;
+        }
+
+        .custom-radio label {
+            position: relative;
+            padding-left: 30px;
+            cursor: pointer;
+        }
+
+        .custom-radio label:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 1px;
+            width: 15px;
+            height: 15px;
+            border: 3px solid #2196F3;
+            border-radius: 50%;
+        }
+
+        .custom-radio input[type="radio"]:checked + label:before {
+            background-color: #2196F3;
+            border-color: #2196F3;
+        }
+
+        .custom-radio label:after {
+            content: "";
+            position: absolute;
+            left: 7px;
+            top: 8px;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background-color: #fff;
+            opacity: 0;
+        }
+
+        .custom-radio input[type="radio"]:checked + label:after {
+            opacity: 1;
+        }
+
+        .custom-radio label:hover:before {
+            border-color: #1E88E5;
+        }
+
+        .custom-radio label:hover:after {
+            background-color: #1E88E5;
+        }
+
+
+        .addDetailsContainer {
+            border-bottom-style: solid;
+            border-top-style: solid;
+            border-color: #00000014;
+            padding-top: 15px;
+            padding-bottom: 15px;
+        }
+
+        .addDetailsBtn {
+            border-radius: 24px;
+            background-color: inherit;
+            border-color: #1cb260;
+            border-style: solid;
+            border-width: 1.5px;
+            color: #1cb260;
+            padding: 5px 10px;
+            font-weight: 550;
+            margin: 10px 40px;
+            font-size: 14px;
+        }
+
+        .addDetailsBtn:hover {
+            color: white;
+            background-color: #1CB260;
+        }
+
+        .pstJobHead p {
+            padding: 20px 15px 0px;
+        }
+
+        .btn-close {
+            margin-left: -50px;
+        }
+
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 25px;
+            height: 12px;
+            margin-left: 7px;
+        }
+
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            -webkit-transition: 0.4s;
+            transition: 0.4s;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 15px;
+            width: 15px;
+            left: 1px;
+            bottom: -1.5px;
+            background-color: #57d457d4;
+            -webkit-transition: 0.4s;
+            transition: 0.4s;
+        }
+
+        input:checked+.slider {
+            background-color: #75e4a3eb;
+        }
+
+        input:focus+.slider {
+            box-shadow: 0 0 1px #2196f3;
+        }
+
+        input:checked+.slider:before {
+            -webkit-transform: translateX(10px);
+            -ms-transform: translateX(10px);
+            transform: translateX(10px);
+        }
+        /* Rounded sliders */
+
+        .slider.round {
+            border-radius: 34px;
+        }
+
+        .slider.round:before {
+            border-radius: 50%;
+        }
+
+        .dropDown {
+            width: 25vw;
+        }
+        /* mobile view */
+
+        @media screen and (max-width:600px) {
+            .postJobContainer {
+                background-color: #FEFEFE !important;
+                /* margin: 0px auto; */
+                width: 90vw;
+                height: auto;
+            }
+            .pstJobHead {
+                width: 90vw;
+            }
+            .btn-close {
+                margin-left: -40px;
+            }
+            body {
+                background-color: #FEFEFE !important;
+            }
+            #jobPublishBtn {
+                display: grid;
+                justify-content: end;
+            }
+            label {
+                margin-top: 15px;
+            }
+            .addDetailsBtn {
+                margin: 10px 10px;
+            }
+            .dropDown {
+                width: 85vw;
+            }
+            #fromSal,
+            #toSal {
+                width: 60px;
+            }
+            .adddetails-margin-top {
+                margin-top: -20px;
+            }
+        }
+        /* tablet or small lap view */
+        /* scroll bar  */
+
+        .eduQuality_scrollbar,
+        .jobrole_scrollbar {
+            /* margin-left: 30px; */
+            float: left;
+            height: 250px;
+            width: 100%;
+            background: aliceblue;
+            overflow-y: scroll;
+            overflow-x: hidden;
+            margin-bottom: 25px;
+        }
+
+        .eduQuality_force-overflow,
+        .jobrole_force-overflow {
+            min-height: 250px;
+        }
+
+        .keyskills_scrollbar {
+            /* margin-left: 30px; */
+            float: left;
+            height: 200px;
+            width: 100%;
+            background: aliceblue;
+            overflow-y: scroll;
+            overflow-x: hidden;
+            margin-bottom: 25px;
+        }
+
+        .keyskills_force-overflow {
+            min-height: 200px;
+        }
+
+        .benefits_scrollBar {
+            float: left;
+            height: 300px;
+            width: 100%;
+            background: aliceblue;
+            overflow-y: scroll;
+            overflow-x: hidden;
+            margin-bottom: 25px;
+        }
+
+        .benefits_force-overflow {
+            min-height: 300px;
+        }
+
+        .scrollbar-primary::-webkit-scrollbar {
+            width: 4px;
+            background-color: #F5F5F5;
+        }
+
+        .scrollbar-primary::-webkit-scrollbar-thumb {
+            border-radius: 10px;
+            -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+            background-color: #2695abcf;
+        }
+
+        .scrollbar-primary {
+            scrollbar-color: #2695abaf;
+        }
+        /* end of scroll bar  */
+
+        .eduQuality_list_wrp {
+            background-color: aliceblue;
+            border-radius: 10px;
+        }
+
+        .keySkills_list input,
+        .eduQuality_list input,
+        .recent_jobS_wrp input ,
+        .list-benefits input {
+            display: none;
+            cursor: pointer;
+        }
+
+        .keySkills_list>label,
+        .eduQuality_list>label,
+        .recent_jobS_wrp>label,
+        .list-benefits>label {
+            font-size: 14px;
+            font-weight: 400;
+            border-radius: 18px !important;
+        }
+
+        .keySkills_list>input:checked+label,
+        .eduQuality_list>input:checked+label,
+        .recent_jobS_wrp>input:checked+label,
+        .list-benefits>input:checked+label {
+            text-align: center;
+            border-radius: 15px;
+            border: 1px solid #1CB260;
+            padding: 6px 10px;
+            background: #1CB26024;
+            color: #1CB260;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+        .keySkills_list>input:not(:checked)+label:hover,
+        .eduQuality_list>input:not(:checked)+label:hover,
+        .recent_jobS_wrp>input:not(:checked)+label:hover,
+        .list-benefits>input::not(:checked)+label:hover {
+            text-align: center;
+            border-radius: 15px;
+            border: 1px solid #7f7f7f;
+            padding: 6px 10px;
+            background: #959595cb;
+            /* color: #1CB260; */
+            margin: 5px;
+            cursor: pointer;
+        }
+
+        .keySkills_list>input:not(:checked)+label,
+        .eduQuality_list>input:not(:checked)+label,
+        .recent_jobS_wrp>input:not(:checked)+label,
+        .list-benefits>input:not(:checked)+label {
+            text-align: center;
+            border-radius: 15px;
+            border: 1px solid rgb(130, 130, 130);
+            padding: 6px 10px;
+            background: #e9ecef66;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+        .selected_ks_wrp {
+            height: auto;
+            background: aliceblue;
+            padding: 10px;
+            border-radius: 10px;
+            width: 100%;
+            /* margin: 0px auto; */
+        }
+
+        .selected_ks_wrp>span {
+            text-align: center;
+            border-radius: 20px;
+            border: 1px solid #1CB260;
+            padding: 4px 8px;
+            background: #1CB26024;
+            color: #1CB260;
+            margin: 5px;
+            cursor: pointer;
+            font-size: 13px;
+            font-weight: 500;
+        }
+
+        .recent_jobS_wrp>input:checked+label>.recent_job_checkmark {
+            display: inline-block;
+        }
+
+        .recent_job_checkmark {
+            display: none;
+        }
+
+        .recent_job_checkmark img {
+            margin-top: -3px;
+        }
+
+        .gender_container>input,.radio_btnngn_wrp>input {
+            display: none;
+        }
+
+        .gender_container>input:not(:checked)+label, .radio_btn_wrp>input:not(:checked)+label {
+            color: black;
+        }
+
+
+
+        .radio_btn_wrp label{
+          display: inline-block;
+          margin-left: -20px !important;
+          margin-right: 30px !important;
+        }
+
+        .gender_container>input+label,.radio_btn_wrp>input+label {
+            text-align: center;
+            border-radius: 5px;
+            border: 1px solid rgb(191, 191, 191);
+            padding: 6px 3px 6px 1px;
+            background: #ffffff85;
+            width: 80px;
+            /* height: 33px; */
+            margin: 0px 5px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 400;
+        }
+
+        .gender_container>input:checked+label ,.radio_btn_wrp>input:checked+label {
+            color: #1CB260;
+            border-color: #1CB260;
+            background-color: #1CB26024;
+        }
+
+        #whatAppNumber{
+              background-image: url("./images1/whatsapp.png");
+            background-repeat: no-repeat;
+            background-size: 20px;
+            background-position:  97% center;
+        }
+
+        @media screen and (min-width:600px) and (max-width:1000px) {
+            .postJobContainer {
+                background-color: #FEFEFE !important;
+                /* margin: 0px auto; */
+                width: 85vw;
+                height: auto;
+                /* padding: 10px 30px; */
+            }
+            .dropDown {
+                width: 30vw;
+            }
+        }
+
+        div.scrollmenu {
+            background-color:inherit;
+            overflow-x: auto;
+            overflow-y: hidden;
+            white-space: nowrap;
+            margin-bottom: -10px !important;
+        }
+
+        div.scrollmenu .recent_jobS_wrp {
+            z-index: 100;
+        }
+
+        .edu_quality_popup {
+            display: none;
+        }
+
+        .dropdown_keyskills_wrp,
+        .dropdown_jobrole_wrp {
+            position: absolute;
+            min-width: 100%;
+            margin-top: 2px;
+            /* min-width: 420px; */
+            overflow-y: auto;
+            background-color: white;
+            min-height: 250px;
+            height: 200px;
+            /* z-index: 100; */
+            border: 1px solid rgb(206, 206, 206);
+        }
+
+        .dropdown_keyskills_wrp button,
+        .dropdown_jobrole_wrp button {
+            display: block;
+            padding: 8px 10px;
+            /* margin: 0px; */
+            background-color: white;
+            width: 100%;
+            border-style: none;
+            /* border-bottom-width: 1px; */
+            border-bottom-style: solid;
+            border-width: 1px;
+            border-color: rgb(179, 179, 179);
+            text-align: left;
+            font-size: 13px;
+        }
+
+        .dropdown_keyskills_wrp button:hover,
+        .dropdown_jobrole_wrp button:hover {
+            background-color: rgb(221, 221, 221);
+        }
+        .scrollmenu .recent_jobS_wrp {
+            z-index: 100;
+
+            /* background-color: #2196f3; */
+            /* margin: 10px 20px; */
+            }
+
+        @media (min-width: 280px) and (max-width: 600px) {
+            .selected_ks_wrp {
+                height: auto;
+                background: aliceblue;
+                padding: 10px;
+                border-radius: 10px;
+                width: 90vw;
+                margin: 0px auto;
+            }
+        }
+
+        #map_container{
+            height: 40vh;
+            /* min-width: 300px; */
+            width: 92vw;
+            max-width: 600px;
+        }
+
+        .map_matched_city_err, .map_location_info{
+            width: 95vw;
+            max-width: 500px;
+            font-size: 13px;
+            margin-bottom: 0px;
+        }
+
+        .location_popup_wrp .map_captured_address{
+            min-width: 280px;
+            max-width: 630px;
+        }
+
+        .location_popup_wrp .location_btn_wrp{
+            margin-top: 0px !important;
+        }
+        .location_popup_wrp .use_cur_location{
+            border-style: none;
+            background-color: inherit;
+            font-size: 13px;
+            font-weight: 600;
+            padding: 0px;
+            margin: 0px;
+
+        }
+        .location_change_btn {
+            border-style: none;
+            color: #1CB260;
+            background-color: inherit;
+        }
+
+        .search_icon{
+            background-image: url("./images1/search_icon.png");
+            background-repeat: no-repeat;
+            background-size: 20px;
+            background-position:  97% center;
+        }
+
+        .location_popup_wrp .or_divider{
+            padding: 1px 5px;
+            color: rgba(0, 0, 0, 0.342);
+        }
+
+        .location_popup_wrp .or_divider::before, .location_popup_wrp .or_divider::after{
+            content: "";
+            display: inline-block;
+            width: auto;
+            min-width: 100px;
+            border: 1px solid rgba(0, 0, 0, 0.205);
+            height: 1px;
+            margin-bottom: 3px;
+           margin: 0px 10px 3px 10px;
+        }
+
+        /* media queries  */
+
+@media only screen and (max-width: 576px) {
+    #map_container{
+            height: 40vh;
+            max-width: 600px;
+        }
+
+        .map_matched_city_err, .map_location_info{
+
+            font-size: 12px;
+
+        }
+}
+@media only screen and (min-width: 576px) and (max-width: 768px) {
+}
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+}
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+}
+@media only screen and (min-width: 1200px) and (max-width: 1400px) {
+}
+/* end of media queries */
+
+    </style>
+</head>
+
+<body>
+
+    <!-- header -->
+    <section class="navBar ">
+        <div class="ms-4 p-2">
+            <nav class="">
+                <a class="" href="#"><img width="175px" src="./images1/brand-logo.png" class="brandLogo" /></a>
+            </nav>
+        </div>
+    </section>
+    <!-- end of header -->
+    <div class="post_job_content">
+        <div class="container-fluid-sm post_a_job_form">
+            <div class="postJobContainer">
+                <!-- heading -->
+                <div class="pstJobHead ">
+                    <p class="text-sm-center">Admin - Post the job</p>
+                    <div class="d-grid justify-content-end mb-4" style="margin-top: -45px;">
+                        <div> <span class="d-none save_job_btn" style="cursor: pointer;"><img src="./images1/saveIcon.png" width="15px" alt="save"><span style="font-size: 15px;"> &nbsp; Save</span></span>
+                            <div class="d-inline-block"> <span class="closeBtn mx-3 mx-sm-5 cancelPostJobFormm"></span></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- content  -->
+                <!-- <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="custom-radio d-flex justify-content-end">
+                              <input type="radio" name="radioOption" id="radioOption1" onclick="showFields('radioOption1')" value="draftJob" />
+                              <label for="radioOption1" class="ml-2">Draft Job Form</label>
+                            </div>
+                          </div>
+
+                      <div class="col-md-6">
+                        <div class="custom-radio">
+                          <input type="radio" name="radioOption" id="radioOption2" onclick="showFields('radioOption2')" value="newJob" />
+                          <label for="radioOption2">New Job Post</label>
+                        </div>
+                      </div>
+                    </div>
+                </div> -->
+                <!-- <div id="fieldsContainer" style="display: none;"> -->
+                <div class="py-3 px-md-3 px-lg-4 px-sm-2">
+
+                    <span class="text-green" style="font-weight: 600; ">Job Details</span>
+
+<!--
+                    <div class="scrollmenu Freqently_posted_wrp d-none">
+                        <label for="">Freqently posted Job(s)</label>
+                        <div class="recent_jobS_wrp">
+                            recent jobs list
+                        </div>
+                    </div> -->
+
+                <!-- frequently used job popup created 11-05-23 -->
+
+                <!-- <div class="common_popupContainer d-none" id="frequently_posted_jobpopup">
+                    <div class="common_popup_body">
+                        <div class="common_popupContent">
+                            <div class="py-3 px-md-3 px-lg-4 px-sm-2">
+                                <div class="d-grid justify-content-end" style="margin-top: -30px; margin-right: -30px; display: none;">
+                                    <button type="button" class="btn-close close feedback_popup_close me-5 me-sm-0"  data-bs-dismiss="modal" aria-label="close" fdprocessedid="ytufgm"></button>
+                                </div>
+                                <h6>For easier job postings, these are the job roles you most commonly post.</h6>
+                                <div class="scrollmenu Freqently_posted_wrp  ">
+                                    <div class="recent_jobS_wrp">
+                                         list goes here
+                                    </div>
+                                </div>
+                                <div>
+                                    <p class="dash_center mt-3" style="text-align: center;">or</p>
+                                    <div class="post_job_btn_wrp">
+                                        <div class="post_job_btns_1">
+                                            <center><h6 style="margin-bottom: 20px;">Choose a different job role</h6></center>
+                                            <center><button class="mx-auto primary_btn1 post_btn feedback_popup_close">Post a new job</button></center>
+                                        </div>
+                                    </div>
+                                    <div class="show_case_wrp d-none">
+                                        <div class="start_a_post d-grid text-center justify-content-sm-center">
+                                            <div class="tap_img_wrp"> <img src="images/tap.png" alt=""></div>
+                                            <div class="post_a_job_showcase_wrp">
+                                                <p class="">Click here to post a job right now</p>
+                                             <h5><strong>Start posting Your job</strong></h5>
+                                            </div>
+                                          </div>
+                                          <div class="top_wave_wrp ">
+                                             <div class="content">
+                                             </div>
+                                         </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+                  <!-- end of frequently used job popup created 11-05-23 -->
+                <!-- <div class="col-sm-6">
+                    <div class="form-group">
+                        <label id="EmployerLabel" for="EmployerNo">Employer Id</label>
+                        <input autocomplete="off" type="number" name="EmployerNo" id="EmployerNo" maxlength="4" class="form-control text-capitalize" placeholder="Employer No" />
+                        <div class="validMsg">
+                            Please enter Employer id only 4 digit allowed
+                        </div>
+                    </div>
+                </div> -->
+            <div class="row mb-3">
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label id="EmployerLabel" for="EmployerNo">Employer Id</label>
+                        <input class="form-control only_number "  type="number" disabled onKeyPress="if(this.value.length==5) return false;" id="employerId" maxlength="10" placeholder="Enter your number">
+                        <div class="validMsg" >
+                            Please enter Employer id only digit allowed
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="col-sm-6">
+                    <label for="CategoryLabel">Which Job Do You Want You Post</label>
+                    <select required type="text" name="CategoryOption" class="form-control" id="CategoryOption" placeholder="-Select-" tabindex="">
+                        <option selected value=""> -Select- </option>
+                        <option value="Operator Category">Operator Category</option>
+                        <option value="MidSenior Category">MidSenior Category</option>
+                    </select>
+                    <div class="validMsg" >
+                        Please enter Employer id only digit allowed
+                    </div>
+                </div> -->
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label for="CategoryLabel">Which Job Do You Want You Post?</label>
+                        <select required type="text" name="CategoryOption" class="form-control" id="CategoryOption" placeholder="-Select-" tabindex="">
+                            <option selected value=""> -Select- </option>
+                            <option value="Operator Category">Operator Category</option>
+                            <option value="MidSenior Category">MidSenior Category</option>
+                        </select>
+                        <div class="validMsg" style="color: red">
+                            Please fill out this field
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <!-- <div class="col-sm-6">
+                    <div class="form-group">
+                        <label id="EmployerLabel" for="EmployerNo">Placement Id</label>
+                        <input class="form-control only_number "  type="number" disabled onKeyPress="if(this.value.length==5) return false;" id="placementId" maxlength="10" placeholder="Enter your number">
+                        <div class="validMsg" >
+                            Please enter Payment id only digit allowed
+                        </div>
+                    </div>
+                </div> -->
+
+            </div>
+
+                    <div class="row mb-3">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label id="jobRoleLabel" for="jobRole">Job Role</label>
+                                <div data-bs-toggle="modal" data-bs-target="#jobrolepage">
+                                <div>
+                                    <div><input  autocomplete="off" type="text" name="jobRole" id="jobRoleCategory" class="form-control " placeholder="--Select--" style="background-color: inherit;" readonly /></div>
+                                    <!-- <div class="d-grid justify-content-end pe-3" style="margin-top: -20px;">
+                                        <iconify-icon icon="il:arrow-down" style="font-size:10px ;"></iconify-icon>
+                                    </div> -->
+                                </div>
+                                </div>
+                                <input autocomplete="off" type="hidden" id="jobRole">
+                                <div class="validMsg mt-2">
+                                    Please select the job role
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label id="NoOfOpeningLabel" for="jobRole">No of Openings</label>
+                                <div data-bs-toggle="modal" data-bs-target="#noofopenings">
+                                    <div>
+                                        <input autocomplete="off" type="text" oninput="allowOnlyNumber(this,3)"   name="NoOfOpening" id="NoOfOPening" class="form-control" placeholder="No Of Openings" />
+                                    </div>
+                                    <div class="d-grid justify-content-end pe-3" style="margin-top: -20px;">
+                                        <!-- <iconify-icon icon="il:arrow-down" style="font-size:10px ;"></iconify-icon> -->
+                                    </div>
+                                </div>
+                                <input autocomplete="off" type="hidden" id="jobRole">
+                                <div class="validMsg noOfOpenigsError mt-3">
+                                    Please select No Of opening
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group mt-2">
+                                    <div class="d-flex flex-row">
+                                        <div class="no-of-openings-amount-div me-3">
+                                            <div class="no-of-openings-div">
+                                                <div class="no-of-openings-div1">
+                                                    <label id="genderLabel" class="no-of-openings-label">No. of
+                                                        Male(s)</label>
+                                                    <div class="no-of-openings-add-and-redu border" >
+                                                        <div class="no-of-openings-reduce-btn px-2 ">
+                                                            <img class="reduce-icon " alt=""
+                                                                src="./images1/reduce-icon.svg" />
+                                                        </div>
+                                                        <div class="no-of-openings-value-filed border ms-1"
+                                                            style="padding: 10px 10px;">
+                                                            <div class="no-of-openings " id="gender_male">0</div>
+                                                        </div>
+                                                        <div class="no-of-openings-add-btn px-2">
+                                                            <img class="add-icon" alt="" src="./images1/add.svg" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="no-of-openings-amount-div">
+                                            <div class="no-of-openings-div">
+                                                <div class="no-of-openings-div1">
+                                                    <label class="no-of-openings-label">No. of Female(s)</label>
+                                                    <div class="no-of-openings-add-and-redu border">
+                                                        <div class="no-of-openings-reduce-btn px-2">
+                                                            <img class="reduce-icon" alt=""
+                                                                src="./images1/reduce-icon.svg" />
+                                                        </div>
+                                                        <div class="no-of-openings-value-filed border ms-1 "
+                                                            style="padding: 10px 10px;">
+                                                            <div class="no-of-openings" id="gender_female">0</div>
+                                                        </div>
+                                                        <div class="no-of-openings-add-btn px-2">
+                                                            <img class="add-icon" alt="" src="./images1/add.svg" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                    <div class="validMsg maleFemaleErr mt-2">
+                                        You have purchased a plan for <span class="noOfcandidates"></span> candidates.
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6" >
+                                <div class="mt-2  form-group ms-3">
+                                    <label class="no-of-openings-label">Job Description </label>
+
+                                    <textarea class="form-control" name="" placeholder="Job Description" id="JobDescription"></textarea>
+
+                                    <!-- <div class="validMsg mt-2">
+                                        Please enter the job description
+                                    </div> -->
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">
+                            <div class="form-group">
+                                <label id="salaryLabel" for="salary">Salary (per month)</label>
+                                <div class="row">
+                                    <div class="col-4">
+                                        <input autocomplete="off" type="text" disabled class="form-control" placeholder="₹ INR" />
+                                    </div>
+                                    <div class="col-4">
+                                        <div data-bs-toggle="modal" data-bs-target="#salaryPage">
+                                            <input autocomplete="off" type="text" id="minSalary" style="background-color:white;" disabled name="salary" class="form-control" placeholder="Min" />
+                                            <div class="d-grid justify-content-end pe-3" style="margin-top: -20px;">
+                                                <iconify-icon icon="il:arrow-down" style="font-size:10px ;"></iconify-icon>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="col-4">
+                                        <div data-bs-toggle="modal" data-bs-target="#salaryPage">
+                                            <input autocomplete="off" type="text" id="maxSalary" disabled style="background-color:white;" name="maxSalary" class="form-control" placeholder="Max" />
+                                            <div class="d-grid justify-content-end pe-3" style="margin-top: -20px;">
+                                                <iconify-icon icon="il:arrow-down" style="font-size:10px ;"></iconify-icon>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="validMsg">
+                                    Please enter the salary
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-sm-6">
+                                 <!-- <div class="row justify-content-start"> -->
+                                    <div class=" form-group mx-3 mb-1">
+                                        <div class="custom-file  ">
+                                            <label for="formFile" class="form-label">Job Description (Upload File)</label>
+                                           <input class="form-control" type="file" id="formFile">
+                                        </div>
+                                        <!-- <button type="submit" class="btn btn-primary mt-3">Upload</button> -->
+                                    </div>
+                                <!-- </div> -->
+                        </div>
+                        </div>
+
+                    </div>
+                    <div class="row mb-3">
+
+                        <div class="col-sm-6 adddetails-margin-top">
+                            <div class="form-group">
+                                <label  id="benefitsLabel" for="benefits">Benefits</label>
+                                <div class="benefits_text_area_wrp" data-bs-toggle="modal" data-bs-target="#benefitsContainer">
+                                    <!-- <p type="text" style="height: auto; font-weight: 500;min-height: 35px;" name="benefits" id="benefits" class="form-control" placeholder="Ex:Yearly Bonus /Room available "> <span style="color: rgb(211, 211, 211);">Ex: PF, ESI</span> </p> -->
+                                    <textarea name="" class="form-control" id="benefits_text_area" style="height: 35px; background-color: inherit;" placeholder="Ex: PF, ESI" disabled ></textarea>
+                                    <div class="d-grid justify-content-end pe-3" style="margin-top: -20px;">
+                                        <iconify-icon icon="il:arrow-down" style="font-size:10px ;"></iconify-icon>
+                                    </div>
+                                </div>
+                                <div class="validMsg mt-1">
+                                    Please fill out this field
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <div class="form-group mt-1">
+                                <label id="minExpLabel" for="minExp">Minimum Experience </label>
+                                <div class="text-right pe-2" style="margin-top: -25px;  font-size: 12px;font-weight: 700; text-align: right ;max-height: 25px;margin-bottom: -10px;">
+                                    <p> <span><button class="experienceOption" id="exp0-1" style="font-weight: 700; border-style: none; ">0 - 1</button></span><span><button id="expFresher" class=" ms-2 fresherOption" style="font-weight: 600; border-style: none;">Freshers</button></span></p>
+                                </div>
+                                <div class="dropdown">
+                                    <div data-bs-toggle="dropdown">
+                                        <select required name=""  class="form-control" id="minExp">
+                                            <option selected value="">Ex: 2 - 4 Years</option>
+                                            <option class=" fresherOption" value="Freshers">Fresher</option>
+                                            <option class=" experienceOption" value="0 - 1">0 - 1</option>
+                                            <option class=" experienceOption" value="1">1</option>
+                                            <option class=" experienceOption" value="2">2</option>
+                                            <option class=" experienceOption" value="3">3</option>
+                                            <option class=" experienceOption" value="4">4</option>
+                                            <option class=" experienceOption" value="5">5</option>
+                                            <option class=" experienceOption" value="6">6</option>
+                                            <option class=" experienceOption" value="7">7</option>
+                                            <option class=" experienceOption" value="8">8</option>
+                                            <option class=" experienceOption" value="9">9</option>
+                                            <option class=" experienceOption" value="10">10</option>
+
+                                        </select>
+                                        <!-- <input autocomplete="off" type="text" name="minExp" id="minExp" class="form-control bg-white" placeholder="Ex: 2 - 4 Years" readonly /> -->
+                                        <div class="d-grid justify-content-end pe-3" style="margin-top: -20px;">
+                                            <iconify-icon icon="il:arrow-down" style="font-size:10px ;"></iconify-icon>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="validMsg mt-2">
+                                    Please select the minimum experience
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="row">
+
+                          <div class="col-sm-6">
+                            <div class="form-group">
+                                <label id="keySkillsLabel" for="contactPersonName">Key Skills</label>
+                                <div class="keySkills">
+
+                                    <p class="form-control " id="keySkill_input" style="height: auto; min-height: 35px; margin: 0px; font-weight: 500;"> <span style="color: rgb(211, 211, 211);">Select key skills</span> </p>
+                                </div>
+                                <div class="validMsg">
+                                    Please select the key skills
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group ">
+                                <label id="educationLabel" for="eduQualification">Educational Qualification </label>
+
+
+
+                                <div class="eduQuality-custom-dropdown">
+                                    <p class="form-control eduQuality_input" style="height: auto; min-height: 35px; margin: 0px; font-weight: 500;"> <span style="color: rgb(211, 211, 211);">Select education qualification</span> </p>
+                                    <div class="d-grid justify-content-end pe-3 " style="margin-top: -20px; z-index: -80;">
+                                        <img width="10px" src="./images1/downArrow.png" alt="">
+                                    </div>
+
+                                </div>
+
+
+                                <div class="validMsg mt-2" id="edu_quality_error">
+                                    Please select the educational qualification
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label id="genderLabel" for="">Gender</label>
+                                <div class="gender_container" id="gender_input">
+                                    <input type="radio" name="gender" value="Male" id="gender_male"><label class="me-1" for="gender_male"> <img class="d-inline" width="20px" src="./images1/gender_male.png" alt=""> Male</label>
+                                    <input type="radio" name="gender" value="Female" id="gender_female"><label class="mx-1" for="gender_female"> <img class="d-inline" width="20px" src="./images1/gender_female.png" alt=""> Female</label>
+                                    <input type="radio" name="gender" value="Both" id="gender_both"><label class="mx-1" for="gender_both"> <img class="d-inline"  width="20px" src="./images1/gender_both.png" alt=""> Both</label>
+                                </div>
+                                <div class="validMsg">
+                                    Please select the gender
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+
+                    <div class="col-sm-6 d-none mt-3" id="depContainer">
+                        <div class="form-group">
+                            <label for="department">Department </label>
+                            <input autocomplete="off" type="text" list="departmentList" name="department" id="department" class="form-control" placeholder="Department" />
+                            <datalist id="departmentList">
+
+                            </datalist>
+                            <div class="validMsg">
+                                Please fill out this field
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+
+                <div class="addDetailsContainer">
+                    <div>
+                        <button class="addDetailsBtn d-none "> + Additional Details </button>
+                    </div>
+                    <div class="addDetaisContainer">
+                        <div class="py-3 px-md-3 px-lg-4 px-sm-2">
+                            <span class="text-green" style="font-weight: 600;">Additional Details  </span><button class="d-none" id="cancelAddDetails"> &nbsp Cancel </button>
+                            <div class="row " style="margin-bottom: 0px;">
+                                <div class="col-sm-6" style="margin: 0px;">
+                                    <div class="form-group">
+                                        <label id="shiftLabel" for="shiftType">Shift</label><br>
+                                        <div class="row">
+                                            <div class="col-5    d-grid justify-content-center ">
+                                                <label for="option-1" class=" shiftBtn1  "> <input autocomplete="off" value="General" type="radio" onchange="radioBtnFn()" name="shiftType" id="option-1" /><span> &nbsp General</span></label>
+
+                                            </div>
+                                            <div class="col-5  d-grid justify-content-center">
+                                                <label for="option-2" class=" shiftBtn2  "><input autocomplete="off" value="Rotational" type="radio" onchange="radioBtnFn()" name="shiftType" id="option-2" /><span> &nbsp Rotational</span></label>
+
+                                            </div>
+                                        </div>
+
+
+                                        <div class="validMsg">
+                                            Please fill out this field
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="col-sm-6 adddetails-margin-top">
+
+                                    <div class="">
+                                        <div class="form-group">
+                                            <label id="overTimeLabel" for="otType">Over Time</label><br>
+                                            <div class="row">
+                                                <div class="col-5   d-grid justify-content-center ">
+                                                    <label for="overTime-1" class=" otBtn1  "> <input autocomplete="off" type="radio" value="Yes" onchange="overTimeBtnFn()" name="otType" id="overTime-1" /><span> &nbsp Yes</span></label>
+                                                </div>
+                                                <div class="col-5  d-grid justify-content-center">
+                                                    <label for="overTime-2" class=" otBtn2"><input autocomplete="off" value="No" type="radio" onchange="overTimeBtnFn()" name="otType" id="overTime-2" /><span> &nbsp No</span></label>
+
+                                                </div>
+                                            </div>
+
+
+                                            <div class="validMsg">
+                                                Please fill out this field
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="row" style="margin-top: 0px;">
+                                <!-- <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label for="otType">Over Time</label><br>
+                                        <div class="row">
+                                            <div class="col-6   d-grid justify-content-center ">
+                                                <label for="overTime-1" class=" otBtn1  "> <input autocomplete="off" type="radio" value="Yes" onchange="overTimeBtnFn()" name="otType" id="overTime-1" /><span> &nbsp Yes</span></label>
+
+                                            </div>
+                                            <div class="col-6  d-grid justify-content-center">
+                                                <label for="overTime-2" class=" otBtn2"><input autocomplete="off" value="No" type="radio" onchange="overTimeBtnFn()" name="otType" id="overTime-2" /><span> &nbsp No</span></label>
+
+                                            </div>
+                                        </div>
+
+
+                                        <div class="validMsg">
+                                            Please fill out this field
+                                        </div>
+                                    </div>
+
+
+                                </div> -->
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label id="workHoursLabel" for="workHours">Work Hours </label>
+                                        <div data-bs-toggle="dropdown">
+                                            <select required name="" class="form-control" id="workHours">
+                                                <option selected value="">Ex: 8 hours </option>
+                                                <option value="8 hours">8 hours</option>
+                                                <option value="9 hours">9 hours</option>
+                                                 <option value="10 hours">10 hours</option>
+                                                 <option value="11 hours">11 hours</option>
+                                                 <option value="12 hours">12 hours</option>
+                                            </select>
+
+                                        </div>
+
+                                        <div class="validMsg">
+                                            Please fill out this field
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="col-sm-6">
+                                    <div class="form-group">
+                                        <label id="LocationurlLabel" for="Locationurl">Location url</label>
+                                        <textarea class="form-control text-capitalize" autocomplete="off" name="textarea" rows="1" cols="20" id="locationUrl" placeholder="Location Url" ></textarea>
+                                        <div class="validMsg">
+                                            Please fill out this field
+                                        </div>
+                                    </div>
+
+                                </div>
+
+
+                            </div>
+
+
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="py-3 px-md-3 px-lg-4 px-sm-2">
+                    <span class="text-green" style="font-weight: 600;">Contact Details </span>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label id="contactNameLabel" for="contactPersonName">Contact Person Name</label>
+                                <input autocomplete="off" type="text" name="contactPersonName" id="contactPersonName" class="form-control text-capitalize" placeholder="Contact Person Name" />
+                                <div class="validMsg">
+                                    Please enter contact person name
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label id="contactNumberLabel" for="contactNum">Contact Number</label>
+                                <div style="width: 100% !important;">
+                                    <div class="row">
+                                        <div class="col-3">
+                                            <p class="countryCodeWrp d-grid align-items-center ">
+
+                                                <span class="ms-1" style="font-size: 13px;font-weight: 600;"> <img  style="width: 15px;margin-left: 5px;" src="./images1/indianFlag.PNG" alt=""> <span >  +91</span> </span>
+                                            </p>
+                                        </div>
+                                        <div class="col-9">
+                                            <input autocomplete="off" type="number" onKeyPress="if(this.value.length==10) return false;" name="contactNum" id="contactNum" class="form-control" placeholder="Contact Number" />
+                                            <!-- <div class="d-grid justify-content-end">
+                                                <button onclick="return false" id="verifyBtn" class="bg-green verifyBtn d-none " data-toggle="tooltip" data-placement="bottom" title="Send OTP to verify contact number">
+                                                   Send OTP
+                                                </button>
+                                                <span>
+                                                 <p class="text-green  verifyTxt d-none pe-2" style="font-size:13px;font-weight: 500;margin-top: -25px;"> verified <img src="./images1/verifyImg.png"> </p></span>
+                                                </p>
+                                                </span>
+                                            </div> -->
+
+
+                                        </div>
+
+                                    </div>
+
+
+                                </div>
+                                <div class="d-grid justify-content-end" style="margin-top: -15px;">
+                                    <button id="addAltrBtn"><span class="iconify" data-icon="carbon:add-alt" style="color: #316dc5; font-size: 15px;"></span>&nbsp  Add alternate Mobile Number</button>
+                                </div>
+                                <div class="validMsg contactErr" style="margin-top: -5px;">
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="alterNumContainer d-none">
+                                <div class="form-group">
+                                    <label for="alternateNum">Alternate Number </label><span><button  id="cancelAltrNum"> &nbsp Cancel </button></span>
+                                    <div style="width: 100% !important;">
+                                        <div class="row">
+                                            <div class="col-3">
+                                                <p class="countryCodeWrp d-grid align-items-center">
+                                                    <span class="ms-1" style="font-size: 13px;font-weight: 600;"> <img  style="width: 15px;margin-left: 5px;" src="./images1/indianFlag.PNG" alt=""> <span >  +91</span> </span>
+                                                </p>
+                                            </div>
+                                            <div class="col-9">
+                                                <input autocomplete="off" type="number" onKeyPress="if(this.value.length==10) return false;" name="alternateNum" id="alternateNum" class="form-control" placeholder="Alternate Number" />
+                                                <div class="d-grid justify-content-end">
+                                                    <button onclick="return false" id="verifyBtnAlt" class="bg-green verifyBtnAlt d-none " data-toggle="tooltip" data-placement="bottom" title="Send OTP to verify alternate number">
+                                                     Send OTP
+                                                </button>
+                                                    <span>
+                                                 <p class="text-green  verifyTxtAlt d-none pe-2" style="font-size:13px;font-weight: 500;margin-top: -25px;"> verified <img src="./images1/verifyImg.png"> </p></span>
+                                                    </p>
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="validMsg alternateNumErr" style="margin-top: -20px;">
+                                        Please fill out this field
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <!-- <div class="col-sm-6">
+                            <div class="form-group ">
+                                <label for="">Is <strong class="empWhatAppNumber text-primary" > 7806805803 </strong> your WhatsApp number? </label>
+
+                                <input type="radio" name="isSameWatsappNumber" id="Yes_same_number">
+                                  <label for="Yes_same_number">Yes</label>
+                                <input type="radio" name="isSameWatsappNumber" id="not_same_number">
+                                  <label for="not_same_number">No</label>
+
+                                   <div class="radio_btn_wrp ps-3">
+                                    <input type="radio" name="isWhatsAppNumber" value="Yes" id="yes_same_number"><label class="me-1" for="yes_same_number">Yes</label>
+                                    <input type="radio" name="isWhatsAppNumber" value="No" id="not_same_number"><label class="mx-1" for="not_same_number">No</label>
+                                   </div>
+
+                                     <div class="validMsg" >
+                                        Please fill out this field
+                                    </div>
+
+                            </div>
+                        </div> -->
+                        <div class="col-sm-6">
+                             <div class="form-group whatApp_number_wrp">
+                                <label for="WhatsappNumberLabel">WhatsApp number</label>
+                                <input class="form-control only_number "  type="number" onKeyPress="if(this.value.length==10) return false;" id="whatAppNumber" maxlength="10" placeholder="Enter your WhatsApp number">
+                                   <div class="validMsg" >
+                                      Please enter valid WhatApp number
+                                    </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <div class="form-group whatApp_number_wrp">
+                                <label for="WhatsappNumberLabel">Contact Email ID</label>
+                                <input class="form-control  " type="text" onKeyPress="if(this.value.length==70) return false;"
+                                    id="emailID" maxlength="70" placeholder="Enter the email id ">
+                                <div class="validMsg">
+                                    Please enter the valid email id
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="form-group d-grid justify-content-center  d-none ">
+                    <div>
+                        <button type="button pb-1" style="background-color: #70dea236;border: 0px green;padding: 3px 15px 8px 15px;margin-left: 14px;margin-top: 10px;;
+                    border-radius: 4px;font-size: 13px;">
+                     <iconify-icon icon="fontisto:whatsapp" style="color: #1cb260; font-size: 20px;"></iconify-icon> <span>  &nbsp;  Get regular candidate response updates via WhatsApp</span>
+                       <label class="switch my-2">
+                         <input autocomplete="off" type="checkbox" checked name="whatsAppCheck" id="whatsAppCheck">
+                         <span class="slider round "></span>
+                       </label>
+       </button>
+                        <div class="ps-3 validMsg">
+                            Please fill out this field
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-grid justify-content-center mt-2 mb-1">
+                    <button onclick="return false " id="btn_publish" class="api-btn " style="width:auto !important; min-width: 150px;">Publish</button>
+                    <div class="form-group">
+                        <p class="validMsg">Some details are missing</p>
+                    </div>
+
+                </div>
+
+                <p class="text-center mt-3" style="font-size: 13px;">If you have any issues, please <a class="text-primary" href="https://wame.pro/taizo.in" target="_blank">Click Here</a></p>
+            </div>
+
+        </div>
+    </div>
+    <!-- end of post a job form -->
+
+    <!--Job Role popup Page Content-->
+    <div class="modal" id="jobrolepage">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content" style="border-radius: 15px;">
+                <div class="modal-body  pt-0 pb-3">
+                    <div class="modal-body pt-3">
+                        <h4 class="modal-title font-weight-bold">Select Industry?</h4>
+                        <div class="d-grid justify-content-end" style="margin-top: -30px; margin-right: -30px;"><button type="button" class="btn-close close" data-bs-dismiss="modal" aria-label="Close"></button></div>
+
+                    </div>
+                    <div class="modal-body mx-3 p-0 list-industry">
+                        <!-- <input autocomplete="off" type="text" id="industrys" class="btn-job-list" value="Ine sa" name="rangePrimary" /> -->
+                    </div>
+
+                </div>
+
+                <div class="modal-body  pt-0 pb-5 body-list-role">
+                    <div class="modal-body pt-0">
+                        <h4 class="modal-title font-weight-bold">Select Job Role?</h4>
+                        <div>
+                            <form action="" onsubmit="return false">
+                                <input class="job_role_auto-search form-control" style="background-image: url(./images1/se); background-size:25px ; background-repeat:no-repeat; background-position:97% " class="form-control" type="text">
+                                <div style="position: relative; z-index:30">
+                                    <!-- auto complete dropdown -->
+                                    <div class="dropdown_jobrole_wrp d-none ">
+                                        <!-- auto complete goes here -->
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="jobrole_scrollbar scrollbar-primary">
+                        <div class="jobrole_force-overflow ">
+                            <!-- list goes here -->
+                            <div class="modal-body mx-3 p-0 list-role" style="background: aliceblue;">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="hidden invalid-confirm">Please fill out this field</div>
+                    <div class="col-md-12 d-grid d-none p-1 justify-content-end pe-4 mt-3">
+                        <button type="button" class="btn btn-custom-primary confirm-job-role"> Confirm</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Salary popup Page Content-->
+    <div class="modal" id="salaryPage">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content" style="border-radius: 15px;">
+                <div class="modal-body mx-3 pt-0">
+                    <div class="modal-body mx-3 pt-3 pl-0">
+
+                        <h4 class="modal-title font-weight-bold">Salary Range</h4>
+                        <div class="d-grid justify-content-end" style="margin-top: -30px; margin-right: -70px;"><button type="button" class="btn-close close" data-bs-dismiss="modal" aria-label="Close"></button></div>
+
+                    </div>
+
+                    <form action="" onsubmit="return false" class="form-group">
+                        <div class="modal-body mx-3 p-0">
+                            <div class=" mb-4 row">
+                                <div class="form-group col-sm-6">
+                                    <label for="fromSal">Min</label><br>
+                                    <input autocomplete="off" type="text" class="js-input-from" id="fromSal">
+                                </div>
+                                <div class="form-group col-sm-6">
+                                    <label for="toSal">Max</label><br>
+                                    <input autocomplete="off" type="text" class="js-input-to" id="toSal">
+                                </div>
+                                <div id="salary_error_txt" class="validMsg">
+                                    Candidates are not responding to jobs with salaries less than INR 10000
+                                </div>
+                            </div>
+                            <input autocomplete="off" type="text" id="rangePrimary" class="mt-5" name="rangePrimary" step="500" value="0" />
+                        </div>
+
+
+
+                        <div class="modal-body mx-3 d-grid justify-content-end">
+                            <button class="btn btn-primary custom-btn" type="submit" data-dismiss="modal" id="salaryConfirmBtn">Confirm</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- benefits popup -->
+    <div class="modal" id="benefitsContainer">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content" style="border-radius: 15px;">
+                <div class="modal-body  py-4">
+                    <div class="modal-body pt-3">
+                        <h4 class="modal-title font-weight-bold">Select benefits <span class="text-danger benefits_error_txt d-none ">(Max 10)</span></h4>
+                        <div class="d-grid justify-content-end" style="margin-top: -30px; margin-right: -40px;"><button type="button" class="btn-close close" data-bs-dismiss="modal" aria-label="Close"></button></div>
+
+                    </div>
+                    <div class="benefits_scrollBar scrollbar-primary">
+                        <div class="benefits_force-overflow">
+                            <div class="modal-body mx-3 p-0 list-benefits" style="background: aliceblue;">
+                                <!-- list goes here -->
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- <div class="modal-body mx-3 p-0 list-benefits" style="min-height:50vh; height:50vh;overflow-y: auto;background: aliceblue;">
+
+                    </div> -->
+                    <div class="col-md-12 d-grid p-1 justify-content-end pe-4 mt-3">
+                        <button type="button" class="btn btn-custom-primary confirmBenefits"> Confirm</button>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- otp verify popup -->
+
+    <!-- key skills popup -->
+    <div class="keySkills_popupContainer keySkills_popup  d-none">
+        <div class="keySkills_popupbody">
+            <div class="keySkills_popupContent">
+                <div class="d-grid justify-content-end pe-5 pe-sm-2" style="margin-top: -10px; margin-right:-20px ;">
+                    <div class="closeBtn keySkills_closeBtn"></div>
+                </div>
+                <div>
+                    <h4 class="mb-3 mx-2">Select key skills <span class=" ks_maxNum ">( Max 5 )</span></h3>
+                </div>
+                <div class="my-3" style=" position: relative;width: auto; ">
+                    <div class="selected_ks_wrp">
+                        <!-- selected key skill list -->
+                    </div>
+                    <input style=" background: url(images/search_icon.png); background-size: 20px; background-repeat: no-repeat; padding-left: 25px!important; background-position:97%" type="text" class=" form-control keyskills_auto_complete  " placeholder="Search">
+
+                    <!-- auto complete dropdown -->
+                    <div class="dropdown_keyskills_wrp d-none">
+                        <!-- auto complete goes here -->
+                    </div>
+                </div>
+
+                <div>
+                    <div class="keyskills_scrollbar scrollbar-primary">
+                        <div class="keyskills_force-overflow keySkills_list">
+                            <!-- list goes here -->
+                        </div>
+                    </div>
+                    <div class="col-md-12 d-grid p-1 justify-content-end pe-4 mt-1">
+                        <button type="button" class="btn btn-custom-primary keySkills_closeBtn "> Confirm</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- End of key skills popup -->
+
+
+
+    <!-- otp verification -->
+    <section class="cusmodal d-none ">
+        <div class="container">
+            <div class="otpmodalwrp">
+                <div class="otpmodalitm befverfy">
+                    <div class="row">
+                        <div class="col-2">
+
+                        </div>
+                        <div class="col-8">
+                            <h2 class="modaltle">OTP Verification</h2>
+
+                        </div>
+                        <div class="col-2">
+                            <button type="button" id="verifyCloseBtn" class="btn-close" aria-label="Close"></button>
+                        </div>
+                    </div>
+
+                    <p class="modldesc">Please enter the OTP code sent <br>to <span id="sendToNum">+91 9845555556</span></p>
+
+                    <div class="verification-code--inputs vrycdewrp" style="margin-top: 30px;">
+                        <input type="text" id="otpInp1" maxlength="1" />
+                        <input type="text" id="otpInp2" maxlength="1" />
+                        <input type="text" id="otpInp3" maxlength="1" />
+                        <input type="text" id="otpInp4" maxlength="1" />
+                        <input type="text" id="otpInp5" maxlength="1" />
+                        <input type="text" id="otpInp6" maxlength="1" />
+                        <div id="otpValid" class="valError mt-2"> Invalid OTP entered </div>
+                    </div>
+                    <div style="margin-top: -25px;">
+                        <p class="otpverbtnwrp"><a href="#" class="otpverbtn">Verify</a></p>
+                        <p class="otpresd text-center">Didn't receive an OTP? <button id="resendOtp" style="text-decoration: none; border-style: none; background-color: white; color: #1CB260;">Resend</button></p>
+                    </div>
+
+                </div>
+
+                <div class="otpmodalitm aftverfy d-none">
+                    <h2 class="modaltle">Mobile Number Verified</h2>
+                    <div class="vefdimgwrp"><img src="./images1/mob-verified.png" alt=""></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- education quality poupup -->
+    <section class="edu_quality_popup">
+        <div class="common_popupContainer">
+            <div class="common_popup_body">
+                <div class="common_popupContent">
+                    <div class="d-grid justify-content-end" style="margin-top: -10px;">
+                        <div class="closeBtn eduQualtiy_closeBtn"></div>
+                    </div>
+                    <div>
+                        <h4 class="mb-3 mx-2">Educational Qualification</h3>
+                    </div>
+                    <div class="eduQuality_list_wrp mt-3">
+                        <div class="eduQuality_list" id="eduQuality_list" style="width:auto; max-width:350px ">
+                            <input type="checkbox" data-eq-value="Below-10th" id="Below10th">
+                            <label for="Below10th">Below 10th</label>
+                            <input type="checkbox" data-eq-value="10th-Pass-and-Above" id="10thPassandAbove">
+                            <label for="10thPassandAbove">10th Pass and Above</label>
+                            <input type="checkbox" data-eq-value="ITI" id="ITI">
+                            <label for="ITI">ITI</label>
+                            <input type="checkbox" data-eq-value="Diploma" id="Diploma">
+                            <label for="Diploma">Diploma</label>
+                            <input type="checkbox" data-eq-value="UG" id="UG">
+                            <label for="UG">UG</label>
+                            <input type="checkbox" data-eq-value="PG" id="PG">
+                            <label for="PG">PG</label>
+                        </div>
+
+                    </div>
+                    <div class="d-grid justify-content-end mt-3">
+                        <button class="api-btn eduQuality_confirm">Confirm</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end of education poup  -->
+
+
+    <!-- pricing content -->
+
+
+                <div>
+                    <div class="d-grid justify-content-center mt-4">
+                        <div class="d-grid justify-content-end" style="width: 80vw;">
+                            <!-- <div  class="closeBtn pricing_popup_cancel"></div> -->
+                        </div>
+                    </div>
+                    <section class="main_content pricingContainer d-none">
+
+                    </section>
+                </div>
+
+    <!-- end of pricing content -->
+
+
+    <!--  pricing popup-  -->
+    <div class="pricing_popupContainer pricingContainerss d-none">
+        <div class="pricing_popupBody">
+            <div class="pricing_popupContent ">
+                <h2 class="text-center mb-2" style="font-weight: 700;">Pricing</h2>
+                <div class="d-grid justify-content-end pe-4 pe-sm-0  " style="margin-top: -50px; margin-right:-20px;"><button type="button" class="btn-close pricingPopupCloseBtn" aria-label="Close"></button></div>
+
+                <!-- pricing btn -->
+                <div>
+                    <div class="billingBtn mt-4 ">
+                        <button class="text-center monthlyPlanBtn activePlanBtn">
+                                Bill Monthly
+                            </button>
+                        <button class="text-center yearlyPlanBtn idlePlanBtn ">
+                                <p style="margin-top: -5px;">
+                                    Bill yearly
+                                    <p style="font-size: 10px;margin-top: -20px; margin-bottom: -20px;">Save 50%</p>
+                                </p>
+
+                                </button>
+                    </div>
+                    <h5 class="pricingAlertText text-center mb-3 mt-3 text-danger"></h5>
+                    <div>
+
+                        <p class="text-center mt-1 pricingErrText" style="font-size: 12px; font-weight: 400;">Your Taizo Free Trial has Ended. <br> To continue to post the job you can subscribe to a Monthly / Annual plan that works for you</p>
+                    </div>
+                    <div class="monthlyPlanDetails">
+                        <p class="text-center mx-auto  saveOffer d-none">save 50%</p>
+                        <h4 class="text-center mt-3"><span class="priceVal" style="font-size: xx-large;">₹999</span>/<span class="planName">month</span></h4>
+
+
+                        <div class="startpln startplnyearly text-center  mt-4"><a href="#" style="text-decoration: none !important;" class="startplnbtn">Upgrade</a></div>
+
+                        <ul class="priceDetList" style="margin-top: 20px;">
+                            <li class="priceDetListItem"><img class="imgPrice" src="./images1/invoice_success_icon.png"><b class="jobCount">1 Job Post</b></li>
+                            <li class="priceDetListItem"><img class="imgPrice" src="./images1/invoice_success_icon.png">Unlimited Candidate Responses</li>
+                            <li class="priceDetListItem"><img class="imgPrice" src="./images1/invoice_success_icon.png>Interview Scheduling</li>
+                            <li class="priceDetListItem"><img class="imgPrice" src="./images1/invoice_success_icon.png">Pre-screening Questions</li>
+                            <li class="priceDetListItem"><img class="imgPrice" src="./images1/invoice_success_icon.png">Email Notifications</li>
+                            <li class="priceDetListItem"><img class="imgPrice" src="./images1/invoice_success_icon.png">Push Notifications</li>
+                            <li class="priceDetListItem"><img class="imgPrice" src="./images1/invoice_success_icon.png">WhatsApp Notifications</li>
+                        </ul>
+                    </div>
+
+                </div>
+                <!-- end of pricing btn -->
+            </div>
+        </div>
+    </div>
+
+
+    <!--   end of pricing popup-  -->
+
+    <!-- save button popup -->
+    <div class="common_popupContainer  savePopupContainer d-none">
+        <div class="confirmCall_popupBody">
+            <div class="confirmCall_popupContent">
+                <div class="">
+                    <!-- <div class="d-grid justify-content-end" style="margin-bottom: -10px; margin-right: -20px; "><button type="button" class="btn-close canCallCloseBtn" aria-label="Close"></button></div> -->
+
+                    <div class="mb-3 mt-4">
+                        <!-- <h5 class=" mb-2 ps-2 text-center candidateName"> </h5> -->
+                        <div class="mt-3 ps-2 candidateDetailsCard">
+                            <h6 class="text-center">Do you want to save the job to publish later ?</h6>
+
+                            <div class="d-grid justify-content-center my-4">
+                                <div> <a href="" style="text-decoration: none;"><button class="cancelBtn d-inline  px-4 mx-2"> &nbsp; No &nbsp;</button></a>
+                                    <button class="api-btn d-inline mx-2 save_job_btn">&nbsp; Save &nbsp;</button></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="common_popupContainer whatsApp_alert_confirm_popup d-none">
+        <div class="common_popup_body">
+            <div class="common_popupContent">
+               <p> Turning off this option will stop the WhatsApp alert service. You will not receive notifications on WhatsApp for candidate responses. </p>
+
+
+<h6>Are you sure you want to turn off this option?</h6>
+
+<div class="d-grid justify-content-center mt-3">
+    <div>
+        <button class="secondary_btn whatsapp_alert_yes me-3">Yes</button>
+        <button class="primary_btn whatsapp_alert_no ">No</button>
+    </div>
+</div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div class="location_popup_wrp common_popupContainer d-none">
+             <div class="common_popup_body">
+                <div class="common_popupContent">
+
+                    <h4>
+                        <div class="row">
+                            <div class="col-11">Please select your location</div>
+                            <div class="col-1">  <div class="d-grid justify-content-end mb-2 location_popup_cancel">
+                                <div class="closeBtn"></div>
+                                </div></div>
+                        </div>
+                    </h4>
+                    <p class=" map_location_info">( Location of your company will help job seekers reach you easily for the interview. )</p>
+                             <div class="seacrch_by_company  ">
+                                <label for="companyName_gmap">Search for your location</label>
+                                <input id="companyName_gmap"  type="text" class="form-control companyName_gmap search_icon" placeholder="Search by Company Name, Area, Location...">
+                             </div>
+
+                             <div class="location_btn_wrp my-3 ">
+                                <p class="text-center mt-3 or_divider" style="margin-bottom: 0px;">or</p>
+                                <button class=" use_cur_location "> <img src="./images1/location_icon.png" alt="" srcset=""> Use current location</button>
+                             </div>
+
+                              <div class="use_location_wrp d-none">
+                                <input id="map_input2" style="max-width: 300px;" class="form-control  companyName_gmap my-2 ms-sm-5 search_icon" type="text" placeholder="Search by Area, Company Name..."/>
+                              <div id="map_container"></div>
+
+                              </div>
+
+                             <div class="address_conformation_wrp d-none">
+                                <div class="map_address_wrp d-nonee">
+                                    <div class="form-group">
+                                        <label for="map_captured_address">Address</label>
+                                    <textarea disabled id="map_captured_address" class="map_captured_address form-control">  </textarea>
+                                    <p class="validMsg map_matched_city_err">Sorry, our service is currently available in the Tamil Nadu cities of Chennai,Chengalpattu,Coimbatore,Hosur,Kanchipuram,Tiruvallur</p>
+                                    </div>
+
+                                    <div class="continue_post_wrp d-none">
+                                        <button  class="btn bg-green text-white d-block mx-auto px-4 mt-2 mt-sm-4 continue_post">Continue</button>
+                                     </div>
+                                </div>
+                             </div>
+
+                </div>
+            </div>
+    </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/js/intlTelInput-jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/js/ion.rangeSlider.min.js"></script>
+    <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.0-beta.3/iconify-icon.min.js"></script>
+    <script  src="./assest/js/all1.js"></script>
+
+    <!-- pricing popup js  -->
+    <script  src="https://checkout.razorpay.com/v1/checkout.js"></script>
+
+
+
+
+
+    <!-- fireBase CDNs -->
+    <script  src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script  src="https://www.gstatic.com/firebasejs/8.10.1/firebase-analytics.js"></script>
+    <script  src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+    <script defer src="./assest/js/postJobApi1.js"></script>
+
+
+    <script defer src="./assest/js/utils1.js"></script>
+
+
+
+
+
+
+    <script>
+    $(".feedback_popup_close").click(function () {
+        $("#frequently_posted_jobpopup").addClass("d-none");
+    })
+        let benefitsCountArr = [];
+        let ks_valueArr = [];
+        let eq_valueArr = [];
+        let selected_keySkill = [];
+        let benefits_text=[];
+        let showDetails={
+            whatsapp:false
+        }
+
+        $.ajax({
+    url: "../pricing_page_content.html",
+    async: false,
+  }).done(function (res) {
+    $(".main_content").html(res);
+  });
+
+
+    // $(document).ready(function () {
+    //     $('#JobDescription').on('input', function () {
+    //         var maxLength = 1000; // Maximum number of characters allowed
+    //         var currentLength = $(this).val().length;
+    //         var remaining = maxLength - currentLength;
+
+    //         if (remaining < 0) {
+    //             $(this).val($(this).val().slice(0, maxLength));
+    //             remaining = 0;
+    //         }
+
+    //     });
+    // });
+
+
+
+            function allowOnlyNumber(input,length) {
+
+                // Remove leading zeros
+                input.value = input.value.replace(/\D/g, '');
+
+                // Ensure it is a positive number
+                if (input.value < 0) {
+                    input.value = '';
+                    return;
+                }
+
+                // Ensure the maximum length is 3
+                if (input.value.length > length) {
+                    input.value = input.value.slice(0, 3);
+                }
+
+
+            }
+
+
+        let radioBtnFn = () => {
+            if ($("#option-1").is(":checked")) {
+                $(".shiftBtn1").addClass("activeBtn");
+                $(".shiftBtn2").removeClass("activeBtn");
+            } else {
+                if ($("#option-2").is(":checked")) {
+                    $(".shiftBtn1").removeClass("activeBtn");
+                    $(".shiftBtn2").addClass("activeBtn");
+                }
+            }
+        }
+        let overTimeBtnFn = () => {
+            if ($("#overTime-1").is(":checked")) {
+                $(".otBtn1").addClass("activeBtn");
+                $(".otBtn2").removeClass("activeBtn");
+            } else {
+                if ($("#overTime-2").is(":checked")) {
+                    $(".otBtn1").removeClass("activeBtn");
+                    $(".otBtn2").removeClass("activeBtn");
+                }
+            }
+        }
+
+        $(".addDetailsBtn").click(function() {
+            $(".addDetaisContainer").removeClass("d-none");
+            $(".addDetailsBtn").addClass("d-none");
+            window.scrollTo(0, document.body.scrollHeight);
+
+        })
+        $("#cancelAddDetails").click(function() {
+            $(".addDetaisContainer").addClass("d-none");
+            $(".addDetailsBtn").removeClass("d-none");
+        })
+
+        $("#addAltrBtn").click(function() {
+            $("#addAltrBtn").hide();
+            $(".alterNumContainer").removeClass("d-none");
+        })
+        $("#cancelAltrNum").click(function() {
+            $("#addAltrBtn").show();
+            $(".alterNumContainer").addClass("d-none");
+            $("#alternateNum").val("");
+            removeError("alternateNum");
+        })
+
+        $(document).on("click",".pricing_popup_cancel",function(){
+            $(".pricingContainer").addClass("d-none");
+            $(".post_job_content").removeClass("d-none");
+        })
+
+        $(document).on('click', '.btn-job-industry', function() {
+            $(".btn-job-industry").removeClass('active');
+            $(this).addClass('active');
+            $("#jobRole").val($(this).attr('data-value'));
+            $("#jobRoleCategory").val("")
+
+        });
+        $(".workHrContainer li").click(function() {
+            $("#workHours").val($(this).text());
+        })
+
+        $(".minExpList li a").click(function() {
+            $("#exp0-1 ,#expFresher").css("color", "black");
+            $("#exp0-1 ,#expFresher").css("background-color", "#EBEDED");
+            $("#minExp").val($(this).text()).change();
+            removeError("minExp");
+        });
+        $("#exp0-1 , #expFresher").click(function() {
+            $("#exp0-1 ,#expFresher").css("color", "black");
+            $("#exp0-1 ,#expFresher").css("background-color", "#EBEDED");
+            $(this).css("background-color", "#1CB26024");
+            $(this).css("color", "#1cb240");
+            $("#minExp").val($(this).text()).change();
+            removeError("minExp");
+        })
+
+        // auto resizing text area
+        $(document).on("input","#benefits_text_area", function(){
+            this.style.height = '35px';
+
+            this.style.height =
+                    (this.scrollHeight) + 'px';
+        });
+
+        $(document).on("click",".benefits_text_area_wrp", function(){
+            let benefits_value_arr=$("#benefits_text_area").val().split(", ");
+            $('.list-benefits>input').each(function () {
+                let condition=benefits_value_arr.indexOf($(this).val())!=-1;
+                if (condition) {
+                    this.checked=true
+                } else {
+                    this.checked=false
+                }
+              })
+        })
+
+        function expFreshFn() {
+            if ($("#expFresher").is(":checked")) {
+                $("#minExp").val("Fresher");
+            } else {
+                $("#minExp").val("")
+            };
+
+        }
+
+
+
+        //   benefits functons
+        $(document).on('click', '.list-benefits>input', function() {
+            removeError("benefits_text_area");
+            let checked_length=$(".list-benefits>input:checked").length
+            if (checked_length<=10) {
+                if (this.checked==true) {
+                    benefits_text.push($(this).val());
+                } else {
+                    benefits_text.splice(benefits_text.indexOf($(this).val()),1)
+                }
+            } else {
+                this.checked=false
+            }
+
+            if (checked_length>9) {
+                $("#benefitsContainer .benefits_error_txt").removeClass("d-none")
+            } else {
+                $("#benefitsContainer .benefits_error_txt").addClass("d-none")
+            }
+            $("#benefits_text_area").val(benefits_text.join(", "))
+            $("#benefits_text_area").css("height","35px");
+            $("#benefits_text_area").css("height",($("#benefits_text_area").prop("scrollHeight")+"px"));
+
+        });
+
+        // key skills Api function
+
+        let keyskills_autocomplete_Arr = [];
+
+        function keykill_api_fn() {
+            let settings = {
+                method: "GET",
+                url: getBaseUrl() + "/keySkills",
+                async: false
+            }
+            $.ajax(settings).done(function(res) {
+                let keySkillArr = res.data;
+                // console.log(keySkillArr)
+                let keySkillList = "";
+                let key_skills_autocomplete_list = "";
+                keySkillArr.map((element, index) => {
+
+                    key_skills_autocomplete_list += `<button  data-value="${index}_ks" >${element.skill}</button>`
+
+                    keySkillList += `<input type="checkbox" data-keyValue=${element.skill.split(" ").join("-")} id="${index}_ks">
+                            <label for="${index}_ks">${element.skill}</label>`;
+                    keyskills_autocomplete_Arr.push(element.skill)
+                })
+                $(".keySkills_list").html(keySkillList)
+                $(".dropdown_keyskills_wrp").html(key_skills_autocomplete_list + "<button class='no_results_found'>No results found</button>")
+            })
+        }
+
+        $(document).ready(function() {
+            keykill_api_fn();
+        })
+
+        $(document).on('click', ".keySkills_list input", function(evt) {
+
+            let thisId = $(this).attr("id")
+                // alert(thisId)
+            removeError("keySkill_input");
+            // alert($(".keySkills_list input:checked").length)
+            if ($(".keySkills_list input:checked").length != 6) {
+                // let ks_valueArr = $(this).attr("data-keyValue");
+                let thisValue = $(this).attr("data-keyValue");
+
+                $(".ks_maxNum").removeClass("text-danger");
+                if (ks_valueArr.indexOf(thisValue.split("-").join(" ")) == -1) {
+                    ks_valueArr.push(thisValue.split("-").join(" "));
+                    selected_keySkill.push(thisValue.split("-").join(" ") + "/" + thisId)
+
+                } else {
+                    ks_valueArr.splice(ks_valueArr.indexOf(thisValue.split("-").join(" ")), 1)
+                    selected_keySkill.splice(selected_keySkill.indexOf(thisValue.split("-").join(" ") + "/" + thisId), 1)
+                }
+                // ks_valueArr.push(thisValue);
+                // console.log(selected_keySkill)
+                // console.log(ks_valueArr)
+
+            } else {
+                this.checked = false;
+                $(".ks_maxNum").addClass("text-danger");
+            }
+
+            $(".keySkills>p").html(ks_valueArr.join(", "));
+
+            let selected_keySkill_txt = ""
+            selected_keySkill.map((element) => {
+                selected_keySkill_txt += `<span class="d-inline-block my-1"> ${element.split("/").shift()} <span class="d-inline-block ms-1 seleted_ks_remove " style="float:right" data-value="${element.split("/").pop()}"> <img width="10px"   src="images/cancelicon.png" alt=""> </span></span>`
+            })
+
+            $(".selected_ks_wrp").html(selected_keySkill_txt)
+
+            show_selected_ks_Fn()
+
+
+        });
+
+        // auto complete function
+        $(document).on("input", ".keyskills_auto_complete", function() {
+            let thisValue = $(this).val();
+            if (thisValue.length >= 1) {
+                $(".dropdown_keyskills_wrp").removeClass("d-none")
+                let matchedWord = keyskills_autocomplete_Arr.filter((keySkill) => {
+                    if (keySkill.toLowerCase().includes(thisValue.toLowerCase())) {
+                        return keySkill
+                    } else {}
+                })
+                let key_skills_autocomplete_list = ""
+                $(".dropdown_keyskills_wrp button").each(function() {
+                        if (matchedWord.indexOf($(this).text()) != -1) {
+
+                            $(this).removeClass("d-none")
+                        } else {
+
+                            $(this).addClass("d-none")
+                        }
+                    })
+                    // matchedWord.map((element) => {
+                    //     key_skills_autocomplete_list += `<button id="${element}_keySKillAutoComplete">${element}</button>`;
+                    // })
+                if (matchedWord.length == 0) {
+                    $(".dropdown_keyskills_wrp button").addClass("d-none")
+                    $(".no_results_found").removeClass("d-none")
+
+                    // $(".dropdown_keyskills_wrp").html("<button>No results found</button>")
+                } else {
+                    $(".no_results_found").addClass("d-none")
+                        // $(".dropdown_keyskills_wrp").html(key_skills_autocomplete_list)
+                }
+            } else {
+                $(".dropdown_keyskills_wrp").addClass("d-none")
+            }
+
+            show_selected_ks_Fn()
+        })
+
+        $(document).on("click", ".dropdown_keyskills_wrp button", function() {
+            $(".dropdown_keyskills_wrp").addClass("d-none")
+            $(".keyskills_auto_complete").val("")
+                // alert($(this).attr("data-value"))
+            $("#" + $(this).attr("data-value")).click()
+            let position_top = $('#' + $(this).attr("data-value")).position().top;
+        })
+
+
+        $(document).on("click", ".keySkills", function() {
+
+            $(".keySkills_popup").removeClass("d-none");
+            window.scrollBy(0, -document.body.scrollHeight);
+
+            if (selected_keySkill.length != 0) {
+                $(".selected_ks_wrp").removeClass("d-none")
+                let selected_keySkill_txt = ""
+                selected_keySkill.map((element) => {
+                    selected_keySkill_txt += `<span class="d-inline-block my-1"> ${element.split("/").shift()} <span class="d-inline-block ms-1 seleted_ks_remove " data-value="${element.split("/").pop()}"> <img width="10px"  src="images/cancelicon.png" alt=""> </span></span>`
+                })
+                $(".selected_ks_wrp").html(selected_keySkill_txt)
+            } else {
+                $(".selected_ks_wrp").addClass("d-none")
+            }
+
+        })
+
+
+        function show_selected_ks_Fn() {
+            if (selected_keySkill.length == 0) {
+                $(".selected_ks_wrp").addClass("d-none")
+            } else {
+                $(".selected_ks_wrp").removeClass("d-none")
+            }
+        }
+
+        $(document).ready(function() {
+            show_selected_ks_Fn()
+        })
+
+        // to remove the selected key skills
+        $(document).on("click", ".seleted_ks_remove", function() {
+            let this_data_value = $(this).attr("data-value")
+            $("#" + this_data_value).click()
+            show_selected_ks_Fn()
+        })
+
+        //  end of key skills function
+
+        $(document).on("click", ".keySkills_closeBtn", function() {
+            $(".keySkills_popup").addClass("d-none");
+        })
+
+        $(".cancelPostJobForm").click(function() {
+            $(".savePopupContainer").removeClass("d-none");
+        })
+
+        $(".confirmBenefits").click(function() {
+            $(".close").trigger("click");
+            let str = '';
+
+            function selectBnfts(element) {
+                str += element + ",";
+            }
+            // benefitsCountArr.map(selectBnfts)
+            // $("#benefits").text(benefitsCountArr);
+        });
+
+        $(".eduQuality-custom-dropdown").click(function() {
+            $(".edu_quality_popup").show();
+        })
+
+
+        $(document).on('change', ".eduQuality_list> input", function(evt) {
+
+            removeError("edu_quality_error");
+
+            if ($(".eduQuality_list input:checked").length != 7) {
+                let thisValue = $(this).attr("data-eq-Value");
+                if (eq_valueArr.indexOf(thisValue.split("-").join(" ")) == -1) {
+                    eq_valueArr.push(thisValue.split("-").join(" "));
+                } else {
+                    eq_valueArr.splice(eq_valueArr.indexOf(thisValue.split("-").join(" ")), 1)
+                }
+
+            } else {
+                this.checked = false;
+            }
+            $(".eduQuality_input").html(eq_valueArr.join(", "));
+        })
+
+        $(document).on("click", ".eduQuality_confirm ,.eduQualtiy_closeBtn", function() {
+            $(".edu_quality_popup").hide();
+        })
+
+        $(document).on('change', "#gender_input input[name='gender']", function(evt) {
+            removeError("gender_input");
+        })
+
+        $(document).on('click', '.btn-job-role', function() {
+            $(".btn-job-role").removeClass('active');
+            $(this).addClass('active');
+            $("#jobRoleCategory").val($(this).attr('data-value'));
+            $(".invalid-confirm").hide();
+            removeError("jobRoleCategory");
+            $(".close").trigger('click');
+        });
+
+        $("#rangePrimary").on("change", function() {
+            var value = $(this).val().split(";");
+            var minPrice = value[0];
+            var maxPrice = value[1];
+            $("#fromSal").prop("value", minPrice);
+            $("#toSal").prop("value", maxPrice);
+            // $inputFrom.prop("value", minPrice);
+            // $inputsalary.prop("value", minPrice);
+        });
+
+
+        $(".body-list-role").hide();
+        //Load Industry Data
+        // $(document).on('click', '#jobRole', function(){
+
+        var settings = {
+            "async": true,
+            "crossDomain": true,
+            "url": getBaseUrl() + "/jobIndustries",
+            "method": "GET"
+        }
+
+        $.ajax(settings).done(function(response) {
+            // //Gk_console.log(response.data);
+            if (response.data != "" && response.data.length > 0) {
+                //Gk_console.log(response.data);
+                var str = '';
+
+                for (var i = 0; i < response.data.length; i++) {
+                    str = str + '<button type="button" class="btn-job-industry" data-id="' + response.data[i].id + '"  data-value="' + response.data[i].industry + '">' + response.data[i].industry + ' </button>';
+
+                }
+                //Gk_console.log(str);
+                $(".list-industry").html('');
+                $(".list-industry").html(str);
+            }
+        });
+        // });
+        let job_role_Arr = [];
+        $(document).on('click', '.btn-job-industry', function() {
+
+            var id = $(this).attr('data-id');
+            var settings = {
+                "async": true,
+                "crossDomain": true,
+                "url": getBaseUrl() + "/fullTimeJobRoles?industry_id=" + id,
+                "method": "GET"
+            }
+
+            $.ajax(settings).done(function(response) {
+                // //Gk_console.log(response.data);
+                job_role_Arr = [];
+                $(".job_role_auto-search").val("");
+                $(".dropdown_jobrole_wrp").addClass("d-none")
+                if (response.data != "" && response.data.length > 0) {
+                    $(".body-list-role").css("display", 'block');
+                    //Gk_console.log(response.data);
+                    var str = '';
+                    let dropDown_text = "";
+                    for (var i = 0; i < response.data.length; i++) {
+                        str += `<button class="btn-job-role " id="${response.data[i].id}_jobrole" data-id="${response.data[i].id}" data-value="${response.data[i].jobRoles}" >${response.data[i].jobRoles}</button>`;
+                        // str = str + '<button type="button" class="btn-job-role "  data-id="' + response.data[i].id + '" data-value="' + response.data[i].jobRoles + '">' + response.data[i].jobRoles + ' </button>';
+                        dropDown_text += `<button " data-id="${response.data[i].id}" data-value="${response.data[i].jobRoles}"> ${ response.data[i].jobRoles} </button>`
+                        job_role_Arr.push(response.data[i].jobRoles);
+                    }
+                    //Gk_console.log(str);
+                    $(".list-role").html('');
+                    $(".list-role").html(str);
+                    $(".dropdown_jobrole_wrp").html(dropDown_text + "<button class=' Noresultsfound d-none'>No results found</button>");
+
+                    $(".body-list-role").show();
+                }
+            });
+        });
+
+        //  job role autocomplete
+
+        $(document).on("input", ".job_role_auto-search", function() {
+            let matchedWord = [];
+            matchedWord = job_role_Arr.filter((element) => {
+                if (element.toLowerCase().includes($(this).val().toLowerCase())) {
+                    return element
+                } else {}
+            })
+            let dropDown_text = "";
+            matchedWord.map((el) => {
+                dropDown_text += `<button data-value="${el}"> ${el} </button>`
+            })
+            if ($(this).val().length > 0) {
+                $(".dropdown_jobrole_wrp").removeClass("d-none")
+                $(".dropdown_jobrole_wrp").html(dropDown_text + "<button class=' Noresultsfound d-none'>No results found</button>");
+
+                if (matchedWord == 0) {
+                    $(".dropdown_jobrole_wrp button").addClass("d-none")
+                    $(".dropdown_jobrole_wrp .Noresultsfound").removeClass("d-none")
+                } else {
+
+                }
+            } else {
+                $(".dropdown_jobrole_wrp").addClass("d-none")
+            }
+        })
+
+        $(document).on("click", ".dropdown_jobrole_wrp button", function() {
+            $(".dropdown_jobrole_wrp").addClass("d-none")
+
+                // $("#" + thisValue + "_jobrole").click();
+                $("#jobRoleCategory").val($(this).attr('data-value'));
+                $(".invalid-confirm").hide();
+                removeError("jobRoleCategory");
+                // $(".close").click();
+                $(".industry_wrp").removeClass("d-none")
+                return false;
+            })
+            // end of job role autocomplete
+
+
+        // work benefits functions
+        function workBenftsFn(endURL) {
+            var settings = {
+                "async": true,
+                "crossDomain": true,
+                "url": getBaseUrl() + "/" + endURL,
+                "method": "GET"
+            }
+            $.ajax(settings).done(function(res) {
+                let workBenefitsArr = res.data;
+                let str = "";
+
+                function benefitsFn(response,index) {
+
+                }
+                workBenefitsArr.map((response,index)=>{
+                     str += `<input type="checkbox" id="benefits_list_${index}" class="" value='${response.benefits}'' > <label for="benefits_list_${index}" >${response.benefits}</label> `;
+                     $(".list-benefits").html(str);
+                });
+                // console.log(res);
+            })
+        }
+
+        workBenftsFn("benefits");
+
+        // educational details functions
+
+        function coursesApiFn(endURL) {
+            let settings = {
+                "async": true,
+                "crossDomain": true,
+                "method": "GET",
+                "url": getBaseUrl() + "/" + endURL
+            }
+            $.ajax(settings).done(function(res) {
+                // console.log(res.results);
+                let courseArr = res.results;
+                let depListHtml = "";
+
+                function courseFn(courseName) {
+                    depListHtml += `<option value="${courseName.courses}"></option>`;
+                    $("#departmentList").html(depListHtml);
+                };
+                // using map method in results array of response
+
+                courseArr.map(courseFn);
+            })
+
+        }
+
+        $(document).on("change",".radio_btn_wrp input[name='isWhatsAppNumber']",function(){
+            console.log($(this).val())
+            if (!($(this).val()=="No")) {
+                $(".whatApp_number_wrp").addClass("d-none")
+                 showDetails.whatsapp=false;
+            } else {
+                $(".whatApp_number_wrp").removeClass("d-none")
+                $("#whatAppNumber").focus()
+                 showDetails.whatsapp=true;
+            }
+        })
+
+        $("#eduQualityContainer li").click(function() {
+            removeError("eduQualification");
+            if ($(this).attr("data-eduQuality") == "10A" || $(this).attr("data-eduQuality") == "10B") {
+                $("#eduQualification").val($(this).text());
+                $("#depContainer").addClass("d-none");
+                // deptNoError = false;
+                deptNoError = true;
+
+            } else {
+                $("#department").val("");
+                $("#eduQualification").val($(this).text());
+                // $("#depContainer").removeClass("d-none");
+                // calling courseApi Function with end url as a argument
+                // coursesApiFn($(this).attr("data-endURL"));
+                deptNoError = true;
+            }
+        });
+
+        // salary function
+
+        $("#salaryConfirmBtn").click(function() {
+            if (!($("#toSal").val().length < 5 || $("#fromSal").val().length < 5)) {
+                removeError("salary_error_txt")
+                $(".close").trigger('click');
+                $("#minSalary").val($("#fromSal").val());
+                $("#maxSalary").val($("#toSal").val());
+            } else {
+                addError("salary_error_txt");
+            }
+            removeError("minSalary");
+
+        });
+
+        $(document).on("input", "#toSal , #fromSal", function() {
+            // alert($(this).val())
+            if ($(this).val().length == 5) {
+                let my_range = $("#rangePrimary").data("ionRangeSlider");
+                my_range.update({
+                    from: $("#fromSal").val(),
+                    to: $("#toSal").val()
+                });
+            } else {
+
+            }
+
+        })
+
+         // Update the total amount when the number of openings is increased
+            $(document).on("click", ".no-of-openings-add-btn", function () {
+
+                var openingsValue = parseInt(
+                    $(this)
+                        .closest(".no-of-openings-add-and-redu")
+                        .find(".no-of-openings")
+                        .text()
+                );
+                    console.log(openingsValue);
+
+                    openingsValue++;
+                    $(this)
+                        .closest(".no-of-openings-add-and-redu")
+                        .find(".no-of-openings")
+                        .text(openingsValue);
+
+                        showGenderErr()
+
+            });
+
+            // Update the total amount when the number of openings is reduced
+            $(document).on("click", ".no-of-openings-reduce-btn", function () {
+
+                var openingsValue = parseInt(
+                    $(this)
+                        .closest(".no-of-openings-add-and-redu")
+                        .find(".no-of-openings")
+                        .text()
+                );
+
+                if (openingsValue > 0) {
+                    console.log(openingsValue);
+
+                    openingsValue--;
+                    $(this)
+                        .closest(".no-of-openings-add-and-redu")
+                        .find(".no-of-openings")
+                        .text(openingsValue);
+                }
+                showGenderErr()
+            });
+
+
+            function showGenderErr(){
+                 let male = parseInt($("#gender_male").text());
+                let female = parseInt($("#gender_female").text());
+                let noOfOpenings = parseInt($("#NoOfOPening").val());
+               if (noOfOpenings) {
+                 if ((male + female) != noOfOpenings) {
+                    $(".maleFemaleErr").text(
+                         `You have purchased a plan for ${noOfOpenings} candidates.`
+                     );
+                     addError("genderLabel");
+                     noError++;
+                 } else {
+                     removeError("genderLabel");
+                 }
+               }
+            }
+
+
+        $(document).on("keydown", "#toSal , #fromSal", function(evnt) {
+                // console.log(evnt)
+                // alert($(this).val())
+                if ($(this).val().length >= 5) {
+                    if (!(evnt.key == "Backspace" || evnt.key == "Enter" || evnt.key == "Delete" || evnt.key == "Tab")) {
+                        return false
+                    } else {}
+                } else {}
+
+            })
+            //  end of salary function
+
+
+            $(document).ready(function(){
+
+var empDetailsArr=getEmpDetails()
+// console.log(empDetailsArr)
+
+
+
+// if (empDetailsArr.data.usedFreeTrial=="No" || (empDetailsArr.data.plan==5 && empDetailsArr.data.planJobCount!=0) ) {
+//     let settings = {
+//       method: "GET",
+//     url: getBaseUrl() + "/plan/5",
+//      async: false,
+//   };
+//    $.ajax(settings).done(function (res) {
+
+//     $("#btn_publish").text("Free Trial")
+
+//  })
+
+
+// } else {
+
+
+// }
+
+})
+
+// {
+//     $(document).on("change","#whatsAppCheck",function(){
+//         if(!$(this).prop("checked")){
+//             $(".whatsApp_alert_confirm_popup").removeClass("d-none")
+//         }
+//     })
+//     $(document).on("click",".whatsapp_alert_no",function(){
+//        $("#whatsAppCheck").prop("checked",true)
+//         $(".whatsApp_alert_confirm_popup").addClass("d-none")
+//     })
+//      $(document).on("click",".whatsapp_alert_yes",function(){
+//         $(".whatsApp_alert_confirm_popup").addClass("d-none")
+//     })
+// }
+
+
+// post a job map functions
+    </script>
+    <!-- Google maps  -->
+    <script defer src="./assest/js/post_job_map1.js"></script>
+    <script  defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDClUaUiKoy6KFC0ZrEPM-a5RF80OWysOc&libraries=places&callback=initMap "></script>
+</body>
+
+</html>

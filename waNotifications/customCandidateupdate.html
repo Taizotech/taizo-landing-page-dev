@@ -1,0 +1,1001 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Taizo | Jobseeker Profile</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="images1/favicon.ico"
+    />
+    <link
+      rel="stylesheet"
+      href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css"
+    />
+    <link rel="stylesheet" href="/resources/demos/style.css" />
+    <link rel="stylesheet" href="assest/css/profile-form1.css" />
+    <link rel="stylesheet" href="assest/css/candidate.css" />
+  </head>
+  <body>
+    <header class="header_top">
+      <div class="">
+        <img
+          src="images1/jobseekerTaizoLogo.png"
+          width="130px"
+          class="img-fluid my-2 mx-4"
+          alt="Taizo Logo"
+        />
+      </div>
+    </header>
+
+    <main class="form_container">
+      <!-- <div class="d-grid justify-content-center mt-5">
+        <div class="mx-auto">
+          <div class="load_spinner"></div>
+        </div>
+      </div> -->
+      <div class="text-center my-2">
+        <h3 class="createBioData">Admin-Candidate Details</h3>
+       </div>
+       <form onsubmit="return false" class="">
+                <div class="row">
+                  <div class="form-group">
+                    <label class="d-block ProfilePicture" id="profile_pic"for="can_photo">Profile Photo</label>
+                    <div class="">
+                      <img class="upload_photo" src="./images1/dummy_Can_img.png" id="can_photo_img" alt="Profile Image">
+                      <button type="button" class=" ms-4 ms-sm-5 btn btn-primary upload_photo upload">Upload</button>
+                    </div>
+                    <input type="file" id="can_photo"  readonly placeholder="upload" class="d-none" name="myfile" accept=".jpg, .jpeg, .png">
+                    <p class="errText PleaseFillOutThisField">Please fill out this field</p>
+                  </div>
+
+                </div>
+                <div class="row">
+                  <div class="col-sm-4">
+                    <div class="form-group">
+                      <label class="name" for="candiate_name" id="Name_label">Name</label>
+                      <input
+                        class="form-control only_text text-capitalize"
+                        type="text"
+                        name=""
+                        id="can_name"
+                        placeholder="Your Name "
+                        maxlength="45"
+                      />
+                      <p class="errText PleaseFillOutThisField pleaseEnterValidName">Please enter a valid name</p>
+                    </div>
+                  </div>
+                  <div class="col-sm-2">
+                    <div class="form-group">
+                      <label class="initial" for="candiate_initial" id="Name_initial">Initial</label>
+                      <input
+                        class="form-control only_text text-capitalize"
+                        type="text"
+                        name=""
+                        id="can_initial"
+                        placeholder="Your initial "
+                        maxlength="5"
+                      />
+                      <p class="errText PleaseFillOutThisField pleaseEnterValidName">Please enter the initial</p>
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="form-group">
+                      <label for="" class="dateOfBirth" id="date_label">Date of Birth</label>
+                      <input class="form-control" type="date"  id="can_dob" />
+                      <p class="errText PleaseFillOutThisField">Please fill out this field</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+
+                  <div class="col-sm-6">
+                    <div class="form-group">
+                      <div
+                        class="location_input_wrp"
+                        data-bs-toggle="modal"
+                        data-bs-target="#location_modal"
+                      >
+                        <label for="" class="cityState currentLocation_T" id="Current_LocationLabel">Your Current Location</label>
+                        <input readonly class="form-control" type="text" id="current_location" placeholder="E.g. Chennai, Tamil Nadu" />
+                      </div>
+                      <p class="errText PleaseFillOutThisField">Please fill out this field</p>
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="form-group">
+                      <label class="d-block gender" for="" id="gender_label">Gender</label>
+                      <div class="radio_btn_wrp">
+                        <input
+                        class="only_text"
+                        type="radio"
+                        name="gender"
+                        id="gender_male"
+                        value="Male"
+                      />
+                      <label class="male" for="gender_male">Male</label>
+                      <input
+                        class="only_text"
+                        type="radio"
+                        name="gender"
+                        id="gender_female"
+                        value="Female"
+                      />
+                      <label class="female" for="gender_female">Female</label>
+                      <input
+                        class="only_text "
+                        type="radio"
+                        name="gender"
+                        id="gender_not_to_say"
+                        value="Prefer not to say"
+                      />
+                      <label class="preferNotToSay" for="gender_not_to_say">Prefer not to say</label>
+                      </div>
+                      <p class="errText PleaseFillOutThisField">Please fill out this field</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-6">
+                    <div class="form-group">
+                      <label for="educationDetails" class="educationQualfication" id="qualification_label">Education Qualfication</label>
+                      <select
+                        name=""
+                        required
+                        class="form-control"
+                        id="educationDetails"
+                      >
+                        <option value="">--Select--</option>
+                        <option value="Below 10th">Below 10th</option>
+                        <option value="10th Pass and Above">
+                          10th Pass and Above
+                        </option>
+                        <option data-endUrl="diplomaCourses" value="Diploma">
+                          Diploma
+                        </option>
+                        <option data-endUrl="ITICourses" value="ITI">ITI</option>
+                        <option data-endUrl="UGCourses" value="UG">UG</option>
+                        <option data-endUrl="PGCourses" value="PG">PG</option>
+                      </select>
+                      <p class="errText PleaseFillOutThisField">Please fill out this field</p>
+                    </div>
+                  </div>
+                  <div class="col-sm-6 department_wrp">
+                    <div class="form-group">
+                      <label for="can_degree" class="department">Department</label>
+
+
+                      <div class="ui-widget">
+                         <input class="form-control" placeholder=""  id="candidate_degree">
+                      </div>
+
+                      <p class="errText PleaseFillOutThisField PleaseSelectFromList" id="candidate_label">Please fill out this field</p>
+
+
+
+                    </div>
+                  </div>
+                </div>
+                <div class="row course_completion_wrp">
+                  <div class="col-sm-6 ">
+                    <div class="form-group">
+                        <label class="d-block completionYear " id="completion_label" for="">Completion Year</label>
+                           <input class="form-control only_number" type="text" autocomplete="off"  placeholder="E.g. 2023" maxlength="4" min="1900" max="2099"  id="completion_year"  />
+                            <p class="errText PleaseEnterCourseCompletionYear">Please enter the course completion year in YYYY format</p>
+                    </div>
+                   </div>
+                   <div class="col-sm-6 isStudent_wrp">
+                    <div class="form-group">
+                      <label class="d-block areYouStudent" for="" id="student_label"> Are you a student ? </label>
+                      <div class="radio_btn_wrp">
+                        <input  type="radio" name="isStudent" value="Yes" id="yes_student" />
+                      <label class="yes" for="yes_student">Yes</label>
+                      <input  type="radio" name="isStudent" value="No" id="no_student" />
+                      <label class="no" for="no_student">No</label>
+                      </div>
+                      <p class="errText PleaseFillOutThisField">Please fill out this field</p>
+                    </div>
+                  </div>
+                  </div>
+
+                  </div>
+                </div>
+
+                <div class="row additional_details_wrp">
+                  <div class="col-sm-6">
+                     <div class="form-group">
+                      <label class="d-block doYouHaveArrears" for="" id="arrear_label"> Do you have any arrears? </label>
+                      <div class="radio_btn_wrp">
+                      <input  type="radio" name="isHavingArrear" value="Yes" id="yes_arrear" />
+                      <label class="yes" for="yes_arrear">Yes</label>
+                      <input  type="radio" name="isHavingArrear" value="No" id="no_arrear" />
+                      <label class="no" for="no_arrear">No</label>
+                      </div>
+                      <p class="errText PleaseFillOutThisField">Please fill out this field</p>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-6">
+                    <div class="form-group">
+                      <label class="d-block doYouHavePfEsi" for="" id="pf_label"> Do you already have a PF/ESI account?</label>
+                      <div class="radio_btn_wrp">
+                        <input type="radio" name="isHavingPF" value="Yes" id="yes_pf_account" />
+                        <label class="yes" for="yes_pf_account">Yes</label>
+                        <input type="radio" name="isHavingPF" value="No" id="no_pf_account" />
+                        <label class="no" for="no_pf_account">No</label>
+                      </div>
+                      <p class="errText PleaseFillOutThisField">Please fill out this field</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-sm-6">
+                    <div class="form-group">
+                      <div
+                        class=""
+                        data-bs-toggle="modal"
+                        data-bs-target="#"
+                      >
+                        <label for="languages_known" class="knownLanguages" id="languages_label">known Languages</label>
+                       <div class="lan_known_input_wrp"   data-bs-toggle="modal"
+                       data-bs-target="#language_known_modal"> <textarea readonly class="form-control" name="" placeholder="E.g. தமிழ், English" id="languages_known"></textarea></div>
+                      </div>
+                      <p class="errText PleaseFillOutThisField">Please fill out this field</p>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-6">
+                    <div class="form-group">
+                      <div>
+                        <label for="key_skills" class="keySkills" id="key_label" >Key Skills</label>
+                        <div class="keySkills_input_wrp"
+                        data-bs-toggle="modal"
+                        data-bs-target="#keySkills_modal"><textarea readonly name="" class="form-control"  id="key_skills" placeholder="E.g. Turning, Milling"></textarea></div>
+
+                      </div>
+                      <p class="errText PleaseFillOutThisField">Please fill out this field</p>
+                    </div>
+                  </div>
+
+                </div>
+
+                <div class="row">
+                  <div class="col-sm-6">
+                    <div class="form-group">
+                      <div
+                        class=""
+                        data-bs-toggle="modal"
+                        data-bs-target="#"
+                      >
+                        <label for="certification_courses" class="certificationCourse">Certification Course (Optional)</label>
+                        <div class="courses_input_wrp" data-bs-toggle="modal"
+                        data-bs-target="#courses_modal" ><textarea name="" readonly class="form-control"  id="certification_courses" placeholder="E.g. Certified in CAM, Certified in CAD"></textarea></div>
+
+                      </div>
+                      <p class="errText PleaseFillOutThisField">Please fill out this field</p>
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="form-group">
+                      <label class="d-block doYouHaveExperience " id="experience_label" for="">Do you have experience working in a manufacturing unit?</label>
+                      <div class="radio_btn_wrp">
+                        <input  type="radio" name="isHavingExperience" value="Yes" id="yes_having_experience" />
+                      <label class="yes" for="yes_having_experience">Yes</label>
+                      <input  type="radio" name="isHavingExperience" value="No" id="no_experience" />
+                      <label class="no" for="no_experience">No</label>
+                      </div>
+                      <p class="errText PleaseFillOutThisField">Please fill out this field</p>
+                    </div>
+                  </div>
+
+                </div>
+
+                <div class="row job_role_deetails_wrp">
+                   <div class="col-sm-6 ">
+                     <div class="form-group">
+                      <label class="PleaseDoLetWhichJobrole_T" id="interested_label" for="">Please do let us know which job role you are interested in?</label>
+                      <input
+                        data-bs-toggle="modal"
+                        data-bs-target="#job_role_modal"
+                        class="form-control only_text text-capitalize"
+                        type="text"
+                        name=""
+                        id="can_job_role"
+                        placeholder="Job Role"
+                        maxlength="45"
+                        readonly
+                      />
+                      <input
+                        class="form-control only_text text-capitalize"
+                        type="hidden"
+                        name=""
+                        id="can_industry"
+                        placeholder="Job Role"
+                        maxlength="45"
+                      />
+                      <p class="errText PleaseFillOutThisField">Please fill out this field</p>
+                    </div>
+                   </div>
+                   <div class="col-sm-6 experience_wrp">
+                     <div class="">
+                      <label class="label_text howManyYearsOfExperience_T" for="" id="experience_label1">How many years of experience do you have as a <span class="job_role_value">{{job_role}}</span> ?</label>
+
+                      <div class="d-flex flex-row " style="margin-top: -25px;">
+
+                       <div class="form-group">
+                       <strong> <label class="ms-1 years_T"  for="">Year(s)</label></strong>
+                         <select  class="form-control me-2" required name="" id="exp_in_years">
+                         <option selected value="">--Select--</option>
+                         <option value="0">0</option>
+                         <option value="1">01</option>
+                         <option value="2">02</option>
+                         <option value="3">03</option>
+                         <option value="4">04</option>
+                         <option value="5">05</option>
+                         <option value="6">06</option>
+                         <option value="7">07</option>
+                         <option value="8">08</option>
+                         <option value="9">09</option>
+                         <option value="10">10</option>
+                         <option value="11">11</option>
+                         <option value="12">12</option>
+                         <option value="13">13</option>
+                         <option value="14">14</option>
+                         <option value="15">15</option>
+                         <option value="16">16</option>
+                         <option value="17">17</option>
+                         <option value="18">18</option>
+                         <option value="19">19</option>
+                         <option value="20">20</option>
+                        </select>
+                          <p class="errText PleaseFillOutThisField">Please fill out this field</p>
+                       </div>
+
+                        <div class="ms-4 form-group ">
+                        <strong> <label class="ms-2 months_T" for="" id="month_label">Month(s)</label></strong>
+                          <select class="form-control ms-2" required name="" id="exp_in_months">
+                         <option selected value="">--Select--</option>
+
+                         <option value="0">00</option>
+                         <option value="1">01</option>
+                         <option value="2">02</option>
+                         <option value="3">03</option>
+                         <option value="4">04</option>
+                         <option value="5">05</option>
+                         <option value="6">06</option>
+                         <option value="7">07</option>
+                         <option value="8">08</option>
+                         <option value="9">09</option>
+                         <option value="10">10</option>
+                         <option value="11">11</option>
+                         <option value="12">12</option>
+                        </select>
+                        <p class="errText PleaseFillOutThisField">Please fill out this field</p>
+                        </div>
+                      </div>
+
+                    </div>
+
+
+                   </div>
+
+
+                </div>
+                <div class="row">
+                  <div class="col-sm-6">
+                    <div class="form-group">
+                      <label class="SelectPreferredjoblocation" for="" id="location_label">Select Preferred job location(s)</label>
+                      <div class="preferred_location_input_wrp">
+                        <input
+                       data-bs-toggle="modal"
+                        data-bs-target="#preferred_location_modal"
+                        class="form-control only_text  "
+                        type="text"
+                        name=""
+                        id="preferred_location_input"
+                        placeholder="E.g. Chennai, Coimbatore, Kanchipuram"
+                        maxlength="45"
+                        readonly
+                      />
+                      </div>
+
+                      <p class="errText PleaseFillOutThisField">Please fill out this field</p>
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="form-group">
+                      <div>
+                        <label for="reference" class="HowDidYouHearAboutTaizoApp" id="reference_label" >How did you hear about Taizo jobs app?</label>
+                        <div class="">
+                          <select  name="" class="form-control"  id="reference">
+                            <option selected value=""> -Select- </option>
+                                                              <option  value="Facebook">Facebook</option>
+                                                              <option  value="Instagram">Instagram</option>
+                                                              <option value="YouTube Ad">YouTube Ad</option>
+                                                              <option  value="Job Fair">Job Fair</option>
+                                                              <option  value="Placement Officer">Placement Officer</option>
+                                                              <option  value="College / Institute">College / Institute</option>
+                                                              <option  value="Friend / Coworker">Friend / Coworker</option>
+                                                              <option  value="WhatsApp Group">WhatsApp Group</option>
+                                                              <option value="Taizo YouTube Channel">Taizo YouTube Channel</option>
+                                                              <option  value="Others">Others</option>
+                          </select>
+                        </div>
+                      </div>
+                      <p class="errText PleaseFillOutThisField">Please fill out this field</p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- <div class="col-sm-6 ms-2">
+                  <div class="form-group">
+                      <label for="contactNum">Contact number</label>
+                      <input type="number" onKeyPress="if(this.value.length==10) return false;"
+                          name="contactNum" id="contactNum"
+                          class="form-control text-capitalize " placeholder="Contact Number"
+                          />
+                          <p class="errText PleaseFillOutThisField">Please fill out this field</p>
+                  </div>
+                </div> -->
+
+                  <div class="row">
+                    <div class="col-sm-6 ">
+                      <div class="form-group">
+                        <label for="whatapp_number">WhatsApp number</label>
+                        <input type="number" onKeyPress="if(this.value.length==10) return false;" name="whatapp_number"
+                          id="whatapp_number" class="form-control text-capitalize " placeholder="WhatsApp Number" />
+                        <p class="errText PleaseFillOutThisField">Please fill out this field</p>
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <!-- right side -->
+
+                      <div class="form-group ">
+                        <label for="mobileNum">Mobile number</label>
+                        <input type="number" onKeyPress="if(this.value.length==10) return false;" name="mobileNum" id="mobileNum"
+                          class="form-control text-capitalize " placeholder="mobile Number" />
+                        <p class="errText PleaseFillOutThisField">Please fill out this field</p>
+                      </div>
+                    </div>
+                  </div>
+
+
+                <div class="d-grid justify-content-center my-4">
+                  <button class="btn btn-success profile_submit px-4 mx-3">Submit</button>
+                </div>
+
+
+              </form>
+      <!--main content goes here  -->
+    </main>
+
+    <!-- location Modal -->
+    <div
+      class="modal fade"
+      id="location_modal"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="staticBackdropLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-md">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title selectCityState" id="staticBackdropLabel">
+              City State
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <h6 class="state">State</h6>
+            <div
+              class="scrollbar-primary states_container"
+              style="max-height: 200px"
+            >
+              <div class="force-overflow">
+                <div style="width: 100%" class="state_list_wrp chips_wrp">
+                  <!-- list goes here -->
+                </div>
+              </div>
+            </div>
+            <div class="seleted_state_wrp  chips_wrp">
+              <input type="radio" checked id="selected_state" />
+              <label for="selected_state">
+                Tamil Nadu
+                <button class="btn-close"></button>
+              </label>
+            </div>
+
+            <div class="cities_wrp ">
+              <h6 class="city">City</h6>
+
+              <div class="scrollbar-primary" style="max-height: 200px">
+                <div class="force-overflow">
+                  <div style="width: 100%" class="city_list_wrp chips_wrp">
+                    <!-- list goes here -->
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-success confirm_location confirm"
+                  data-bs-dismiss="modal"
+                >
+                  Ok
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- end of location Modal -->
+
+    <!-- Language known Modal -->
+    <div
+      class="modal fade"
+      id="language_known_modal"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="staticBackdropLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-md">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="staticBackdropLabel">
+              <span class="selectKnownLanguage">Select Known Language(s)</span>
+              <span class="max_wrp">(<span class="max">Max</span> 5)</span>
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <!-- <h6>Select Languages (Max 5)</h6> -->
+            <div class="scrollbar-primary" style="max-height: 250px">
+              <div class="force-overflow">
+                <div style="width: 100%" class="language_list_wrp chips_wrp">
+                  <!-- list goes here -->
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-success confirm_language confirm"
+              data-bs-dismiss="modal"
+            >
+              Ok
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end of Langguage known Modal -->
+
+    <!-- courses Modal -->
+    <div
+      class="modal fade"
+      id="courses_modal"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="staticBackdropLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-md">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="staticBackdropLabel">
+              <span class="selectCertificationCourse">
+                Select Certification Course</span
+              >
+              <span class="max_wrp">(<span class="max">Max</span> 3)</span>
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <!-- <h6>Courses Completed </h6> -->
+            <div class="scrollbar-primary" style="max-height: 250px">
+              <div class="force-overflow">
+                <div style="width: 100%" class="courses_list_wrp chips_wrp">
+                  <!-- list goes here -->
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-success confirm_courses confirm"
+              data-bs-dismiss="modal"
+            >
+              Ok
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end of courses Modal -->
+
+    <!-- key skills Modal -->
+    <div
+      class="modal fade"
+      id="keySkills_modal"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="staticBackdropLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-md">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="staticBackdropLabel">
+              <span class="selectKeySkills">Select Key Skills</span>
+              <span class="max_wrp">(<span class="max">Max</span> 5)</span>
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <!-- <h6>Select Key skills </h6> -->
+            <div class="scrollbar-primary" style="max-height: 250px">
+              <div class="force-overflow">
+                <div style="width: 100%" class="keySkills_list_wrp chips_wrp">
+                  <!-- list goes here -->
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-success confirm_keySkills confirm"
+              data-bs-dismiss="modal"
+            >
+              Ok
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end of key skills Modal -->
+
+    <!-- loader modal -->
+    <div
+      class="modal fade"
+      id="loader_modal"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="staticBackdropLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-md">
+        <div
+          class="modal-content"
+          style="background-color: inherit; border: none"
+        >
+          <div class="d-grid justify-content-center">
+            <div class="mx-auto">
+              <div class="load_spinner"></div>
+            </div>
+            <div>
+              <h5 class="text-white mt-3 text-center WereLoadingYourProfile">
+                We're loading your profile details. <br />
+                Please do not press the back button or exit the page
+              </h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end of loader modal -->
+
+    <!-- success Modal -->
+    <div
+      class="modal fade"
+      id="success_msg_modal"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="staticBackdropLabel"
+      aria-hidden="true"
+      style="background-color: rgba(0, 0, 0, 0.81)"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-md">
+        <div class="modal-content">
+          <div class="modal-body">
+            <div style="min-height: 20vh; height: auto">
+              <div class="d-grid justify-content-center">
+                <img src="assets/images/bio_data_success.png" alt="" />
+              </div>
+              <div class="text-center d-grid justify-content-center mt-4">
+                <h5 class="YourBioDataCreated">
+                  You Have Successfully Register Admin candidate Page
+                </h5>
+              </div>
+              <a
+                target="_blank"
+                class="showMeJobs"
+                style="text-decoration: none"
+              >
+                <button class="btn btn-success d-block mx-auto mb-2 mt-3">
+                  OK
+                </button></a
+              >
+              <!-- href="https://console.taizo.in/waNotifications/customCandidate.html?adminId=" -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end of success Modal -->
+
+    <!-- job role Modal -->
+    <div
+      class="modal fade"
+      id="job_role_modal"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="staticBackdropLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-md">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5
+              class="modal-title selectIndustryJobrole"
+              id="staticBackdropLabel"
+            >
+              Select Industry, Job Role
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <h6 class="industry_T">Industry</h6>
+            <div
+              class="scrollbar-primary industry_container"
+              style="max-height: 200px"
+            >
+              <div class="force-overflow">
+                <div style="width: 100%" class="industry_list_wrp chips_wrp">
+                  <!-- list goes here -->
+                </div>
+              </div>
+            </div>
+            <div class="seleted_industry_wrp d-none chips_wrp">
+              <input type="radio" checked id="selected_state" />
+              <label for="selected_state">
+                Tamil Nadu
+                <button class="btn-close"></button>
+              </label>
+            </div>
+
+            <div class="job_role_wrp d-none">
+              <h6 class="jobRole_T">Job Role</h6>
+
+              <div class="scrollbar-primary" style="max-height: 200px">
+                <div class="force-overflow">
+                  <div style="width: 100%" class="job_role_list_wrp chips_wrp">
+                    <!-- list goes here -->
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-success confirm_job_role confirm"
+                  data-bs-dismiss="modal"
+                >
+                  Ok
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end of job role Modal -->
+
+    <!-- preferred location Modal -->
+    <div
+      class="modal fade"
+      id="preferred_location_modal"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="staticBackdropLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-md">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="staticBackdropLabel">
+              <span class="SelectPreferredjoblocation">Select Preferred job location</span>
+              <!-- <span class="max_wrp">(<span class="max">Max</span> 5)</span> -->
+            </h5>
+            <button
+              type="button"
+              class="btn-close confirm_preferred_location"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <!-- <h6>Select Key skills </h6> -->
+            <div class="scrollbar-primary" style="max-height: 250px">
+              <div class="force-overflow">
+                <div style="width: 100%;" class="location_list_wrp chips_wrp">
+                  <input
+                    value="Chennai"
+                    type="checkbox"
+                    id="pref_loc_chennai"
+                    name="preferred_location"
+                  />
+                  <label for="pref_loc_chennai"> Chennai</label>
+                  <input
+                    value="Coimbatore"
+                    type="checkbox"
+                    id="pref_loc_coimbatore"
+                    name="preferred_location"
+                  />
+                  <label for="pref_loc_coimbatore"> Coimbatore</label>
+                  <input
+                    value="Chengalpattu"
+                    type="checkbox"
+                    id="pref_loc_chegalpattu"
+                    name="preferred_location"
+                  />
+                  <label for="pref_loc_chegalpattu"> Chengalpattu</label>
+                  <input
+                    value="Kanchipuram"
+                    type="checkbox"
+                    id="pref_loc_kanchipuram"
+                    name="preferred_location"
+                  />
+                  <label for="pref_loc_kanchipuram"> Kanchipuram</label>
+                  <input
+                    value="Tiruvallur"
+                    type="checkbox"
+                    id="pref_loc_tiuvallur"
+                    name="preferred_location"
+                  />
+                  <label for="pref_loc_tiuvallur"> Tiruvallur</label>
+                  <input
+                  value="Hosur"
+                  type="checkbox"
+                  id="pref_loc_Hosur"
+                  name="preferred_location"
+                />
+                <label for="pref_loc_Hosur"> Hosur</label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-success confirm_preferred_location confirm"
+              data-bs-dismiss="modal"
+            >
+              Ok
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end of Preferred location Modal -->
+
+    <!-- submit confirmation Modal -->
+    <div
+      class="modal fade"
+      id="submit_confirm_modal"
+      data-bs-backdrop="static"
+      data-bs-keyboard="false"
+      tabindex="-1"
+      aria-labelledby="staticBackdropLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-md">
+        <div class="modal-content">
+          <div class="modal-body" style="min-height: 150px">
+            <div class="text-center my-5">
+              <h5 class="AreYouSureSubmit">
+                Are you sure, you want to submit ?
+              </h5>
+              <div class="d-grid justify-content-center mt-4">
+                <div>
+                  <button
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                    class="btn btn-secondary mx-3 px-3 no"
+                  >
+                    No
+                  </button>
+                  <button
+                    class="btn btn-success mx-3 px-3 confirm_profile_submit yes"
+                  >
+                    Yes
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end of submit confirmatin Modal -->
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+      integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+      integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://code.jquery.com/jquery-3.6.3.min.js"
+      integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <!-- should  run first -->
+    <script defer src="./assest/js/all1.js"></script>
+    <!-- should   run second -->
+    <!-- <script defer src="assets/js/profile_form_translation.js"></script> -->
+    <!-- should run third -->
+    <script defer src="./assest/js/utils1.js"></script>
+    <!-- should run next -->
+    <script defer src="./assest/js/profile-form1.js"></script>
+
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+  </body>
+</html>

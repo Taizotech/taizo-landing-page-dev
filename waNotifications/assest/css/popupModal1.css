@@ -1,0 +1,275 @@
+/* popup container css */
+
+.popupContainer {
+  background-color: rgba(102, 99, 99, 0.631);
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+}
+
+.popupBody {
+  height: 70vh;
+  padding: 20px;
+  width: 40vw;
+  background-color: #fff;
+  border-radius: 10px;
+  border-style: none;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15vh;
+}
+
+.popupContent {
+  width: 30vw;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* close Job popup */
+
+.closeJob_popupContainer,
+.feedback_popupContainer_CJ,
+.feedback_popupContainer_SF,
+.common_popupContainer {
+  background-color: rgba(102, 99, 99, 0.631);
+  height: 100vh;
+  width: 100vw;
+  display: grid;
+  position: fixed;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  top: 0px;
+  left: 0px;
+  z-index: 1000;
+}
+
+.common_popup_body {
+  width: auto;
+  height: auto;
+  background-color: #fff !important;
+  padding: 30px 20px;
+  border-radius: 20px;
+  border-style: none;
+}
+
+.confirmCall_popupBody {
+  height: auto;
+  padding: 10px 30px 10px 20px;
+  width: 300px;
+  background-color: #fff !important;
+  border-radius: 20px;
+  border-style: none;
+}
+
+.confirmCall_popupContent,
+.common_popupContent {
+  width: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.closeJob_popupBody {
+  height: auto;
+  padding: 30px;
+  width: 600px;
+  background-color: #fff;
+  border-radius: 20px;
+  border-style: none;
+}
+
+.closeJob_popupContent {
+  width: auto;
+  max-width: 550px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* end of close Job popup */
+
+/* feed back popup  */
+
+.feedback_popupBody_CJ,
+.feedback_popupBody_SF {
+  height: auto;
+  padding: 30px;
+  width: 500px;
+  background-color: #fff;
+  border-radius: 20px;
+  border-style: none;
+}
+
+.feedback_popupContent_CJ,
+.feedback_popupContent_SF,
+.keySkills_popupContent {
+  width: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.keySkills_popupContainer {
+  background-color: rgba(102, 99, 99, 0.631);
+  height: auto;
+  min-height: 300vh;
+  width: 100vw;
+  display: grid;
+  position: absolute;
+  display: grid;
+  justify-content: center;
+  align-items: baseline;
+  top: 0px;
+  left: 0px;
+  z-index: 1000;
+}
+
+.keySkills_popupbody {
+  margin-top: 100px;
+  height: auto;
+  padding: 20px;
+  width: auto;
+  max-width: 650px;
+  background-color: #fff;
+  border-radius: 20px;
+  border-style: none;
+  display: grid;
+  align-items: center;
+}
+
+/* end of feed back popup */
+
+/* schedule interview popup  */
+
+.sched_popupContainer {
+  background-color: rgba(102, 99, 99, 0.631);
+  height: 110vh;
+  width: 100vw;
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  z-index: 11;
+  top: 0px;
+  left: 0px;
+}
+
+.sched_popupBody {
+  height: auto;
+  padding: 20px;
+  width: 55vw;
+  background-color: white !important;
+  border-radius: 20px;
+  border-style: none;
+  margin-left: auto;
+  margin-right: auto;
+  /* margin-top: 15vh; */
+}
+
+.sched_popupContent {
+  width: 50vw;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.whatsApp_alert_confirm_popup .common_popup_body {
+  max-width: 400px;
+}
+
+/* end of schedule interview popup */
+
+/* popup container css */
+
+@media screen and (max-width: 600px) {
+  .notificationContainer {
+    display: grid;
+    justify-content: center;
+    margin-left: -50px;
+    /* padding-right: 5vw;
+        width: 50vw; */
+  }
+  .noti_popupBody {
+    height: 500px;
+    /* padding: 10px; */
+    width: 300px;
+    background-color: #1cb260;
+    border-radius: 10px;
+    border-style: none;
+    /* margin-right: 30vw; */
+    position: fixed;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  /* .noti_popupContent {
+        width: 320px;
+        left: 1vw;
+    } */
+  .popupContainer {
+    background-color: rgba(102, 99, 99, 0.631);
+    height: 100vh;
+    width: 100vw;
+    /* display: grid; */
+    /* justify-content: center; */
+    /* align-items: center;  */
+    /* margin: 0px auto; */
+    padding: 20px auto;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+  }
+  .popupBody {
+    padding: 10px;
+    width: 80vw;
+  }
+  .popupContent {
+    width: 70vw;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .sched_popupContainer {
+    height: 160vh;
+  }
+  .sched_popupBody {
+    height: auto;
+    padding: 10px;
+    width: 97vw;
+    /* margin-top: 20vh; */
+  }
+  .sched_popupContent {
+    width: 90vw;
+    height: auto;
+  }
+  /* close Job popup */
+  .closeJob_popupBody {
+    width: 97vw;
+    padding: 20px 10px;
+  }
+  /* end of close Job popup */
+  /* feedBack rating */
+  .feedback_popupBody_CJ,
+  .feedback_popupBody_SF,
+  .keySkills_popupbody {
+    height: auto;
+    padding: 20px;
+    width: 97vw;
+  }
+  /* end of feed back rating */
+  /* call details  */
+  .confirmCall_popupBody {
+    height: auto;
+    padding: 10px;
+    width: 97vw;
+    background-color: #fff !important;
+    border-radius: 20px;
+    border-style: none;
+  }
+  .common_popup_body {
+    width: 97%;
+    height: auto;
+    margin: 0px auto;
+    background-color: #fff !important;
+    padding: 30px 10px;
+    border-radius: 20px;
+    border-style: none;
+  }
+}

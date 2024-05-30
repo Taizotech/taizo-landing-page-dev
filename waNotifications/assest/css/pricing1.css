@@ -1,0 +1,443 @@
+.load_spinner {
+  border-left-style: solid;
+  border: 16px solid #f3f3f3;
+  border-top: 16px solid #1cb260;
+  border-radius: 50%;
+  border-width: 5px;
+  width: 70px;
+  height: 70px;
+  margin: 0px auto;
+  /* animation-name: load_spinner; */
+  animation: load_spinner 1s linear infinite;
+}
+@keyframes load_spinner {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.pricing_plans_wrp {
+  /* margin: 10px 0px 0px 0px; */
+  margin: 0px;
+  width: 100vw;
+  min-width: auto;
+
+  /* background-color: #1cb260; */
+}
+
+.pricing_pg_title {
+  margin-top: -35px;
+}
+
+.plan_lable_wrp {
+  position: relative;
+  padding-right: 100px;
+}
+
+.offer_price_wrp {
+  display: inline-block;
+  margin-top: 10px;
+  margin-bottom: 0px;
+}
+
+.free_plan_wrp {
+  border-radius: 10px;
+  background-color: rgb(255, 255, 255);
+  /* height: 410px; */
+  width: 340px;
+  max-width: 340px;
+  margin: 5px auto;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.premium_plan_wrp,
+.flexible_plan_wrp {
+  border-radius: 10px;
+  background-color: rgb(255, 255, 255);
+  /* height: 410px; */
+  width: 340px;
+  max-width: 340px;
+  margin: 5px auto;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.premium_plan_card_content,
+.free_plan_card_content,
+.flexible_plan_card_content {
+  padding: 10px 0px 20px 0px;
+}
+
+.contact_sales_wrp {
+  display: grid;
+  /* grid-template-rows: 340px 100px; */
+  /* gap: 10px; */
+  /* background-color: #2196f3; */
+  /* padding: 10px; */
+  /* align-content: center; */
+
+  height: 410px;
+}
+
+.free_trail_label {
+  background-color: #35ab6a29;
+  width: 100px;
+  height: auto;
+  max-height: 35px;
+  padding-top: 5px;
+  padding-right: 10px;
+  border-radius: 5px 0px 0px 5px;
+  margin-top: 20px !important;
+  position: absolute;
+}
+
+.premium_label {
+  background-color: #1cb260;
+  width: 100px;
+  height: auto;
+  max-height: 35px;
+  padding-top: 5px;
+  padding-right: 10px;
+  border-radius: 5px 0px 0px 5px;
+  margin-top: 20px !important;
+  position: absolute;
+}
+
+.free_trail_label p,
+.premium_label p {
+  font-size: 17px;
+  font-weight: 600;
+  margin-top: 0px !important;
+}
+
+.premium_offer_text p {
+  columns: rgb(96, 37, 0);
+  background-color: #e8a677f1;
+  font-weight: 500;
+  font-size: 13px;
+  width: 95%;
+  max-width: 340px;
+  margin: -30px auto 0px auto;
+  border-radius: 5px;
+  position: relative;
+  min-height: 30px;
+  height: auto;
+  z-index: 5;
+  padding: 3px 5px;
+}
+
+.you_saved_text {
+  border-radius: 30px;
+  background-color: #bf00c5;
+  color: white;
+  font-size: 12px;
+  padding: 3px 7px;
+  font-weight: 500;
+}
+.original_amount {
+  text-decoration: line-through;
+  padding-left: 25px !important;
+  position: absolute;
+  margin-top: -10px;
+}
+
+.free_plan_details_wrp,
+.premium_plan_details_wrp,
+.flexible_plan_details_wrp {
+  padding: 10px 0px;
+}
+
+.free_plan_details_wrp ul li,
+.premium_plan_details_wrp ul li,
+.flexible_plan_details_wrp ul li {
+  /* list-style-image: url("images/verifyImg.png"); */
+  list-style: none;
+  font-weight: 500 !important;
+  /* list-style-position: outside; */
+  font-size: 15px;
+  margin: 13px 0px;
+}
+
+.free_plan_details_wrp ul li > span,
+.premium_plan_details_wrp ul li > span,
+.flexible_plan_details_wrp ul li > span {
+  display: inline-block;
+  margin: 1px 5px;
+}
+
+.free_plan_activate {
+  display: inline-block;
+  background-color: inherit;
+  color: #1cb260;
+  min-width: 150px;
+  width: auto;
+  border-radius: 5px;
+  border-color: #1cb260;
+  border-style: solid;
+  margin: 5px auto 0px auto !important;
+  padding: 5px;
+  height: 40px;
+  font-weight: 500;
+}
+
+.free_plan_activate:hover {
+  color: #1e9755;
+  border-color: #1e9755;
+  border-width: 3px;
+  font-weight: 600;
+}
+
+.premium_plan_activate,
+.contact_sales_btn,
+.btn_green {
+  display: inline-block;
+  background-color: #1cb260;
+  color: white;
+  min-width: 150px;
+  width: auto;
+  border-radius: 5px;
+  border-color: #1cb260;
+  border-style: solid;
+  margin: 5px auto 0px auto !important;
+  padding: 5px;
+  height: 40px;
+  font-weight: 500;
+}
+
+.premium_plan_activate:hover,
+.contact_sales_btn:hover {
+  background-color: #279b5b;
+}
+
+.plan_info_list {
+  font-size: 14px;
+  color: #818181;
+}
+
+.plan_info_list ul li {
+  margin: 10px 0px;
+}
+
+.free_plan_ended_wrp {
+  position: absolute;
+  text-align: center;
+  background-color: #d4d4d4;
+  border-radius: 10px;
+  height: 430px;
+  width: 340px;
+  display: grid;
+  align-content: center;
+  padding: 0px 10px;
+  z-index: 10;
+}
+
+.free_plan_ended_text {
+  text-align: center;
+}
+
+.free_plan_ended_text h5 span {
+  color: red;
+}
+
+.free_plan_ended_text p {
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.free_plan_count {
+  border-radius: 4px;
+  border-color: #c4c4c4;
+  width: 50px;
+  height: 25px;
+  cursor: pointer;
+  margin-left: 20px;
+  cursor: default;
+  /* box-shadow: 1px 3px 10px 1px rgba(0, 0, 0, 0.452); */
+}
+
+.premium_plan_count {
+  border-radius: 4px;
+  border-color: #6d6d6d;
+  width: 50px;
+  height: 25px;
+  cursor: pointer;
+  margin-left: 20px;
+  box-shadow: 1px 3px 5px 1px rgba(0, 0, 0, 0.349);
+}
+
+.errorPopupWrp {
+  background-color: #b6b6b6a8;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 100;
+}
+
+.errorPopupBody {
+  /* margin: 10vh auto; */
+  background-color: #ffffff;
+  height: auto;
+  width: 350px;
+  border-radius: 15px;
+}
+
+.errorPopupContent p {
+  font-weight: 600;
+  line-height: 1 !important;
+  padding-left: 35px;
+}
+
+/*  closeBtn btn */
+
+.closeBtn {
+  /* position: absolute;
+right: 32px;
+top: 32px; */
+  width: 20px;
+  height: 20px;
+  opacity: 0.3;
+}
+
+.closeBtn:hover {
+  opacity: 1;
+}
+
+.closeBtn:before,
+.closeBtn:after {
+  position: absolute;
+  /* left: 150px; */
+  content: " ";
+  height: 20px;
+  width: 2px;
+  background-color: #333;
+}
+
+.closeBtn:before {
+  transform: rotate(45deg);
+}
+
+.closeBtn:after {
+  transform: rotate(-45deg);
+}
+
+/* end of closeBtn btn */
+
+.pricing_popup_content {
+  width: auto;
+  height: auto;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  background-color: #e6e6e6;
+}
+
+label {
+  font-size: 13px;
+  font-weight: 600;
+  margin-top: 15px;
+  margin-bottom: 8px;
+  color: #202124;
+  font-family: "DM Sans";
+}
+.contact_sales_from .row {
+  margin: 0px 10px;
+}
+.validMsg {
+  font-size: 14px;
+  position: relative;
+  top: 5px;
+  display: none;
+}
+.error .validMsg {
+  color: #ff4d4d;
+  display: block;
+}
+.Contact_sales_popup p {
+  margin-bottom: 0px;
+}
+.Contact_sales_body {
+  max-width: 700px;
+  width: 98vw;
+  /* height: 90vh;
+  max-height: 400px; */
+}
+
+.success_msg_wrp {
+  min-height: 60vh;
+  display: grid;
+  align-content: center;
+}
+
+@media only screen and (max-width: 575px) {
+  .free_plan_wrp {
+    border-radius: 10px;
+    background-color: rgb(243, 243, 243);
+    /* height: 100px !important; */
+    width: 300px;
+    max-width: 300px;
+    margin: 5px auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+  .free_plan_ended_wrp {
+    height: 100px !important;
+    width: 300px;
+    padding: 10px 5px 0px 5px;
+    z-index: 10;
+  }
+  .free_plan_wrp {
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    /* height: 410px; */
+    width: 300px;
+    max-width: 300px;
+    margin: 5px auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+
+  .premium_plan_wrp,
+  .flexible_plan_wrp {
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    /* height: 410px; */
+    width: 300px;
+    max-width: 340px;
+    margin: 5px auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+
+  .pricing_plans_wrp {
+    margin: 10px auto 0px auto;
+    min-width: auto;
+    max-width: 900px;
+    /* background-color: #1cb260; */
+  }
+  .pricing_pg_title {
+    margin-top: 10px;
+  }
+
+  .premium_plan_wrp {
+    margin-top: 20px;
+  }
+  body {
+    height: auto;
+    padding-bottom: 150px;
+  }
+
+  .you_saved_text {
+    /* display: inline-block; */
+    /* margin-top: 10px !important; */
+    font-size: 10px;
+    font-weight: 500;
+  }
+
+  .free_plan_amount_wrp {
+    margin-top: 0px;
+  }
+}

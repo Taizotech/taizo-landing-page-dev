@@ -1,0 +1,159 @@
+.form-group label,
+.label_text {
+  font-size: 14px;
+  font-weight: 500;
+  margin: 20px 5px 5px 0px;
+  cursor: pointer;
+}
+
+input,
+select,
+textarea {
+  background-color: rgba(216, 216, 216, 0.767) !important;
+}
+
+.error input,
+.error select,
+.error textarea {
+  border-color: red !important;
+}
+
+.error .errText {
+  color: red !important;
+}
+
+.errText {
+  display: none;
+}
+
+.error .errText {
+  display: block;
+  color: red !important;
+  margin-bottom: 0px;
+}
+
+.chips_wrp > input {
+  display: none;
+}
+
+.chips_wrp > input + label {
+  font-size: 14px;
+  font-weight: 400;
+  border-radius: 18px !important;
+}
+
+.chips_wrp > input:checked + label {
+  text-align: center;
+  border-radius: 15px;
+  border: 1px solid #1cb260;
+  padding: 6px 10px;
+  background: #1cb26024;
+  color: #1cb260;
+  margin: 5px;
+  cursor: pointer;
+}
+
+/* .chips_wrp > input:not(:checked) + label:hover {
+  text-align: center;
+  border-radius: 15px;
+  border: 1px solid #7f7f7f;
+  padding: 6px 10px;
+  background: #959595cb;
+  margin: 5px;
+  cursor: pointer;
+} */
+
+.chips_wrp > input:not(:checked) + label {
+  text-align: center;
+  border-radius: 15px;
+  border: 1px solid rgb(130, 130, 130);
+  padding: 6px 10px;
+  background: #e9ecef66;
+  margin: 5px;
+  cursor: pointer;
+}
+
+/* scroll bar  */
+
+.scrollbar-primary {
+  float: left;
+  height: 100%;
+  width: 100%;
+  background: aliceblue;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  margin-bottom: 25px;
+}
+.force-overflow {
+  min-height: 100%;
+}
+
+.scrollbar-primary::-webkit-scrollbar {
+  width: 4px;
+  background-color: #f5f5f5;
+}
+
+.scrollbar-primary::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+  background-color: #1cb25f8c;
+}
+
+.scrollbar-primary {
+  scrollbar-color: #1cb260;
+}
+
+/* loader */
+
+.load_spinner {
+  border-left-style: solid;
+  border: 16px solid #f3f3f3;
+  border-top: 16px solid #1cb260;
+  border-radius: 50%;
+  border-width: 5px;
+  width: 70px;
+  height: 70px;
+  margin: 0px auto;
+  /* animation-name: load_spinner; */
+  animation: load_spinner 1s linear infinite;
+}
+@keyframes load_spinner {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/*  close_btn btn */
+
+.close_btn {
+  width: 20px;
+  height: 20px;
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+.close_btn:hover {
+  opacity: 1;
+}
+
+.close_btn:before,
+.close_btn:after {
+  position: absolute;
+  content: " ";
+  height: 20px;
+  width: 2px;
+  background-color: #333;
+}
+
+.close_btn:before {
+  transform: rotate(45deg);
+}
+
+.close_btn:after {
+  transform: rotate(-45deg);
+}
+
+/* end of close_btn btn */
